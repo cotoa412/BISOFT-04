@@ -17,7 +17,7 @@
 
         If UsernameIn.ToLower().Equals(Username.ToLower()) Then
             If PasswordIn.Equals(Password) Then
-                Home.Show()
+                'Home.Show()
                 Me.Hide()
             Else
                 MsgBox("Contraseña Incorrecta")

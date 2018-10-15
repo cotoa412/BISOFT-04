@@ -87,6 +87,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendario.Designer.vb">
+      <DependentUpon>Calendario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos.Designer.vb">
+      <DependentUpon>Cursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,16 +106,22 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.vb">
-      <DependentUpon>Home.vb</DependentUpon>
+    <Compile Include="Horario.Designer.vb">
+      <DependentUpon>Horario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Home.vb">
+    <Compile Include="Horario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Homeworks.Designer.vb">
-      <DependentUpon>Homeworks.vb</DependentUpon>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Homeworks.vb">
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materiales.Designer.vb">
+      <DependentUpon>Materiales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Materiales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -121,31 +139,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Profile.Designer.vb">
-      <DependentUpon>Profile.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Profile.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos.resx">
+      <DependentUpon>Cursos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.vb</DependentUpon>
+    <EmbeddedResource Include="Horario.resx">
+      <DependentUpon>Horario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Homeworks.resx">
-      <DependentUpon>Homeworks.vb</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materiales.resx">
+      <DependentUpon>Materiales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
-      <DependentUpon>Profile.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +189,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="border.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
