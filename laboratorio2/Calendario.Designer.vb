@@ -41,7 +41,7 @@ Partial Class Calendario
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(206, 22)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(617, 328)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
