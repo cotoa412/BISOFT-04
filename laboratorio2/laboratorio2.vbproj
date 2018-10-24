@@ -148,6 +148,7 @@
     <Compile Include="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Schedule.vb" />
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
