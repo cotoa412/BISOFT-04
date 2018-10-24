@@ -1,6 +1,6 @@
 ﻿Public Class Course
 
-
+    Private Id As Integer
     Private Name As String
     Private Credits As Integer
     Private Hours As New List(Of DateTime)
@@ -33,12 +33,21 @@
         End Set
     End Property
 
-    Public Property Hours_Course As Integer
+    Public Property Hours_Course As List(Of Date)
         Get
             Return Hours
         End Get
-        Set(value As Integer)
+        Set(value As List(Of Date))
             Hours = value
+        End Set
+    End Property
+
+    Public Property Id_Course As Integer
+        Get
+            Return Id
+        End Get
+        Set(value As Integer)
+            Id = value
         End Set
     End Property
 End Class
