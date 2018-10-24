@@ -78,7 +78,7 @@ Partial Class Login
         '
         'ButtonAccept
         '
-        Me.ButtonAccept.Location = New System.Drawing.Point(61, 133)
+        Me.ButtonAccept.Location = New System.Drawing.Point(60, 133)
         Me.ButtonAccept.Name = "ButtonAccept"
         Me.ButtonAccept.Size = New System.Drawing.Size(75, 23)
         Me.ButtonAccept.TabIndex = 5

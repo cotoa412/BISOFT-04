@@ -111,7 +111,7 @@ Partial Class Registro
         '
         'ButtonAccept
         '
-        Me.ButtonAccept.Location = New System.Drawing.Point(43, 232)
+        Me.ButtonAccept.Location = New System.Drawing.Point(42, 232)
         Me.ButtonAccept.Name = "ButtonAccept"
         Me.ButtonAccept.Size = New System.Drawing.Size(75, 23)
         Me.ButtonAccept.TabIndex = 9
@@ -120,7 +120,7 @@ Partial Class Registro
         '
         'ButtonCancel
         '
-        Me.ButtonCancel.Location = New System.Drawing.Point(145, 232)
+        Me.ButtonCancel.Location = New System.Drawing.Point(146, 232)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(75, 23)
         Me.ButtonCancel.TabIndex = 10
