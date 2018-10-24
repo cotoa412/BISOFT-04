@@ -1,10 +1,22 @@
-﻿Public Class User
+﻿Imports laboratorio2
+
+Public Class User
+    Private id As String
     Private name As String
     Private username As String
     Private email As String
     Private password As String
     Private courses As New List(Of Course)
     Private schedule As Schedule
+
+    Public Property Id1 As String
+        Get
+            Return id
+        End Get
+        Set(value As String)
+            id = value
+        End Set
+    End Property
 
     Public Property Name1 As String
         Get

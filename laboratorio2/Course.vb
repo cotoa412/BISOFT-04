@@ -6,7 +6,7 @@
     Private Hours As New List(Of DateTime)
     Private ProfessorName As String
 
-    Public Property Name_Course As String
+    Public Property Name1 As String
         Get
             Return Name
         End Get
@@ -15,7 +15,7 @@
         End Set
     End Property
 
-    Public Property Credits_Course As Integer
+    Public Property Credits1 As Integer
         Get
             Return Credits
         End Get
@@ -24,21 +24,21 @@
         End Set
     End Property
 
-    Public Property ProfessorName_Course As String
+    Public Property Hours1 As List(Of Date)
+        Get
+            Return Hours
+        End Get
+        Set(value As List(Of Date))
+            Hours = value
+        End Set
+    End Property
+
+    Public Property ProfessorName1 As String
         Get
             Return ProfessorName
         End Get
         Set(value As String)
             ProfessorName = value
-        End Set
-    End Property
-
-    Public Property Hours_Course As Integer
-        Get
-            Return Hours
-        End Get
-        Set(value As Integer)
-            Hours = value
         End Set
     End Property
 End Class
