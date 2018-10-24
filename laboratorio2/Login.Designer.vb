@@ -23,8 +23,8 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonAccept = New System.Windows.Forms.Button()
@@ -35,34 +35,34 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 20)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(39, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(79, 24)
+        Me.Label1.Size = New System.Drawing.Size(64, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario:"
         '
-        'TextBox1
+        'TextBoxUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(109, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(137, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxUsername.Location = New System.Drawing.Point(109, 22)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(137, 20)
+        Me.TextBoxUsername.TabIndex = 1
         '
-        'TextBox2
+        'TextBoxPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(109, 62)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(137, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBoxPassword.Location = New System.Drawing.Point(109, 62)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(137, 20)
+        Me.TextBoxPassword.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 59)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(14, 62)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 24)
+        Me.Label2.Size = New System.Drawing.Size(89, 18)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña:"
         '
@@ -82,7 +82,7 @@ Partial Class Login
         Me.ButtonAccept.Name = "ButtonAccept"
         Me.ButtonAccept.Size = New System.Drawing.Size(75, 23)
         Me.ButtonAccept.TabIndex = 5
-        Me.ButtonAccept.Text = "Button2"
+        Me.ButtonAccept.Text = "Ingresar"
         Me.ButtonAccept.UseVisualStyleBackColor = True
         '
         'ButtonCancel
@@ -91,7 +91,7 @@ Partial Class Login
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(75, 23)
         Me.ButtonCancel.TabIndex = 6
-        Me.ButtonCancel.Text = "Button3"
+        Me.ButtonCancel.Text = "Cancelar"
         Me.ButtonCancel.UseVisualStyleBackColor = True
         '
         'ButtonRegister
@@ -112,9 +112,9 @@ Partial Class Login
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonAccept)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBoxPassword)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxUsername)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Login"
         Me.Text = "Login"
@@ -124,8 +124,8 @@ Partial Class Login
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBoxUsername As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents ButtonAccept As Button
