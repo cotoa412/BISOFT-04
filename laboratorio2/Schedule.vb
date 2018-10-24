@@ -1,4 +1,4 @@
-﻿Public Class Shedule
+﻿Public Class Schedule
 
     Private Activities As Activities
 
