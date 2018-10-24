@@ -118,6 +118,7 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Course.vb" />
     <Compile Include="Materiales.Designer.vb">
       <DependentUpon>Materiales.vb</DependentUpon>
     </Compile>

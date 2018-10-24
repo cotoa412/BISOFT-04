@@ -27,6 +27,9 @@ Partial Class Login
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonAccept = New System.Windows.Forms.Button()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
+        Me.ButtonRegister = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,19 +68,49 @@ Partial Class Login
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(37, 100)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(12, 93)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(195, 33)
+        Me.Button1.Size = New System.Drawing.Size(135, 24)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Recuperar Contraseña"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ButtonAccept
+        '
+        Me.ButtonAccept.Location = New System.Drawing.Point(61, 133)
+        Me.ButtonAccept.Name = "ButtonAccept"
+        Me.ButtonAccept.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonAccept.TabIndex = 5
+        Me.ButtonAccept.Text = "Button2"
+        Me.ButtonAccept.UseVisualStyleBackColor = True
+        '
+        'ButtonCancel
+        '
+        Me.ButtonCancel.Location = New System.Drawing.Point(142, 133)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonCancel.TabIndex = 6
+        Me.ButtonCancel.Text = "Button3"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
+        '
+        'ButtonRegister
+        '
+        Me.ButtonRegister.Location = New System.Drawing.Point(157, 93)
+        Me.ButtonRegister.Name = "ButtonRegister"
+        Me.ButtonRegister.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRegister.TabIndex = 7
+        Me.ButtonRegister.Text = "Registrar"
+        Me.ButtonRegister.UseVisualStyleBackColor = True
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(267, 170)
+        Me.Controls.Add(Me.ButtonRegister)
+        Me.Controls.Add(Me.ButtonCancel)
+        Me.Controls.Add(Me.ButtonAccept)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
@@ -95,4 +128,7 @@ Partial Class Login
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonAccept As Button
+    Friend WithEvents ButtonCancel As Button
+    Friend WithEvents ButtonRegister As Button
 End Class
