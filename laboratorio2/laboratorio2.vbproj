@@ -87,12 +87,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities.vb" />
     <Compile Include="Calendario.Designer.vb">
       <DependentUpon>Calendario.vb</DependentUpon>
     </Compile>
     <Compile Include="Calendario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassHorario.vb" />
     <Compile Include="Cursos.Designer.vb">
       <DependentUpon>Cursos.vb</DependentUpon>
     </Compile>
