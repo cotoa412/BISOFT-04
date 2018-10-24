@@ -33,7 +33,7 @@ Public Class Activities
         End Set
     End Property
 
-    Public Property Id1 As Integer
+    Public Property Id_Activities As Integer
         Get
             Return Id
         End Get
