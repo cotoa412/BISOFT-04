@@ -3,7 +3,7 @@
 
     Private Name As String
     Private Credits As Integer
-    Private Hours As Integer
+    Private Hours As New List(Of DateTime)
     Private ProfessorName As String
 
     Public Property Name_Course As String
