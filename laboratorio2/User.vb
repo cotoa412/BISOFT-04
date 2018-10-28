@@ -1,6 +1,4 @@
-﻿Imports laboratorio2
-
-Public Class User
+﻿Public Class User
     Private id As String
     Private name As String
     Private username As String
@@ -9,7 +7,7 @@ Public Class User
     Private courses As New List(Of Course)
     Private schedule As Schedule
 
-    Public Property Id1 As String
+    Public Property Id_User As String
         Get
             Return id
         End Get
@@ -18,7 +16,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Name1 As String
+    Public Property Name_User As String
         Get
             Return name
         End Get
@@ -27,7 +25,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Username1 As String
+    Public Property Username_User As String
         Get
             Return username
         End Get
@@ -36,7 +34,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Email1 As String
+    Public Property Email_User As String
         Get
             Return email
         End Get
@@ -45,7 +43,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Password1 As String
+    Public Property Password_User As String
         Get
             Return password
         End Get
@@ -54,7 +52,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Courses1 As List(Of Course)
+    Public Property Courses_User As List(Of Course)
         Get
             Return courses
         End Get
@@ -63,7 +61,7 @@ Public Class User
         End Set
     End Property
 
-    Public Property Schedule1 As Schedule
+    Public Property Schedule_User As Schedule
         Get
             Return schedule
         End Get

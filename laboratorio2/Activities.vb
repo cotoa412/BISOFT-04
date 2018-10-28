@@ -1,11 +1,12 @@
 ﻿Imports laboratorio2
 
 Public Class Activities
+    Private Id As Integer
     Private Name As String
     Private Date_hours As DateTime
     Private Course As Course
 
-    Public Property Name1 As String
+    Public Property Name_Activities As String
         Get
             Return Name
         End Get
@@ -14,7 +15,7 @@ Public Class Activities
         End Set
     End Property
 
-    Public Property Date_hours1 As Date
+    Public Property Date_hours_Activities As Date
         Get
             Return Date_hours
         End Get
@@ -23,12 +24,21 @@ Public Class Activities
         End Set
     End Property
 
-    Public Property Course1 As Course
+    Public Property Course_Activities As Course
         Get
             Return Course
         End Get
         Set(value As Course)
             Course = value
+        End Set
+    End Property
+
+    Public Property Id_Activities As Integer
+        Get
+            Return Id
+        End Get
+        Set(value As Integer)
+            Id = value
         End Set
     End Property
 End Class

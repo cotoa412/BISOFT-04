@@ -1,12 +1,12 @@
 ﻿Public Class Course
 
-
+    Private Id As Integer
     Private Name As String
     Private Credits As Integer
     Private Hours As New List(Of DateTime)
     Private ProfessorName As String
 
-    Public Property Name1 As String
+    Public Property Name_Course As String
         Get
             Return Name
         End Get
@@ -15,7 +15,7 @@
         End Set
     End Property
 
-    Public Property Credits1 As Integer
+    Public Property Credits_Course As Integer
         Get
             Return Credits
         End Get
@@ -24,7 +24,7 @@
         End Set
     End Property
 
-    Public Property Hours1 As List(Of Date)
+    Public Property Hours_Course As List(Of Date)
         Get
             Return Hours
         End Get
@@ -33,7 +33,7 @@
         End Set
     End Property
 
-    Public Property ProfessorName1 As String
+    Public Property ProfessorName_Course As String
         Get
             Return ProfessorName
         End Get
