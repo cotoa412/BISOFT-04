@@ -142,7 +142,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Schedule.vb" />
     <Compile Include="Registro.Designer.vb">
       <DependentUpon>Registro.vb</DependentUpon>
     </Compile>
