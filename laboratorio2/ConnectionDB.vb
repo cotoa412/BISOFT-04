@@ -13,7 +13,7 @@ Public Class ConnectionDB
 
         Catch ex As Exception
 
-            MsgBox("Error al conectar con la base de datos" & vbCrfl & ex.Message)
+            MsgBox("Error al conectar con la base de datos" & vbCrLf & ex.Message)
             Return False
 
         End Try
@@ -24,7 +24,7 @@ Public Class ConnectionDB
 
         Try
 
-            If Connection.Open = True Then
+            If Connection.State = ConnectionState.Open Then
 
                 Connection.Close()
                 Return True
@@ -37,6 +37,7 @@ Public Class ConnectionDB
 
         Catch ex As Exception
 
+            MsgBox(ex.Message)
             Return False
 
         End Try

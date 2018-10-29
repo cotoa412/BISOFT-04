@@ -7,10 +7,10 @@ Public Class Registro
 
     Private Sub ButtonAccept_Click(sender As Object, e As EventArgs) Handles ButtonAccept.Click
         Dim User As New User
-        User.Email1 = TextBoxEmail.Text
-        User.Name1 = TextBoxName.Text
-        User.Username1 = TextBoxUsername.Text
-        User.Password1 = TextBoxPassword.Text
+        User.Email_User = TextBoxEmail.Text
+        User.Name_User = TextBoxName.Text
+        User.Username_User = TextBoxUsername.Text
+        User.Password_User = TextBoxPassword.Text
 
         Dim connection As New SqlConnection
         Dim command As New SqlCommand
