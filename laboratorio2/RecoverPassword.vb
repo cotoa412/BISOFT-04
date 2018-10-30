@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Net.Mail
 Public Class RecoverPassword
-    Dim Command As SqlCommand
     Dim Connection As SqlConnection
+    Dim Command As SqlCommand
     Dim Password_RecoverPassword As String
     Dim Email_RecoverPassword As String
     Dim Cond As Boolean
@@ -15,7 +15,7 @@ Public Class RecoverPassword
             MsgBox("Debe ingresar los datos solicitados")
 
         Else
-            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456")
+            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
             Command = New SqlCommand("Select [Password],[Email] From [User] Where [UserName]='" & UserName_RecoverPassword.ToString & "'", Connection)
             Dim reader As SqlDataReader
             Connection.Open()
@@ -69,4 +69,10 @@ Public Class RecoverPassword
     Private Sub RecoverPassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        Login.Show()
+    End Sub
+
 End Class
