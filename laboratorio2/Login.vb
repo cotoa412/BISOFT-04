@@ -36,8 +36,17 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub ButtonRegister_Click(sender As Object, e As EventArgs) Handles ButtonRegister.Click
-        Me.Close()
+
+    Private Sub LabelRecoverPassword_Click(sender As Object, e As EventArgs) Handles LabelRecoverPassword.Click
+
+        RecoverPassword.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub LabelRegister_Click(sender As Object, e As EventArgs) Handles LabelRegister.Click
+
         Registro.Show()
+        Me.Hide()
     End Sub
 End Class
