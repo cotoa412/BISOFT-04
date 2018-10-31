@@ -1,5 +1,5 @@
 ﻿Public Class User
-    Private id As String
+    Private id As Integer
     Private name As String
     Private username As String
     Private email As String
@@ -7,14 +7,7 @@
     Private courses As New List(Of Course)
     Private schedule As Schedule
 
-    Public Property Id_User As String
-        Get
-            Return id
-        End Get
-        Set(value As String)
-            id = value
-        End Set
-    End Property
+
 
     Public Property Name_User As String
         Get
@@ -67,6 +60,15 @@
         End Get
         Set(value As Schedule)
             schedule = value
+        End Set
+    End Property
+
+    Public Property Id_User As Integer
+        Get
+            Return id
+        End Get
+        Set(value As Integer)
+            id = value
         End Set
     End Property
 End Class

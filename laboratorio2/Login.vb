@@ -11,25 +11,35 @@ Public Class Login
         Dim connection As New SqlConnection
         Dim command As New SqlCommand
 
-        Dim connectionString As String = "Data Source= SP-LAB9-16;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
-
-        connection = New SqlConnection(connectionString)
-
-        Dim selectQuery As String
-        selectQuery = "SELECT * FROM Profile WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
-        command = New SqlCommand(selectQuery, connection)
-
-        connection.Open()
-
-        Dim reader As SqlDataReader = command.ExecuteReader
-
-        If reader.HasRows Then
-            Me.Close()
-
-
+        If (Password = "" Or Username = "") Then
+            MsgBox("Debe llenar todos los campos")
         Else
-            MsgBox("Usuario o contraseña incorrecta.")
+
+            Dim connectionString As String = "Data Source= SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
+
+            connection = New SqlConnection(connectionString)
+
+            Dim selectQuery As String
+            selectQuery = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
+            command = New SqlCommand(selectQuery, connection)
+
+            connection.Open()
+
+            Dim reader As SqlDataReader = command.ExecuteReader
+
+            If reader.HasRows Then
+                Calendario.Show()
+                Me.Hide()
+
+            Else
+                MsgBox("Usuario o contraseña incorrecta.")
+            End If
+
+
+
         End If
+
+
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click

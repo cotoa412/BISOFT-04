@@ -15,7 +15,7 @@ Public Class RecoverPassword
             MsgBox("Debe ingresar los datos solicitados")
 
         Else
-            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
+            Connection = New SqlConnection("Data Source=SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
             Command = New SqlCommand("Select [Password],[Email] From [User] Where [UserName]='" & UserName_RecoverPassword.ToString & "'", Connection)
             Dim reader As SqlDataReader
             Connection.Open()
