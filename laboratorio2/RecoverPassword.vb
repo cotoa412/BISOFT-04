@@ -12,7 +12,8 @@ Public Class RecoverPassword
 
         If UserName_RecoverPassword = "" Then
 
-            MsgBox("Debe ingresar los datos solicitados")
+            LabelMessage.Text = "Debe ingresar los datos solicitados"
+            LabelMessage.Visible = True
 
         Else
             Connection = New SqlConnection("Data Source=SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
@@ -51,13 +52,19 @@ Public Class RecoverPassword
                     Server.EnableSsl = True
                     Server.Credentials = New System.Net.NetworkCredential("parapropruebas@gmail.com", "123456pruebas")
                     Server.Send(Mail)
-                    MsgBox("Se ha enviado la contraseña a tu correo")
+
+                    LabelMessage.Text = "Se ha enviado la contraseña a tu correo"
+                    LabelMessage.ForeColor = Color.Green
+                    LabelMessage.Visible = True
+
+                    Connection.Close()
 
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
             Else
-                MsgBox("Usuario no registrado")
+                LabelMessage.Text = "Usuario no registrado"
+                LabelMessage.Visible = True
             End If
 
         End If
@@ -71,8 +78,8 @@ Public Class RecoverPassword
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
         Login.Show()
+        Me.Close()
     End Sub
 
 End Class

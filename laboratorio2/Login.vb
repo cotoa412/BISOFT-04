@@ -12,7 +12,9 @@ Public Class Login
         Dim command As New SqlCommand
 
         If (Password = "" Or Username = "") Then
-            MsgBox("Debe llenar todos los campos")
+            LabelError.Text = "Debe llenar todos los campos"
+            LabelError.Visible = True
+
         Else
 
             Dim connectionString As String = "Data Source= SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
@@ -32,12 +34,14 @@ Public Class Login
                 Me.Hide()
 
             Else
-                MsgBox("Usuario o contraseña incorrecta.")
+                LabelError.Text = "El Usuario No Existe"
+                LabelError.Visible = True
             End If
 
 
 
         End If
+
 
 
     End Sub

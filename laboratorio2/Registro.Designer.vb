@@ -34,6 +34,7 @@ Partial Class Registro
         Me.ButtonAccept = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.LabelID = New System.Windows.Forms.Label()
+        Me.LabelError = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -137,11 +138,25 @@ Partial Class Registro
         Me.LabelID.TabIndex = 11
         Me.LabelID.Visible = False
         '
+        'LabelError
+        '
+        Me.LabelError.AutoSize = True
+        Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelError.ForeColor = System.Drawing.Color.Red
+        Me.LabelError.Location = New System.Drawing.Point(39, 268)
+        Me.LabelError.Name = "LabelError"
+        Me.LabelError.Size = New System.Drawing.Size(45, 15)
+        Me.LabelError.TabIndex = 12
+        Me.LabelError.Text = "Label6"
+        Me.LabelError.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelError.Visible = False
+        '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(262, 279)
+        Me.ClientSize = New System.Drawing.Size(262, 301)
+        Me.Controls.Add(Me.LabelError)
         Me.Controls.Add(Me.LabelID)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonAccept)
@@ -155,6 +170,7 @@ Partial Class Registro
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Registro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -173,4 +189,5 @@ Partial Class Registro
     Friend WithEvents ButtonAccept As Button
     Friend WithEvents ButtonCancel As Button
     Friend WithEvents LabelID As Label
+    Friend WithEvents LabelError As Label
 End Class

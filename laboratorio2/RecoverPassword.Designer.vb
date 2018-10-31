@@ -27,6 +27,7 @@ Partial Class RecoverPassword
         Me.ButtonConfirm = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LabelMessage = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label2
@@ -74,20 +75,34 @@ Partial Class RecoverPassword
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(80, 31)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Cancelar"
+        Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'LabelMessage
+        '
+        Me.LabelMessage.AutoSize = True
+        Me.LabelMessage.ForeColor = System.Drawing.Color.Red
+        Me.LabelMessage.Location = New System.Drawing.Point(57, 169)
+        Me.LabelMessage.Name = "LabelMessage"
+        Me.LabelMessage.Size = New System.Drawing.Size(39, 13)
+        Me.LabelMessage.TabIndex = 5
+        Me.LabelMessage.Text = "Label3"
+        Me.LabelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelMessage.Visible = False
         '
         'RecoverPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(279, 200)
+        Me.Controls.Add(Me.LabelMessage)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonConfirm)
         Me.Controls.Add(Me.TextBoxUser)
         Me.Controls.Add(Me.Label2)
         Me.Name = "RecoverPassword"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RecoverPassword"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -99,4 +114,5 @@ Partial Class RecoverPassword
     Friend WithEvents ButtonConfirm As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents LabelMessage As Label
 End Class
