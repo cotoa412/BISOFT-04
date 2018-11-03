@@ -22,7 +22,7 @@ Public Class Registro
             Dim connection As New SqlConnection
             Dim command As New SqlCommand
 
-            Dim connectionString As String = "Data Source= SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
+            Dim connectionString As String = "Data Source= DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
 
             connection = New SqlConnection(connectionString)
             Dim insertQuery As String

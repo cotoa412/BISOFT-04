@@ -13,10 +13,11 @@ Public Class RecoverPassword
         If UserName_RecoverPassword = "" Then
 
             LabelMessage.Text = "Debe ingresar los datos solicitados"
+            LabelMessage.ForeColor = Color.Red
             LabelMessage.Visible = True
 
         Else
-            Connection = New SqlConnection("Data Source=SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
+            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
             Command = New SqlCommand("Select [Password],[Email] From [User] Where [UserName]='" & UserName_RecoverPassword.ToString & "'", Connection)
             Dim reader As SqlDataReader
             Connection.Open()
@@ -64,12 +65,13 @@ Public Class RecoverPassword
                 End Try
             Else
                 LabelMessage.Text = "Usuario no registrado"
+                LabelMessage.ForeColor = Color.Red
                 LabelMessage.Visible = True
             End If
 
         End If
 
-
+        TextBoxUser.Text = ""
 
     End Sub
 

@@ -6,6 +6,7 @@ Public Class Login
     End Sub
 
     Private Sub ButtonAccept_Click(sender As Object, e As EventArgs) Handles ButtonAccept.Click
+
         Dim Username As String = TextBoxUsername.Text
         Dim Password As String = TextBoxPassword.Text
         Dim connection As New SqlConnection
@@ -17,7 +18,7 @@ Public Class Login
 
         Else
 
-            Dim connectionString As String = "Data Source= SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
+            Dim connectionString As String = "Data Source= DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
 
             connection = New SqlConnection(connectionString)
 
