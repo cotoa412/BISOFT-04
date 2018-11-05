@@ -94,6 +94,7 @@
     <Compile Include="Calendario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassAddActivity.vb" />
     <Compile Include="ConnectionDB.vb" />
     <Compile Include="Cursos.Designer.vb">
       <DependentUpon>Cursos.vb</DependentUpon>

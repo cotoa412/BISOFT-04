@@ -41,5 +41,14 @@
             ProfessorName = value
         End Set
     End Property
+
+    Public Property Id_Course As Integer
+        Get
+            Return Id
+        End Get
+        Set(value As Integer)
+            Id = value
+        End Set
+    End Property
 End Class
 

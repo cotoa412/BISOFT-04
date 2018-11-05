@@ -9,6 +9,7 @@ Public Class ConnectionDB
 
             Connection = New SqlConnection("Data Source=SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
             Connection.Open()
+            Return Connection
             Return True
 
         Catch ex As Exception
@@ -43,5 +44,8 @@ Public Class ConnectionDB
         End Try
 
     End Function
+
+
+
 
 End Class

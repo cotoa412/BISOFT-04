@@ -15,7 +15,7 @@ Public Class Activities
         End Set
     End Property
 
-    Public Property Date_hours_Activities As Date
+    Public Property DateHour_Activities As Date
         Get
             Return Date_hours
         End Get

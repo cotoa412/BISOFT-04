@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Net.Mail
 Public Class RecoverPassword
-    Dim Command As SqlCommand
     Dim Connection As SqlConnection
+    Dim Command As SqlCommand
     Dim Password_RecoverPassword As String
     Dim Email_RecoverPassword As String
     Dim Cond As Boolean
@@ -12,10 +12,12 @@ Public Class RecoverPassword
 
         If UserName_RecoverPassword = "" Then
 
-            MsgBox("Debe ingresar los datos solicitados")
+            LabelMessage.Text = "Debe ingresar los datos solicitados"
+            LabelMessage.ForeColor = Color.Red
+            LabelMessage.Visible = True
 
         Else
-            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456")
+            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
             Command = New SqlCommand("Select [Password],[Email] From [User] Where [UserName]='" & UserName_RecoverPassword.ToString & "'", Connection)
             Dim reader As SqlDataReader
             Connection.Open()
@@ -51,22 +53,35 @@ Public Class RecoverPassword
                     Server.EnableSsl = True
                     Server.Credentials = New System.Net.NetworkCredential("parapropruebas@gmail.com", "123456pruebas")
                     Server.Send(Mail)
-                    MsgBox("Se ha enviado la contraseña a tu correo")
+
+                    LabelMessage.Text = "Se ha enviado la contraseña a tu correo"
+                    LabelMessage.ForeColor = Color.Green
+                    LabelMessage.Visible = True
+
+                    Connection.Close()
 
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
             Else
-                MsgBox("Usuario no registrado")
+                LabelMessage.Text = "Usuario no registrado"
+                LabelMessage.ForeColor = Color.Red
+                LabelMessage.Visible = True
             End If
 
         End If
 
-
+        TextBoxUser.Text = ""
 
     End Sub
 
     Private Sub RecoverPassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Login.Show()
+        Me.Close()
+    End Sub
+
 End Class
