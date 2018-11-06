@@ -37,51 +37,57 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 26)
+        Me.Label1.Location = New System.Drawing.Point(52, 32)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 18)
+        Me.Label1.Size = New System.Drawing.Size(79, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario:"
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(109, 27)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(145, 33)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(137, 20)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(181, 22)
         Me.TextBoxUsername.TabIndex = 1
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(109, 63)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(145, 78)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(137, 20)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(181, 22)
         Me.TextBoxPassword.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 62)
+        Me.Label2.Location = New System.Drawing.Point(19, 76)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 18)
+        Me.Label2.Size = New System.Drawing.Size(111, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña:"
         '
         'ButtonAccept
         '
-        Me.ButtonAccept.Location = New System.Drawing.Point(42, 104)
+        Me.ButtonAccept.Location = New System.Drawing.Point(56, 128)
+        Me.ButtonAccept.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonAccept.Name = "ButtonAccept"
-        Me.ButtonAccept.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonAccept.Size = New System.Drawing.Size(100, 28)
         Me.ButtonAccept.TabIndex = 5
         Me.ButtonAccept.Text = "Ingresar"
         Me.ButtonAccept.UseVisualStyleBackColor = True
         '
         'ButtonCancel
         '
-        Me.ButtonCancel.Location = New System.Drawing.Point(159, 104)
+        Me.ButtonCancel.Location = New System.Drawing.Point(212, 128)
+        Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonCancel.Name = "ButtonCancel"
-        Me.ButtonCancel.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonCancel.Size = New System.Drawing.Size(100, 28)
         Me.ButtonCancel.TabIndex = 6
         Me.ButtonCancel.Text = "Cancelar"
         Me.ButtonCancel.UseVisualStyleBackColor = True
@@ -91,9 +97,10 @@ Partial Class Login
         Me.LabelRecoverPassword.AutoSize = True
         Me.LabelRecoverPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelRecoverPassword.ForeColor = System.Drawing.Color.Black
-        Me.LabelRecoverPassword.Location = New System.Drawing.Point(12, 137)
+        Me.LabelRecoverPassword.Location = New System.Drawing.Point(16, 169)
+        Me.LabelRecoverPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRecoverPassword.Name = "LabelRecoverPassword"
-        Me.LabelRecoverPassword.Size = New System.Drawing.Size(135, 15)
+        Me.LabelRecoverPassword.Size = New System.Drawing.Size(164, 18)
         Me.LabelRecoverPassword.TabIndex = 8
         Me.LabelRecoverPassword.Text = "¿Olvidó su contraseña?"
         '
@@ -101,9 +108,10 @@ Partial Class Login
         '
         Me.LabelRegister.AutoSize = True
         Me.LabelRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRegister.Location = New System.Drawing.Point(168, 137)
+        Me.LabelRegister.Location = New System.Drawing.Point(224, 169)
+        Me.LabelRegister.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRegister.Name = "LabelRegister"
-        Me.LabelRegister.Size = New System.Drawing.Size(57, 15)
+        Me.LabelRegister.Size = New System.Drawing.Size(68, 18)
         Me.LabelRegister.TabIndex = 9
         Me.LabelRegister.Text = "Registrar"
         '
@@ -112,9 +120,10 @@ Partial Class Login
         Me.LabelError.AutoSize = True
         Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelError.ForeColor = System.Drawing.Color.Red
-        Me.LabelError.Location = New System.Drawing.Point(106, 88)
+        Me.LabelError.Location = New System.Drawing.Point(141, 108)
+        Me.LabelError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelError.Name = "LabelError"
-        Me.LabelError.Size = New System.Drawing.Size(55, 13)
+        Me.LabelError.Size = New System.Drawing.Size(75, 17)
         Me.LabelError.TabIndex = 10
         Me.LabelError.Text = "LabelError"
         Me.LabelError.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -122,9 +131,9 @@ Partial Class Login
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(258, 161)
+        Me.ClientSize = New System.Drawing.Size(344, 198)
         Me.Controls.Add(Me.LabelError)
         Me.Controls.Add(Me.LabelRegister)
         Me.Controls.Add(Me.LabelRecoverPassword)
@@ -134,6 +143,8 @@ Partial Class Login
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBoxUsername)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
