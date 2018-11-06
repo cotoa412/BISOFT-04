@@ -5,8 +5,29 @@
 
     Private Sub Calendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim firstDay As DateTime
+        Dim week, day As Int16
+        Dim dateNum As Int32
+        Dim DaysInMonth As Integer = Date.DaysInMonth(Now.Year, Now.Month)
         firstDay = New DateTime(Now.Year, Now.Month, 1)
-        Label1.Text = Date.Today.DayOfWeek.ToString()
+        day = CInt(firstDay.DayOfWeek)
+        If day = 0 Then day = 7
+
+        week = 1
+        dateNum = 1
+
+        While dateNum <= DaysInMonth
+            Dim label As Label = CType(Me.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
+            label.Text = CStr(dateNum)
+
+            dateNum += 1
+            day += 1
+            If day > 7 Then
+                day = 1
+                week += 1
+            End If
+        End While
+
+
 
     End Sub
 End Class
