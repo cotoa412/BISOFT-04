@@ -122,12 +122,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Course.vb" />
-    <Compile Include="Materiales.Designer.vb">
-      <DependentUpon>Materiales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Materiales.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -147,6 +141,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Material.Designer.vb">
+      <DependentUpon>Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecoverPassword.Designer.vb">
       <DependentUpon>RecoverPassword.vb</DependentUpon>
@@ -179,14 +179,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materiales.resx">
-      <DependentUpon>Materiales.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material.resx">
+      <DependentUpon>Material.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecoverPassword.resx">
       <DependentUpon>RecoverPassword.vb</DependentUpon>
