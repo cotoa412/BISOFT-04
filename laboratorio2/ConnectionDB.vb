@@ -1,13 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Public Class ConnectionDB
 
-    Protected Connection As SqlConnection
+    Public connection As SqlConnection
 
     Public Function Connect()
 
         Try
 
-            Connection = New SqlConnection("Data Source=SP-LAB9-17;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
+            Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=********;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
             Connection.Open()
             Return Connection
             Return True
