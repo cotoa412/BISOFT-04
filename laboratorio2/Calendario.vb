@@ -10,6 +10,7 @@
         Dim DaysInMonth As Integer = Date.DaysInMonth(Now.Year, Now.Month)
         firstDay = New DateTime(Now.Year, Now.Month, 1)
         day = CInt(firstDay.DayOfWeek)
+        If day = 0 Then day = 7
 
         week = 1
         dateNum = 1
