@@ -60,10 +60,11 @@ Partial Class Calendario
         Me.d5_1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.d3_5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -83,7 +84,7 @@ Partial Class Calendario
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 77)
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 78)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(823, 404)
@@ -141,7 +142,7 @@ Partial Class Calendario
         '
         'd1_7
         '
-        Me.d1_7.Location = New System.Drawing.Point(706, 94)
+        Me.d1_7.Location = New System.Drawing.Point(707, 94)
         Me.d1_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_7.Name = "d1_7"
         Me.d1_7.Size = New System.Drawing.Size(108, 69)
@@ -157,7 +158,7 @@ Partial Class Calendario
         '
         'd2_6
         '
-        Me.d2_6.Location = New System.Drawing.Point(593, 168)
+        Me.d2_6.Location = New System.Drawing.Point(593, 167)
         Me.d2_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_6.Name = "d2_6"
         Me.d2_6.Size = New System.Drawing.Size(108, 69)
@@ -165,7 +166,7 @@ Partial Class Calendario
         '
         'd2_5
         '
-        Me.d2_5.Location = New System.Drawing.Point(480, 168)
+        Me.d2_5.Location = New System.Drawing.Point(480, 167)
         Me.d2_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_5.Name = "d2_5"
         Me.d2_5.Size = New System.Drawing.Size(108, 69)
@@ -173,7 +174,7 @@ Partial Class Calendario
         '
         'd2_4
         '
-        Me.d2_4.Location = New System.Drawing.Point(366, 167)
+        Me.d2_4.Location = New System.Drawing.Point(365, 167)
         Me.d2_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_4.Name = "d2_4"
         Me.d2_4.Size = New System.Drawing.Size(108, 69)
@@ -189,7 +190,7 @@ Partial Class Calendario
         '
         'd2_2
         '
-        Me.d2_2.Location = New System.Drawing.Point(142, 167)
+        Me.d2_2.Location = New System.Drawing.Point(141, 167)
         Me.d2_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_2.Name = "d2_2"
         Me.d2_2.Size = New System.Drawing.Size(105, 69)
@@ -205,7 +206,7 @@ Partial Class Calendario
         '
         'd3_7
         '
-        Me.d3_7.Location = New System.Drawing.Point(707, 243)
+        Me.d3_7.Location = New System.Drawing.Point(707, 242)
         Me.d3_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_7.Name = "d3_7"
         Me.d3_7.Size = New System.Drawing.Size(108, 69)
@@ -213,7 +214,7 @@ Partial Class Calendario
         '
         'd3_6
         '
-        Me.d3_6.Location = New System.Drawing.Point(594, 243)
+        Me.d3_6.Location = New System.Drawing.Point(595, 242)
         Me.d3_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_6.Name = "d3_6"
         Me.d3_6.Size = New System.Drawing.Size(108, 69)
@@ -229,7 +230,7 @@ Partial Class Calendario
         '
         'd3_3
         '
-        Me.d3_3.Location = New System.Drawing.Point(254, 242)
+        Me.d3_3.Location = New System.Drawing.Point(253, 242)
         Me.d3_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_3.Name = "d3_3"
         Me.d3_3.Size = New System.Drawing.Size(105, 69)
@@ -237,7 +238,7 @@ Partial Class Calendario
         '
         'd3_2
         '
-        Me.d3_2.Location = New System.Drawing.Point(142, 242)
+        Me.d3_2.Location = New System.Drawing.Point(141, 242)
         Me.d3_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_2.Name = "d3_2"
         Me.d3_2.Size = New System.Drawing.Size(105, 69)
@@ -253,7 +254,7 @@ Partial Class Calendario
         '
         'd4_7
         '
-        Me.d4_7.Location = New System.Drawing.Point(706, 318)
+        Me.d4_7.Location = New System.Drawing.Point(707, 318)
         Me.d4_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_7.Name = "d4_7"
         Me.d4_7.Size = New System.Drawing.Size(108, 69)
@@ -261,7 +262,7 @@ Partial Class Calendario
         '
         'd4_6
         '
-        Me.d4_6.Location = New System.Drawing.Point(593, 317)
+        Me.d4_6.Location = New System.Drawing.Point(593, 318)
         Me.d4_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_6.Name = "d4_6"
         Me.d4_6.Size = New System.Drawing.Size(108, 69)
@@ -269,7 +270,7 @@ Partial Class Calendario
         '
         'd4_5
         '
-        Me.d4_5.Location = New System.Drawing.Point(480, 317)
+        Me.d4_5.Location = New System.Drawing.Point(480, 318)
         Me.d4_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_5.Name = "d4_5"
         Me.d4_5.Size = New System.Drawing.Size(108, 69)
@@ -277,7 +278,7 @@ Partial Class Calendario
         '
         'd4_4
         '
-        Me.d4_4.Location = New System.Drawing.Point(367, 317)
+        Me.d4_4.Location = New System.Drawing.Point(367, 318)
         Me.d4_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_4.Name = "d4_4"
         Me.d4_4.Size = New System.Drawing.Size(108, 69)
@@ -285,7 +286,7 @@ Partial Class Calendario
         '
         'd4_3
         '
-        Me.d4_3.Location = New System.Drawing.Point(254, 317)
+        Me.d4_3.Location = New System.Drawing.Point(253, 318)
         Me.d4_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_3.Name = "d4_3"
         Me.d4_3.Size = New System.Drawing.Size(105, 69)
@@ -293,7 +294,7 @@ Partial Class Calendario
         '
         'd4_2
         '
-        Me.d4_2.Location = New System.Drawing.Point(144, 317)
+        Me.d4_2.Location = New System.Drawing.Point(144, 318)
         Me.d4_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_2.Name = "d4_2"
         Me.d4_2.Size = New System.Drawing.Size(105, 69)
@@ -301,10 +302,10 @@ Partial Class Calendario
         '
         'd4_1
         '
-        Me.d4_1.Location = New System.Drawing.Point(28, 317)
+        Me.d4_1.Location = New System.Drawing.Point(28, 318)
         Me.d4_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_1.Name = "d4_1"
-        Me.d4_1.Size = New System.Drawing.Size(106, 69)
+        Me.d4_1.Size = New System.Drawing.Size(107, 69)
         Me.d4_1.TabIndex = 23
         '
         'd5_7
@@ -325,7 +326,7 @@ Partial Class Calendario
         '
         'd5_5
         '
-        Me.d5_5.Location = New System.Drawing.Point(482, 391)
+        Me.d5_5.Location = New System.Drawing.Point(483, 391)
         Me.d5_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_5.Name = "d5_5"
         Me.d5_5.Size = New System.Drawing.Size(107, 69)
@@ -379,6 +380,18 @@ Partial Class Calendario
         Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
         Me.ToolStripLabel4.Text = "Perfil"
         '
+        'ToolStripLabel5
+        '
+        Me.ToolStripLabel5.Name = "ToolStripLabel5"
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(81, 22)
+        Me.ToolStripLabel5.Text = "Calendario"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripLabel2.Text = "Horario"
+        '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
@@ -391,23 +404,20 @@ Partial Class Calendario
         Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
         Me.ToolStripLabel3.Text = "Cursos"
         '
-        'ToolStripLabel2
+        'd3_5
         '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
-        Me.ToolStripLabel2.Text = "Horario"
-        '
-        'ToolStripLabel5
-        '
-        Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(81, 22)
-        Me.ToolStripLabel5.Text = "Calendario"
+        Me.d3_5.Location = New System.Drawing.Point(479, 244)
+        Me.d3_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.d3_5.Name = "d3_5"
+        Me.d3_5.Size = New System.Drawing.Size(108, 69)
+        Me.d3_5.TabIndex = 39
         '
         'Calendario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(843, 489)
+        Me.Controls.Add(Me.d3_5)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.d5_7)
         Me.Controls.Add(Me.d5_6)
@@ -499,4 +509,5 @@ Partial Class Calendario
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
     Friend WithEvents ToolStripLabel5 As ToolStripLabel
+    Friend WithEvents d3_5 As Label
 End Class

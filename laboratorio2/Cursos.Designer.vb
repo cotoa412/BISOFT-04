@@ -31,9 +31,9 @@ Partial Class Cursos
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -128,11 +128,11 @@ Partial Class Cursos
         Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
         Me.ToolStripLabel4.Text = "Perfil"
         '
-        'ToolStripLabel3
+        'ToolStripLabel1
         '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(78, 22)
-        Me.ToolStripLabel3.Text = "Materiales"
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(81, 22)
+        Me.ToolStripLabel1.Text = "Calendario"
         '
         'ToolStripLabel2
         '
@@ -140,11 +140,11 @@ Partial Class Cursos
         Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
         Me.ToolStripLabel2.Text = "Horario"
         '
-        'ToolStripLabel1
+        'ToolStripLabel3
         '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(81, 22)
-        Me.ToolStripLabel1.Text = "Calendario"
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(78, 22)
+        Me.ToolStripLabel3.Text = "Materiales"
         '
         'ToolStripLabel5
         '

@@ -30,9 +30,9 @@ Partial Class Horario
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,7 +43,7 @@ Partial Class Horario
         '
         Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
         Me.PictureBox1.Location = New System.Drawing.Point(29, 74)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -54,7 +54,7 @@ Partial Class Horario
         '
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
         Me.PictureBox2.Location = New System.Drawing.Point(29, 221)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -65,7 +65,7 @@ Partial Class Horario
         '
         Me.PictureBox3.Image = Global.laboratorio2.My.Resources.Resources.border
         Me.PictureBox3.Location = New System.Drawing.Point(29, 375)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -75,7 +75,7 @@ Partial Class Horario
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(748, 548)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class Horario
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(921, 548)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 4
@@ -114,11 +114,11 @@ Partial Class Horario
         Me.ToolStripLabel1.Size = New System.Drawing.Size(81, 22)
         Me.ToolStripLabel1.Text = "Calendario"
         '
-        'ToolStripLabel3
+        'ToolStripLabel5
         '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
-        Me.ToolStripLabel3.Text = "Cursos"
+        Me.ToolStripLabel5.Name = "ToolStripLabel5"
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripLabel5.Text = "Horario"
         '
         'ToolStripLabel2
         '
@@ -126,11 +126,11 @@ Partial Class Horario
         Me.ToolStripLabel2.Size = New System.Drawing.Size(78, 22)
         Me.ToolStripLabel2.Text = "Materiales"
         '
-        'ToolStripLabel5
+        'ToolStripLabel3
         '
-        Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(60, 22)
-        Me.ToolStripLabel5.Text = "Horario"
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripLabel3.Text = "Cursos"
         '
         'Horario
         '
@@ -143,7 +143,7 @@ Partial Class Horario
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Horario"
         Me.Text = "Horario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

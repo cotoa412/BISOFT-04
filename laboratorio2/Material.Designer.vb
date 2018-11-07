@@ -32,11 +32,11 @@ Partial Class Material
         Me.LabelChange = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -45,7 +45,7 @@ Partial Class Material
         '
         Me.ComboBoxCourse1.FormattingEnabled = True
         Me.ComboBoxCourse1.Location = New System.Drawing.Point(627, 105)
-        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBoxCourse1.Name = "ComboBoxCourse1"
         Me.ComboBoxCourse1.Size = New System.Drawing.Size(145, 24)
         Me.ComboBoxCourse1.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class Material
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(16, 67)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(588, 327)
         Me.DataGridView1.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class Material
         'ButtonOpen
         '
         Me.ButtonOpen.Location = New System.Drawing.Point(647, 156)
-        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonOpen.Name = "ButtonOpen"
         Me.ButtonOpen.Size = New System.Drawing.Size(100, 28)
         Me.ButtonOpen.TabIndex = 2
@@ -74,7 +74,7 @@ Partial Class Material
         'ButtonSelect
         '
         Me.ButtonSelect.Location = New System.Drawing.Point(647, 227)
-        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonSelect.Name = "ButtonSelect"
         Me.ButtonSelect.Size = New System.Drawing.Size(100, 28)
         Me.ButtonSelect.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class Material
         'ButtonDelete
         '
         Me.ButtonDelete.Location = New System.Drawing.Point(647, 191)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(100, 28)
         Me.ButtonDelete.TabIndex = 4
@@ -94,7 +94,7 @@ Partial Class Material
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(647, 263)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 28)
         Me.Button4.TabIndex = 5
@@ -138,6 +138,12 @@ Partial Class Material
         Me.ToolStrip1.TabIndex = 8
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
+        Me.ToolStripLabel4.Text = "Perfil"
+        '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
@@ -150,23 +156,17 @@ Partial Class Material
         Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
         Me.ToolStripLabel2.Text = "Horario"
         '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
-        Me.ToolStripLabel3.Text = "Cursos"
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
-        Me.ToolStripLabel4.Text = "Perfil"
-        '
         'ToolStripLabel5
         '
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
         Me.ToolStripLabel5.Size = New System.Drawing.Size(78, 22)
         Me.ToolStripLabel5.Text = "Materiales"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripLabel3.Text = "Cursos"
         '
         'Material
         '
@@ -182,7 +182,7 @@ Partial Class Material
         Me.Controls.Add(Me.ButtonOpen)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ComboBoxCourse1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Material"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prueba"

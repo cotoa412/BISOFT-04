@@ -165,6 +165,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Schedule.vb" />
+    <Compile Include="tiempo.Designer.vb">
+      <DependentUpon>tiempo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tiempo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tiempo.resx">
+      <DependentUpon>tiempo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

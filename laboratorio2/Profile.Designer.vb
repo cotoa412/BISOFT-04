@@ -49,7 +49,7 @@ Partial Class Profile
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel5, Me.ToolStripLabel3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(327, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(349, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -86,7 +86,7 @@ Partial Class Profile
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(76, 46)
+        Me.PictureBox1.Location = New System.Drawing.Point(76, 43)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(174, 160)
         Me.PictureBox1.TabIndex = 1
@@ -123,7 +123,7 @@ Partial Class Profile
         '
         Me.TextBoxUser.Location = New System.Drawing.Point(109, 234)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(141, 22)
+        Me.TextBoxUser.Size = New System.Drawing.Size(228, 22)
         Me.TextBoxUser.TabIndex = 5
         '
         'TextBoxPassword
@@ -131,14 +131,14 @@ Partial Class Profile
         Me.TextBoxPassword.Location = New System.Drawing.Point(109, 273)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(141, 22)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(228, 22)
         Me.TextBoxPassword.TabIndex = 6
         '
         'TextBoxName
         '
         Me.TextBoxName.Location = New System.Drawing.Point(109, 327)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(141, 22)
+        Me.TextBoxName.Size = New System.Drawing.Size(228, 22)
         Me.TextBoxName.TabIndex = 7
         '
         'CheckBoxMostrar
@@ -164,14 +164,14 @@ Partial Class Profile
         '
         Me.TextBox1.Location = New System.Drawing.Point(109, 365)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(141, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(228, 22)
         Me.TextBox1.TabIndex = 10
         '
         'Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(327, 452)
+        Me.ClientSize = New System.Drawing.Size(349, 432)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBoxMostrar)
