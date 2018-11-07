@@ -1,15 +1,15 @@
 ﻿Imports System.Data.SqlClient
 Public Class Material
-    Dim Connection As SqlConnection
-    Dim Command As SqlCommand
-    Dim Reader As SqlDataReader
-    Dim Adapter As SqlDataAdapter
     Dim Document As String
     Dim NameCourse As String
     Dim IdCourse As Integer
+    Dim NameDocument As String
+    Dim Description As String
+    Dim IdDocument As Integer
+    Dim db = New database
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
-        LabelChange.Visible = False
+
         Dim Open As New OpenFileDialog
         Dim Result As New DialogResult
 
@@ -24,23 +24,22 @@ Public Class Material
 
         Else
             Dim CommandInsert As New SqlCommand("INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument)VALUES(@PathDocument,@CourseDocument,@NameDocument,@DescriptionDocument)", Connection)
-
+            NameDocument = InputBox("Nombre el archivo", "Nombre")
+            Description = InputBox("Agrege una descriptión", "Descriptio")
             With CommandInsert
 
                 .Parameters.AddWithValue("@PathDocument", Document)
                 .Parameters.AddWithValue("@CourseDocument", IdCourse)
-                .Parameters.AddWithValue("@NameDocument", "aaaaa")
-                .Parameters.AddWithValue("@DescriptionDocument", "aaaaa")
+                .Parameters.AddWithValue("@NameDocument", NameDocument)
+                .Parameters.AddWithValue("@DescriptionDocument", Description)
 
             End With
-            Connection.Close()
-            Connection.Open()
             CommandInsert.ExecuteNonQuery()
+            ShowData()
 
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
             LabelChange.Visible = True
-            ShowData()
         End If
 
 
@@ -48,26 +47,19 @@ Public Class Material
     End Sub
 
     Private Sub Prueba_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-        Command = New SqlCommand("Select c.[IdCourse],c.[NameCourse]
-	                            	From Course c, CourseUser cu, [User] u
-	                            	Where cu.IdCourse = c.IdCourse 
-		                            And cu.IdUser=u.Id ", Connection)
-        Connection.Open()
-
-        Reader = Command.ExecuteReader
-
-        While Reader.Read()
-
-            ComboBoxCourse1.Items.Add(Reader.Item("NameCourse"))
-
-        End While
-        Connection.Close()
-
+        Dim rows = db.ReaderQuery("Select c.[IdCourse],c.[NameCourse]
+                             	From Course c, CourseUser cu, [User] u
+                             	Where cu.IdCourse = c.IdCourse 
+                              And cu.IdUser=u.Id")
+        For Each row As Dictionary(Of String, Object) In rows
+            ComboBoxCourse1.Items.Add(row.Item("NameCourse"))
+        Next
     End Sub
 
     Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
+
         Try
+
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
             Process.Start(Document)
         Catch ex As Exception
@@ -78,6 +70,7 @@ Public Class Material
 
     Private Sub ComboBoxCourse1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedValueChanged
         ShowData()
+        ShowIdDocument()
 
     End Sub
 
@@ -86,16 +79,14 @@ Public Class Material
 
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
-        Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-        Command = New SqlCommand("DELETE FROM [Document] Where [PathDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'", Connection)
-        Connection.Open()
-        Command.ExecuteNonQuery()
+        db.ExecuteQuery("DELETE FROM [Document] Where [IdDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'")
+
+
 
         ShowData()
         LabelChange.ForeColor = Color.Green
         LabelChange.Text = "Borrado con éxito"
         LabelChange.Visible = True
-
     End Sub
 
     Sub ShowData()
@@ -103,29 +94,33 @@ Public Class Material
         NameCourse = ComboBoxCourse1.SelectedItem
 
         If ComboBoxCourse1.SelectedItem = NameCourse Then
+            Dim rows = db.ReaderQuery("Select c.[IdCourse]
+                                    From Course c Where c.NameCourse='" & NameCourse & "'")
+            IdCourse = rows(0).Item("IdCourse")
 
-            Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-            Command = New SqlCommand("Select c.[IdCourse]
-                                    From Course c Where c.NameCourse='" & NameCourse & "'", Connection)
-
-            Connection.Open()
-            Reader = Command.ExecuteReader
-
-            Reader.Read()
-            IdCourse = Reader.Item("IdCourse")
-            Reader.Close()
-
-            Command = New SqlCommand("SELECT d.[PathDocument],c.[NameCourse],d.[NameDocument],d.[DescriptionDocument] FROM [Document]d,[Course]c Where d.[CourseDocument]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'", Connection)
-
-            Dim dt As New DataTable
-            Adapter = New SqlDataAdapter(Command)
-            Adapter.Fill(dt)
-            Command.ExecuteNonQuery()
-            DataGridView1.DataSource = dt
-            Connection.Close()
-
+            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[IdDocument],c.[NameCourse],d.[NameDocument],d.[DescriptionDocument] FROM [Document]d,[Course]c Where d.[CourseDocument]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
         End If
 
+
+    End Sub
+
+    Sub ShowIdDocument()
+
+        Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        Command = New SqlCommand("Select IdDocument From Document,CourseUser 
+                                  Where CourseDocument=IdCourse And NameDocument =", Connection)
+        Connection.Open()
+        Reader = Command.ExecuteReader
+
+
+        Reader.Read()
+
+        IdDocument = Reader.GetInt32(0)
+
+
+        MsgBox(IdDocument)
+        Reader.Close()
+        Connection.Close()
 
     End Sub
 

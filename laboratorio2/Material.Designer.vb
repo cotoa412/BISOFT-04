@@ -52,6 +52,8 @@ Partial Class Material
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(16, 67)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -182,6 +184,7 @@ Partial Class Material
         Me.Controls.Add(Me.ComboBoxCourse1)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Material"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prueba"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)

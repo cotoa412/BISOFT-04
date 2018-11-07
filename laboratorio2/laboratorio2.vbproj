@@ -95,7 +95,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClassAddActivity.vb" />
-    <Compile Include="ConnectionDB.vb" />
+    <Compile Include="database.vb" />
     <Compile Include="Cursos.Designer.vb">
       <DependentUpon>Cursos.vb</DependentUpon>
     </Compile>
@@ -146,6 +146,11 @@
     </Compile>
     <Compile Include="Material.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectDBDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDBDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="RecoverPassword.Designer.vb">
       <DependentUpon>RecoverPassword.vb</DependentUpon>
@@ -215,6 +220,17 @@
     </None>
     <None Include="ProjectDBDataSet.xss">
       <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDBDataSet1.xsc">
+      <DependentUpon>ProjectDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDBDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDBDataSet1.xss">
+      <DependentUpon>ProjectDBDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
