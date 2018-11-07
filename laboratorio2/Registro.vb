@@ -1,13 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Registro
+    Dim User As New User
     Private Sub Registro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     Private Sub ButtonAccept_Click(sender As Object, e As EventArgs) Handles ButtonAccept.Click
-        Dim User As New User
-        User.Id_User = 1
+
         User.Email_User = TextBoxEmail.Text
         User.Name_User = TextBoxName.Text
         User.Username_User = TextBoxUsername.Text
@@ -40,8 +40,9 @@ Public Class Registro
             connection.Open()
             command.ExecuteNonQuery()
             command.Dispose()
+            MsgBox("Registro Completado", MsgBoxStyle.MsgBoxRight, "Registro")
             connection.Close()
-            User.Id_User += 1
+
 
             Me.Close()
             Login.Show()
