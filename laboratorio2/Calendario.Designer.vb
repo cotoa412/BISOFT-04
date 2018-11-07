@@ -73,9 +73,10 @@ Partial Class Calendario
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox1.Location = New System.Drawing.Point(-227, 61)
+        Me.PictureBox1.Location = New System.Drawing.Point(-303, 75)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(133, 62)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -83,249 +84,284 @@ Partial Class Calendario
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(8, 63)
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 78)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(617, 328)
+        Me.PictureBox2.Size = New System.Drawing.Size(823, 404)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
         'd1_1
         '
-        Me.d1_1.Location = New System.Drawing.Point(19, 77)
+        Me.d1_1.Location = New System.Drawing.Point(25, 95)
+        Me.d1_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_1.Name = "d1_1"
-        Me.d1_1.Size = New System.Drawing.Size(83, 56)
+        Me.d1_1.Size = New System.Drawing.Size(111, 69)
         Me.d1_1.TabIndex = 2
         '
         'd1_2
         '
-        Me.d1_2.Location = New System.Drawing.Point(106, 76)
+        Me.d1_2.Location = New System.Drawing.Point(141, 94)
+        Me.d1_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_2.Name = "d1_2"
-        Me.d1_2.Size = New System.Drawing.Size(79, 56)
+        Me.d1_2.Size = New System.Drawing.Size(105, 69)
         Me.d1_2.TabIndex = 3
         '
         'd1_3
         '
-        Me.d1_3.Location = New System.Drawing.Point(191, 76)
+        Me.d1_3.Location = New System.Drawing.Point(255, 94)
+        Me.d1_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_3.Name = "d1_3"
-        Me.d1_3.Size = New System.Drawing.Size(79, 56)
+        Me.d1_3.Size = New System.Drawing.Size(105, 69)
         Me.d1_3.TabIndex = 4
         '
         'd1_4
         '
-        Me.d1_4.Location = New System.Drawing.Point(275, 77)
+        Me.d1_4.Location = New System.Drawing.Point(367, 95)
+        Me.d1_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_4.Name = "d1_4"
-        Me.d1_4.Size = New System.Drawing.Size(81, 56)
+        Me.d1_4.Size = New System.Drawing.Size(108, 69)
         Me.d1_4.TabIndex = 5
         '
         'd1_5
         '
-        Me.d1_5.Location = New System.Drawing.Point(359, 77)
+        Me.d1_5.Location = New System.Drawing.Point(479, 95)
+        Me.d1_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_5.Name = "d1_5"
-        Me.d1_5.Size = New System.Drawing.Size(81, 56)
+        Me.d1_5.Size = New System.Drawing.Size(108, 69)
         Me.d1_5.TabIndex = 6
         '
         'd1_6
         '
-        Me.d1_6.Location = New System.Drawing.Point(444, 76)
+        Me.d1_6.Location = New System.Drawing.Point(592, 94)
+        Me.d1_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_6.Name = "d1_6"
-        Me.d1_6.Size = New System.Drawing.Size(81, 56)
+        Me.d1_6.Size = New System.Drawing.Size(108, 69)
         Me.d1_6.TabIndex = 7
         '
         'd1_7
         '
-        Me.d1_7.Location = New System.Drawing.Point(530, 76)
+        Me.d1_7.Location = New System.Drawing.Point(707, 94)
+        Me.d1_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d1_7.Name = "d1_7"
-        Me.d1_7.Size = New System.Drawing.Size(81, 56)
+        Me.d1_7.Size = New System.Drawing.Size(108, 69)
         Me.d1_7.TabIndex = 8
         '
         'd2_7
         '
-        Me.d2_7.Location = New System.Drawing.Point(530, 136)
+        Me.d2_7.Location = New System.Drawing.Point(707, 167)
+        Me.d2_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_7.Name = "d2_7"
-        Me.d2_7.Size = New System.Drawing.Size(81, 56)
+        Me.d2_7.Size = New System.Drawing.Size(108, 69)
         Me.d2_7.TabIndex = 15
         '
         'd2_6
         '
-        Me.d2_6.Location = New System.Drawing.Point(445, 136)
+        Me.d2_6.Location = New System.Drawing.Point(593, 167)
+        Me.d2_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_6.Name = "d2_6"
-        Me.d2_6.Size = New System.Drawing.Size(81, 56)
+        Me.d2_6.Size = New System.Drawing.Size(108, 69)
         Me.d2_6.TabIndex = 14
         '
         'd2_5
         '
-        Me.d2_5.Location = New System.Drawing.Point(360, 136)
+        Me.d2_5.Location = New System.Drawing.Point(480, 167)
+        Me.d2_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_5.Name = "d2_5"
-        Me.d2_5.Size = New System.Drawing.Size(81, 56)
+        Me.d2_5.Size = New System.Drawing.Size(108, 69)
         Me.d2_5.TabIndex = 13
         '
         'd2_4
         '
-        Me.d2_4.Location = New System.Drawing.Point(274, 136)
+        Me.d2_4.Location = New System.Drawing.Point(365, 167)
+        Me.d2_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_4.Name = "d2_4"
-        Me.d2_4.Size = New System.Drawing.Size(81, 56)
+        Me.d2_4.Size = New System.Drawing.Size(108, 69)
         Me.d2_4.TabIndex = 12
         '
         'd2_3
         '
-        Me.d2_3.Location = New System.Drawing.Point(191, 137)
+        Me.d2_3.Location = New System.Drawing.Point(255, 169)
+        Me.d2_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_3.Name = "d2_3"
-        Me.d2_3.Size = New System.Drawing.Size(79, 56)
+        Me.d2_3.Size = New System.Drawing.Size(105, 69)
         Me.d2_3.TabIndex = 11
         '
         'd2_2
         '
-        Me.d2_2.Location = New System.Drawing.Point(106, 136)
+        Me.d2_2.Location = New System.Drawing.Point(141, 167)
+        Me.d2_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_2.Name = "d2_2"
-        Me.d2_2.Size = New System.Drawing.Size(79, 56)
+        Me.d2_2.Size = New System.Drawing.Size(105, 69)
         Me.d2_2.TabIndex = 10
         '
         'd2_1
         '
-        Me.d2_1.Location = New System.Drawing.Point(19, 136)
+        Me.d2_1.Location = New System.Drawing.Point(25, 167)
+        Me.d2_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d2_1.Name = "d2_1"
-        Me.d2_1.Size = New System.Drawing.Size(83, 56)
+        Me.d2_1.Size = New System.Drawing.Size(111, 69)
         Me.d2_1.TabIndex = 9
         '
         'd3_7
         '
-        Me.d3_7.Location = New System.Drawing.Point(530, 197)
+        Me.d3_7.Location = New System.Drawing.Point(707, 242)
+        Me.d3_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_7.Name = "d3_7"
-        Me.d3_7.Size = New System.Drawing.Size(81, 56)
+        Me.d3_7.Size = New System.Drawing.Size(108, 69)
         Me.d3_7.TabIndex = 22
         '
         'd3_6
         '
-        Me.d3_6.Location = New System.Drawing.Point(446, 197)
+        Me.d3_6.Location = New System.Drawing.Point(595, 242)
+        Me.d3_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_6.Name = "d3_6"
-        Me.d3_6.Size = New System.Drawing.Size(81, 56)
+        Me.d3_6.Size = New System.Drawing.Size(108, 69)
         Me.d3_6.TabIndex = 21
         '
         'd3_4
         '
-        Me.d3_4.Location = New System.Drawing.Point(275, 197)
+        Me.d3_4.Location = New System.Drawing.Point(367, 242)
+        Me.d3_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_4.Name = "d3_4"
-        Me.d3_4.Size = New System.Drawing.Size(81, 56)
+        Me.d3_4.Size = New System.Drawing.Size(108, 69)
         Me.d3_4.TabIndex = 19
         '
         'd3_3
         '
-        Me.d3_3.Location = New System.Drawing.Point(190, 197)
+        Me.d3_3.Location = New System.Drawing.Point(253, 242)
+        Me.d3_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_3.Name = "d3_3"
-        Me.d3_3.Size = New System.Drawing.Size(79, 56)
+        Me.d3_3.Size = New System.Drawing.Size(105, 69)
         Me.d3_3.TabIndex = 18
         '
         'd3_2
         '
-        Me.d3_2.Location = New System.Drawing.Point(106, 197)
+        Me.d3_2.Location = New System.Drawing.Point(141, 242)
+        Me.d3_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_2.Name = "d3_2"
-        Me.d3_2.Size = New System.Drawing.Size(79, 56)
+        Me.d3_2.Size = New System.Drawing.Size(105, 69)
         Me.d3_2.TabIndex = 17
         '
         'd3_1
         '
-        Me.d3_1.Location = New System.Drawing.Point(20, 195)
+        Me.d3_1.Location = New System.Drawing.Point(27, 240)
+        Me.d3_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_1.Name = "d3_1"
-        Me.d3_1.Size = New System.Drawing.Size(80, 56)
+        Me.d3_1.Size = New System.Drawing.Size(107, 69)
         Me.d3_1.TabIndex = 16
         '
         'd4_7
         '
-        Me.d4_7.Location = New System.Drawing.Point(530, 258)
+        Me.d4_7.Location = New System.Drawing.Point(707, 318)
+        Me.d4_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_7.Name = "d4_7"
-        Me.d4_7.Size = New System.Drawing.Size(81, 56)
+        Me.d4_7.Size = New System.Drawing.Size(108, 69)
         Me.d4_7.TabIndex = 29
         '
         'd4_6
         '
-        Me.d4_6.Location = New System.Drawing.Point(445, 258)
+        Me.d4_6.Location = New System.Drawing.Point(593, 318)
+        Me.d4_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_6.Name = "d4_6"
-        Me.d4_6.Size = New System.Drawing.Size(81, 56)
+        Me.d4_6.Size = New System.Drawing.Size(108, 69)
         Me.d4_6.TabIndex = 28
         '
         'd4_5
         '
-        Me.d4_5.Location = New System.Drawing.Point(360, 258)
+        Me.d4_5.Location = New System.Drawing.Point(480, 318)
+        Me.d4_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_5.Name = "d4_5"
-        Me.d4_5.Size = New System.Drawing.Size(81, 56)
+        Me.d4_5.Size = New System.Drawing.Size(108, 69)
         Me.d4_5.TabIndex = 27
         '
         'd4_4
         '
-        Me.d4_4.Location = New System.Drawing.Point(275, 258)
+        Me.d4_4.Location = New System.Drawing.Point(367, 318)
+        Me.d4_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_4.Name = "d4_4"
-        Me.d4_4.Size = New System.Drawing.Size(81, 56)
+        Me.d4_4.Size = New System.Drawing.Size(108, 69)
         Me.d4_4.TabIndex = 26
         '
         'd4_3
         '
-        Me.d4_3.Location = New System.Drawing.Point(190, 258)
+        Me.d4_3.Location = New System.Drawing.Point(253, 318)
+        Me.d4_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_3.Name = "d4_3"
-        Me.d4_3.Size = New System.Drawing.Size(79, 56)
+        Me.d4_3.Size = New System.Drawing.Size(105, 69)
         Me.d4_3.TabIndex = 25
         '
         'd4_2
         '
-        Me.d4_2.Location = New System.Drawing.Point(108, 258)
+        Me.d4_2.Location = New System.Drawing.Point(144, 318)
+        Me.d4_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_2.Name = "d4_2"
-        Me.d4_2.Size = New System.Drawing.Size(79, 56)
+        Me.d4_2.Size = New System.Drawing.Size(105, 69)
         Me.d4_2.TabIndex = 24
         '
         'd4_1
         '
-        Me.d4_1.Location = New System.Drawing.Point(21, 258)
+        Me.d4_1.Location = New System.Drawing.Point(28, 318)
+        Me.d4_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d4_1.Name = "d4_1"
-        Me.d4_1.Size = New System.Drawing.Size(80, 56)
+        Me.d4_1.Size = New System.Drawing.Size(107, 69)
         Me.d4_1.TabIndex = 23
         '
         'd5_7
         '
-        Me.d5_7.Location = New System.Drawing.Point(530, 318)
+        Me.d5_7.Location = New System.Drawing.Point(707, 391)
+        Me.d5_7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_7.Name = "d5_7"
-        Me.d5_7.Size = New System.Drawing.Size(81, 56)
+        Me.d5_7.Size = New System.Drawing.Size(108, 69)
         Me.d5_7.TabIndex = 36
         '
         'd5_6
         '
-        Me.d5_6.Location = New System.Drawing.Point(445, 318)
+        Me.d5_6.Location = New System.Drawing.Point(593, 391)
+        Me.d5_6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_6.Name = "d5_6"
-        Me.d5_6.Size = New System.Drawing.Size(81, 56)
+        Me.d5_6.Size = New System.Drawing.Size(108, 69)
         Me.d5_6.TabIndex = 35
         '
         'd5_5
         '
-        Me.d5_5.Location = New System.Drawing.Point(362, 318)
+        Me.d5_5.Location = New System.Drawing.Point(483, 391)
+        Me.d5_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_5.Name = "d5_5"
-        Me.d5_5.Size = New System.Drawing.Size(80, 56)
+        Me.d5_5.Size = New System.Drawing.Size(107, 69)
         Me.d5_5.TabIndex = 34
         '
         'd5_4
         '
-        Me.d5_4.Location = New System.Drawing.Point(273, 318)
+        Me.d5_4.Location = New System.Drawing.Point(364, 391)
+        Me.d5_4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_4.Name = "d5_4"
-        Me.d5_4.Size = New System.Drawing.Size(81, 56)
+        Me.d5_4.Size = New System.Drawing.Size(108, 69)
         Me.d5_4.TabIndex = 33
         '
         'd5_3
         '
-        Me.d5_3.Location = New System.Drawing.Point(190, 317)
+        Me.d5_3.Location = New System.Drawing.Point(253, 390)
+        Me.d5_3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_3.Name = "d5_3"
-        Me.d5_3.Size = New System.Drawing.Size(79, 56)
+        Me.d5_3.Size = New System.Drawing.Size(105, 69)
         Me.d5_3.TabIndex = 32
         '
         'd5_2
         '
-        Me.d5_2.Location = New System.Drawing.Point(107, 317)
+        Me.d5_2.Location = New System.Drawing.Point(143, 390)
+        Me.d5_2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_2.Name = "d5_2"
-        Me.d5_2.Size = New System.Drawing.Size(79, 56)
+        Me.d5_2.Size = New System.Drawing.Size(105, 69)
         Me.d5_2.TabIndex = 31
         '
         'd5_1
         '
-        Me.d5_1.Location = New System.Drawing.Point(18, 317)
+        Me.d5_1.Location = New System.Drawing.Point(24, 390)
+        Me.d5_1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d5_1.Name = "d5_1"
-        Me.d5_1.Size = New System.Drawing.Size(83, 56)
+        Me.d5_1.Size = New System.Drawing.Size(111, 69)
         Me.d5_1.TabIndex = 30
         '
         'ToolStrip1
@@ -334,52 +370,53 @@ Partial Class Calendario
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel5, Me.ToolStripLabel2, Me.ToolStripLabel1, Me.ToolStripLabel3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(632, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(843, 25)
         Me.ToolStrip1.TabIndex = 38
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripLabel4
         '
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(34, 22)
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
         Me.ToolStripLabel4.Text = "Perfil"
         '
         'ToolStripLabel5
         '
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(64, 22)
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(81, 22)
         Me.ToolStripLabel5.Text = "Calendario"
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
         Me.ToolStripLabel2.Text = "Horario"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(61, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(78, 22)
         Me.ToolStripLabel1.Text = "Materiales"
         '
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(43, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
         Me.ToolStripLabel3.Text = "Cursos"
         '
         'd3_5
         '
-        Me.d3_5.Location = New System.Drawing.Point(359, 198)
+        Me.d3_5.Location = New System.Drawing.Point(479, 244)
+        Me.d3_5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.d3_5.Name = "d3_5"
-        Me.d3_5.Size = New System.Drawing.Size(81, 56)
+        Me.d3_5.Size = New System.Drawing.Size(108, 69)
         Me.d3_5.TabIndex = 39
         '
         'Calendario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 397)
+        Me.ClientSize = New System.Drawing.Size(843, 489)
         Me.Controls.Add(Me.d3_5)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.d5_7)
@@ -418,6 +455,7 @@ Partial Class Calendario
         Me.Controls.Add(Me.d1_1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Calendario"
         Me.Text = "Calendario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

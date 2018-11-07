@@ -31,15 +31,17 @@ Public Class Login
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.HasRows Then
-                Profile.TextBoxUser = reader.GetValue("UserName")
-                Profile.TextBoxName = reader.GetValue("Name")
-                Profile.TextBoxPassword = reader.GetValue("Password")
-                Profile.TextBox1 = reader.GetValue("Email")
-                Profile.Show()
-                Me.Hide()
+                If reader.Read() Then
+                    Profile.TextBoxUser.Text = reader.Item("UserName")
+                    Profile.TextBoxName.Text = reader.Item("Name")
+                    Profile.TextBoxPassword.Text = reader.Item("Password")
+                    Profile.TextBox1.Text = reader.Item("Email")
+                    Profile.Show()
+                    Me.Hide()
+                End If
 
             Else
-                LabelError.Text = "El Usuario No Existe"
+                    LabelError.Text = "El Usuario No Existe"
                 LabelError.Visible = True
             End If
 
