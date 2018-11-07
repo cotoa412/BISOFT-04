@@ -18,7 +18,7 @@ Public Class Login
 
         Else
 
-            Dim connectionString As String = "Data Source= DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
+            Dim connectionString As String = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
 
             connection = New SqlConnection(connectionString)
 
@@ -31,7 +31,7 @@ Public Class Login
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.HasRows Then
-                Calendario.Show()
+                Material.Show()
                 Me.Hide()
 
             Else

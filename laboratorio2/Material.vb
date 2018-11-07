@@ -18,12 +18,13 @@ Public Class Material
             LabelChange.Text = "Debe seleccionar el curso donde desea agregar el documento"
             LabelChange.ForeColor = Color.Red
             LabelChange.Visible = True
+
         Else
             Dim CommandInsert As New SqlCommand("INSERT iNTO [Document] (IdDocument,CourseDocument,NameDocument,DescriptionDocument)VALUES(@IdDocument,@CourseDocument,@NameDocument,@DescriptionDocument)")
 
             With CommandInsert
 
-                .Parameters.AddWithValue("@IdDocument", Document)
+                .Parameters.AddWithValue("@PathDocument", Document)
                 .Parameters.AddWithValue("@CourseDocument", IdCourse)
                 .Parameters.AddWithValue("@NameDocument", "aaaaa")
                 .Parameters.AddWithValue("@DescriptionDocument", "aaaaa")
@@ -31,13 +32,13 @@ Public Class Material
             End With
             CommandInsert.ExecuteNonQuery()
 
+            LabelChange.ForeColor = Color.Green
+            LabelChange.Text = "Guardado con éxito"
+            LabelChange.Visible = True
+            ShowData()
         End If
 
-        ComboBoxCourse1.Text = ""
-        LabelChange.ForeColor = Color.Green
-        LabelChange.Text = "Guardado con éxito"
-        LabelChange.Visible = True
-        ShowData()
+
 
     End Sub
 
@@ -52,9 +53,12 @@ Public Class Material
     End Sub
 
     Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
-
-        Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
-        Process.Start(Document)
+        Try
+            Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
+            Process.Start(Document)
+        Catch ex As Exception
+            MsgBox("Error al abrir el archivo. " + ex.Message)
+        End Try
 
     End Sub
 
@@ -78,7 +82,7 @@ Public Class Material
 
     Sub ShowData()
         LabelChange.Visible = False
-        NameCourse = ComboBoxCourse1.SelectedItem.ToString
+        NameCourse = ComboBoxCourse1.SelectedItem
 
         If ComboBoxCourse1.SelectedItem = NameCourse Then
             Dim rows = db.ReaderQuery("Select c.[IdCourse]
