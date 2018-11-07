@@ -7,9 +7,12 @@ Public Class Material
     Dim Document As String
     Dim NameCourse As String
     Dim IdCourse As Integer
+    Dim NameDocument As String
+    Dim Description As String
+    Dim IdDocument As Integer
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
-        LabelChange.Visible = False
+
         Dim Open As New OpenFileDialog
         Dim Result As New DialogResult
 
@@ -24,23 +27,24 @@ Public Class Material
 
         Else
             Dim CommandInsert As New SqlCommand("INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument)VALUES(@PathDocument,@CourseDocument,@NameDocument,@DescriptionDocument)", Connection)
-
+            NameDocument = InputBox("Nombre el archivo", "Nombre")
+            Description = InputBox("Agrege una descriptión", "Descriptio")
             With CommandInsert
 
                 .Parameters.AddWithValue("@PathDocument", Document)
                 .Parameters.AddWithValue("@CourseDocument", IdCourse)
-                .Parameters.AddWithValue("@NameDocument", "aaaaa")
-                .Parameters.AddWithValue("@DescriptionDocument", "aaaaa")
+                .Parameters.AddWithValue("@NameDocument", NameDocument)
+                .Parameters.AddWithValue("@DescriptionDocument", Description)
 
             End With
             Connection.Close()
             Connection.Open()
             CommandInsert.ExecuteNonQuery()
+            ShowData()
 
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
             LabelChange.Visible = True
-            ShowData()
         End If
 
 
@@ -67,7 +71,9 @@ Public Class Material
     End Sub
 
     Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
+
         Try
+
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
             Process.Start(Document)
         Catch ex As Exception
@@ -78,6 +84,7 @@ Public Class Material
 
     Private Sub ComboBoxCourse1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedValueChanged
         ShowData()
+        ShowIdDocument()
 
     End Sub
 
@@ -87,9 +94,12 @@ Public Class Material
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
         Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-        Command = New SqlCommand("DELETE FROM [Document] Where [PathDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'", Connection)
+        Command = New SqlCommand("Delete From Document 
+                                   Where IdDocument='" & IdDocument & "' And NameDocument='" & NameDocument & "'", Connection)
         Connection.Open()
         Command.ExecuteNonQuery()
+
+
 
         ShowData()
         LabelChange.ForeColor = Color.Green
@@ -128,4 +138,25 @@ Public Class Material
 
 
     End Sub
+
+    Sub ShowIdDocument()
+
+        Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        Command = New SqlCommand("Select IdDocument From Document,CourseUser 
+                                  Where CourseDocument=IdCourse And NameDocument =", Connection)
+        Connection.Open()
+        Reader = Command.ExecuteReader
+
+
+        Reader.Read()
+
+        IdDocument = Reader.GetInt32(0)
+
+
+        MsgBox(IdDocument)
+        Reader.Close()
+        Connection.Close()
+
+    End Sub
+
 End Class

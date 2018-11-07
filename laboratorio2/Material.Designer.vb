@@ -44,9 +44,12 @@ Partial Class Material
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 31)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView1.Size = New System.Drawing.Size(441, 266)
         Me.DataGridView1.TabIndex = 1
         '
@@ -125,6 +128,7 @@ Partial Class Material
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ComboBoxCourse1)
         Me.Name = "Material"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prueba"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
