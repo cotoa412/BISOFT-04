@@ -23,11 +23,11 @@ Public Class Material
             LabelChange.Visible = True
 
         Else
+
             NameDocument = InputBox("Nombre el archivo", "Nombre")
             Description = InputBox("Agrege una descriptión", "Descripción")
             Dim CommandInsert As String = "INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
             db.ExecuteQuery(CommandInsert)
-
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
             LabelChange.Visible = True
@@ -43,7 +43,7 @@ Public Class Material
         Dim rows = db.ReaderQuery("Select c.[IdCourse],c.[NameCourse]
                              	From Course c, CourseUser cu, [User] u
                              	Where cu.IdCourse = c.IdCourse 
-                              And cu.IdUser=u.Id")
+                                And cu.IdUser=u.Id")
         For Each row As Dictionary(Of String, Object) In rows
             ComboBoxCourse1.Items.Add(row.Item("NameCourse"))
         Next
@@ -72,7 +72,7 @@ Public Class Material
 
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
-        db.ExecuteQuery("DELETE FROM [Document] Where [IdDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'")
+        db.ExecuteQuery("DELETE FROM [Document] Where [PathDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'")
 
 
 
@@ -91,7 +91,7 @@ Public Class Material
                                     From Course c Where c.NameCourse='" & NameCourse & "'")
             IdCourse = rows(0).Item("IdCourse")
 
-            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[IdDocument],c.[NameCourse],d.[NameDocument],d.[DescriptionDocument] FROM [Document]d,[Course]c Where d.[CourseDocument]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
+            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[PathDocument],c.[NameCourse],d.[NameDocument],d.[DescriptionDocument] FROM [Document]d,[Course]c Where d.[CourseDocument]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
         End If
 
 

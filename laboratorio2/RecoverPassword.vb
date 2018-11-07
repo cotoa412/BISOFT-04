@@ -17,7 +17,7 @@ Public Class RecoverPassword
             LabelMessage.Visible = True
 
         Else
-            Connection = New SqlConnection("Data Source=DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456 ")
+            Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
             Command = New SqlCommand("Select [Password],[Email] From [User] Where [UserName]='" & UserName_RecoverPassword.ToString & "'", Connection)
             Dim reader As SqlDataReader
             Connection.Open()

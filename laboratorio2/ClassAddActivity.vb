@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class ClassAddActivity
-    Dim Connection As New SqlConnection("Data Source= DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456")
+    Dim Connection As New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
     Dim Command As SqlCommand
 
     Public Function AddActivity()

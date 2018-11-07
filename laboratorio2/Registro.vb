@@ -22,15 +22,15 @@ Public Class Registro
             Dim connection As New SqlConnection
             Dim command As New SqlCommand
 
-            Dim connectionString As String = "Data Source= DESKTOP-NR4PGLT\SQLSERVERME;Initial Catalog=ProjectDB;User ID=sa;Password=123456"
+            Dim connectionString As String = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
 
             connection = New SqlConnection(connectionString)
             Dim insertQuery As String
-            insertQuery = "INSERT INTO [User] (Id,Name,Username,Password,Email) VALUES(@Id,@Name,@UserName,@Password,@Email)"
+            insertQuery = "INSERT INTO [User] (Name,Username,Password,Email) VALUES(@Name,@UserName,@Password,@Email)"
             command = New SqlCommand(insertQuery, connection)
 
             With command
-                .Parameters.AddWithValue("@Id", User.Id_User)
+
                 .Parameters.AddWithValue("@Name", User.Name_User)
                 .Parameters.AddWithValue("@UserName", User.Username_User)
                 .Parameters.AddWithValue("@Password", User.Password_User)
@@ -42,7 +42,7 @@ Public Class Registro
             command.Dispose()
             connection.Close()
             User.Id_User += 1
-            MsgBox("Perfil Creado")
+
             Me.Close()
             Login.Show()
         End If
