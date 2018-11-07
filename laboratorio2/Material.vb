@@ -154,4 +154,9 @@ Public Class Material
     Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
 
     End Sub
+
+    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
+        Profile.Show()
+        Me.Close()
+    End Sub
 End Class

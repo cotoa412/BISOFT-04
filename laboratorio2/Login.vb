@@ -31,6 +31,10 @@ Public Class Login
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.HasRows Then
+                Profile.TextBoxUser = reader.GetValue("UserName")
+                Profile.TextBoxName = reader.GetValue("Name")
+                Profile.TextBoxPassword = reader.GetValue("Password")
+                Profile.TextBox1 = reader.GetValue("Email")
                 Profile.Show()
                 Me.Hide()
 

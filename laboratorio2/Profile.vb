@@ -47,19 +47,6 @@
         End If
     End Sub
 
-    Private Sub Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-
-
-
-
-
-
-
-    End Sub
-
     Private Sub TextBoxUser_TextChanged(sender As Object, e As EventArgs) Handles TextBoxUser.TextChanged
 
     End Sub
