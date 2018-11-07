@@ -23,23 +23,16 @@ Public Class Material
             LabelChange.Visible = True
 
         Else
-            Dim CommandInsert As New SqlCommand("INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument)VALUES(@PathDocument,@CourseDocument,@NameDocument,@DescriptionDocument)", Connection)
             NameDocument = InputBox("Nombre el archivo", "Nombre")
-            Description = InputBox("Agrege una descriptión", "Descriptio")
-            With CommandInsert
-
-                .Parameters.AddWithValue("@PathDocument", Document)
-                .Parameters.AddWithValue("@CourseDocument", IdCourse)
-                .Parameters.AddWithValue("@NameDocument", NameDocument)
-                .Parameters.AddWithValue("@DescriptionDocument", Description)
-
-            End With
-            CommandInsert.ExecuteNonQuery()
-            ShowData()
+            Description = InputBox("Agrege una descriptión", "Descripción")
+            Dim CommandInsert As String = "INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
+            db.ExecuteQuery(CommandInsert)
 
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
             LabelChange.Visible = True
+            ShowData()
+
         End If
 
 
@@ -105,23 +98,6 @@ Public Class Material
     End Sub
 
     Sub ShowIdDocument()
-
-        Connection = New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-        Command = New SqlCommand("Select IdDocument From Document,CourseUser 
-                                  Where CourseDocument=IdCourse And NameDocument =", Connection)
-        Connection.Open()
-        Reader = Command.ExecuteReader
-
-
-        Reader.Read()
-
-        IdDocument = Reader.GetInt32(0)
-
-
-        MsgBox(IdDocument)
-        Reader.Close()
-        Connection.Close()
-
     End Sub
 
     Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs)
