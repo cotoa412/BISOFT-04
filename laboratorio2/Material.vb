@@ -100,4 +100,34 @@ Public Class Material
     Sub ShowIdDocument()
     End Sub
 
+    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
+        Login.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        Calendario.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        Horario.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
+        Cursos.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
 End Class

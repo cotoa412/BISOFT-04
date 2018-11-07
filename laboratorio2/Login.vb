@@ -31,7 +31,7 @@ Public Class Login
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.HasRows Then
-                Material.Show()
+                Profile.Show()
                 Me.Hide()
 
             Else
