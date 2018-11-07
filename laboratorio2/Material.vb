@@ -3,10 +3,13 @@ Public Class Material
     Dim Document As String
     Dim NameCourse As String
     Dim IdCourse As Integer
+    Dim NameDocument As String
+    Dim Description As String
+    Dim IdDocument As Integer
     Dim db = New database
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
-        LabelChange.Visible = False
+
         Dim Open As New OpenFileDialog
         Dim Result As New DialogResult
 
@@ -20,22 +23,16 @@ Public Class Material
             LabelChange.Visible = True
 
         Else
-            Dim CommandInsert As New SqlCommand("INSERT iNTO [Document] (IdDocument,CourseDocument,NameDocument,DescriptionDocument)VALUES(@IdDocument,@CourseDocument,@NameDocument,@DescriptionDocument)")
-
-            With CommandInsert
-
-                .Parameters.AddWithValue("@PathDocument", Document)
-                .Parameters.AddWithValue("@CourseDocument", IdCourse)
-                .Parameters.AddWithValue("@NameDocument", "aaaaa")
-                .Parameters.AddWithValue("@DescriptionDocument", "aaaaa")
-
-            End With
-            CommandInsert.ExecuteNonQuery()
+            NameDocument = InputBox("Nombre el archivo", "Nombre")
+            Description = InputBox("Agrege una descriptión", "Descripción")
+            Dim CommandInsert As String = "INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
+            db.ExecuteQuery(CommandInsert)
 
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
             LabelChange.Visible = True
             ShowData()
+
         End If
 
 
@@ -53,7 +50,9 @@ Public Class Material
     End Sub
 
     Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
+
         Try
+
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
             Process.Start(Document)
         Catch ex As Exception
@@ -64,6 +63,7 @@ Public Class Material
 
     Private Sub ComboBoxCourse1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedValueChanged
         ShowData()
+        ShowIdDocument()
 
     End Sub
 
@@ -73,6 +73,8 @@ Public Class Material
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
         db.ExecuteQuery("DELETE FROM [Document] Where [IdDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'")
+
+
 
         ShowData()
         LabelChange.ForeColor = Color.Green
@@ -93,5 +95,44 @@ Public Class Material
         End If
 
 
+    End Sub
+
+    Sub ShowIdDocument()
+    End Sub
+
+    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
+        Login.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        Calendario.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        Horario.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
+        Cursos.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
+        Profile.Show()
+        Me.Close()
     End Sub
 End Class
