@@ -38,7 +38,8 @@ Partial Class Profile
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.CheckBoxMostrar = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
+        Me.ButtonSave = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -160,19 +161,29 @@ Partial Class Profile
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Correo"
         '
-        'TextBox1
+        'TextBoxEmail
         '
-        Me.TextBox1.Location = New System.Drawing.Point(109, 365)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 22)
-        Me.TextBox1.TabIndex = 10
+        Me.TextBoxEmail.Location = New System.Drawing.Point(109, 365)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(228, 22)
+        Me.TextBoxEmail.TabIndex = 10
+        '
+        'ButtonSave
+        '
+        Me.ButtonSave.Location = New System.Drawing.Point(142, 399)
+        Me.ButtonSave.Name = "ButtonSave"
+        Me.ButtonSave.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSave.TabIndex = 11
+        Me.ButtonSave.Text = "Guardar"
+        Me.ButtonSave.UseVisualStyleBackColor = True
         '
         'Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(349, 432)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ButtonSave)
+        Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBoxMostrar)
         Me.Controls.Add(Me.TextBoxName)
@@ -208,5 +219,6 @@ Partial Class Profile
     Friend WithEvents TextBoxName As TextBox
     Friend WithEvents CheckBoxMostrar As CheckBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents ButtonSave As Button
 End Class

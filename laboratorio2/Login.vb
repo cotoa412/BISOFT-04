@@ -35,7 +35,7 @@ Public Class Login
                     Profile.TextBoxUser.Text = reader.Item("UserName")
                     Profile.TextBoxName.Text = reader.Item("Name")
                     Profile.TextBoxPassword.Text = reader.Item("Password")
-                    Profile.TextBox1.Text = reader.Item("Email")
+                    Profile.TextBoxEmail.Text = reader.Item("Email")
                     Profile.Show()
                     Me.Hide()
                 End If
