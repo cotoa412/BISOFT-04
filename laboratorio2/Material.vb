@@ -52,7 +52,6 @@ Public Class Material
     Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
 
         Try
-
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
             Process.Start(Document)
         Catch ex As Exception

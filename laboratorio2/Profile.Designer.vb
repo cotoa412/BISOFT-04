@@ -38,7 +38,9 @@ Partial Class Profile
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.CheckBoxMostrar = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
+        Me.ButtonSave = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,104 +51,112 @@ Partial Class Profile
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel5, Me.ToolStripLabel3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(349, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(262, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripLabel4
         '
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(42, 22)
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(34, 22)
         Me.ToolStripLabel4.Text = "Perfil"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(81, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(64, 22)
         Me.ToolStripLabel1.Text = "Calendario"
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
         Me.ToolStripLabel2.Text = "Horario"
         '
         'ToolStripLabel5
         '
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(78, 22)
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(61, 22)
         Me.ToolStripLabel5.Text = "Materiales"
         '
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(43, 22)
         Me.ToolStripLabel3.Text = "Cursos"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(76, 43)
+        Me.PictureBox1.Location = New System.Drawing.Point(70, 27)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(174, 160)
+        Me.PictureBox1.Size = New System.Drawing.Size(130, 130)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 237)
+        Me.Label1.Location = New System.Drawing.Point(16, 193)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 17)
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 273)
+        Me.Label2.Location = New System.Drawing.Point(16, 222)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 17)
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Contraseña"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 330)
+        Me.Label3.Location = New System.Drawing.Point(16, 268)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 17)
+        Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre"
         '
         'TextBoxUser
         '
-        Me.TextBoxUser.Location = New System.Drawing.Point(109, 234)
+        Me.TextBoxUser.Location = New System.Drawing.Point(82, 190)
+        Me.TextBoxUser.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(228, 22)
+        Me.TextBoxUser.Size = New System.Drawing.Size(172, 20)
         Me.TextBoxUser.TabIndex = 5
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(109, 273)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(82, 222)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(228, 22)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(172, 20)
         Me.TextBoxPassword.TabIndex = 6
         '
         'TextBoxName
         '
-        Me.TextBoxName.Location = New System.Drawing.Point(109, 327)
+        Me.TextBoxName.Location = New System.Drawing.Point(82, 266)
+        Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(228, 22)
+        Me.TextBoxName.Size = New System.Drawing.Size(172, 20)
         Me.TextBoxName.TabIndex = 7
         '
         'CheckBoxMostrar
         '
         Me.CheckBoxMostrar.AutoSize = True
-        Me.CheckBoxMostrar.Location = New System.Drawing.Point(109, 300)
+        Me.CheckBoxMostrar.Location = New System.Drawing.Point(82, 244)
+        Me.CheckBoxMostrar.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxMostrar.Name = "CheckBoxMostrar"
-        Me.CheckBoxMostrar.Size = New System.Drawing.Size(155, 21)
+        Me.CheckBoxMostrar.Size = New System.Drawing.Size(118, 17)
         Me.CheckBoxMostrar.TabIndex = 8
         Me.CheckBoxMostrar.Text = "Mostrar Contraseña"
         Me.CheckBoxMostrar.UseVisualStyleBackColor = True
@@ -154,25 +164,48 @@ Partial Class Profile
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 368)
+        Me.Label4.Location = New System.Drawing.Point(16, 299)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Correo"
         '
-        'TextBox1
+        'TextBoxEmail
         '
-        Me.TextBox1.Location = New System.Drawing.Point(109, 365)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 22)
-        Me.TextBox1.TabIndex = 10
+        Me.TextBoxEmail.Location = New System.Drawing.Point(82, 297)
+        Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(172, 20)
+        Me.TextBoxEmail.TabIndex = 10
+        '
+        'ButtonSave
+        '
+        Me.ButtonSave.Location = New System.Drawing.Point(106, 324)
+        Me.ButtonSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.ButtonSave.Name = "ButtonSave"
+        Me.ButtonSave.Size = New System.Drawing.Size(56, 19)
+        Me.ButtonSave.TabIndex = 11
+        Me.ButtonSave.Text = "Guardar"
+        Me.ButtonSave.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Lime
+        Me.Label5.Location = New System.Drawing.Point(67, 355)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 13)
+        Me.Label5.TabIndex = 12
         '
         'Profile
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(349, 432)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(262, 386)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.ButtonSave)
+        Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBoxMostrar)
         Me.Controls.Add(Me.TextBoxName)
@@ -183,6 +216,7 @@ Partial Class Profile
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Profile"
         Me.Text = "Form1"
         Me.ToolStrip1.ResumeLayout(False)
@@ -208,5 +242,7 @@ Partial Class Profile
     Friend WithEvents TextBoxName As TextBox
     Friend WithEvents CheckBoxMostrar As CheckBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents ButtonSave As Button
+    Friend WithEvents Label5 As Label
 End Class

@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class ClassAddActivity
-    Dim Connection As New SqlConnection("Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-    Dim Command As SqlCommand
+    Dim db As New database
 
     Public Function AddActivity()
 
@@ -18,19 +17,7 @@ Public Class ClassAddActivity
         TheCourse.Id_Course = Course
 
 
-        Command = New SqlCommand("INSERT INTO [Activity] (NameActivity,DateHour,Course) VALUES(@NameActivity,@DateHour,@Course)", Connection)
-
-        With Command
-
-            .Parameters.AddWithValue("@NameActivity", Activity.Name_Activities)
-            .Parameters.AddWithValue("@DateHour", Activity.DateHour_Activities)
-            .Parameters.AddWithValue("@Course", TheCourse.Id_Course)
-        End With
-
-        Connection.Open()
-        Command.ExecuteNonQuery()
-        Command.Dispose()
-        Connection.Close()
+        db.ExecuteQuery("INSERT INTO [Activity] (NameActivity,DateHour,Course) VALUES('" & Activity.Name_Activities & "','" & Activity.DateHour_Activities & "','" & TheCourse.Id_Course & "')")
 
         Return True
 
