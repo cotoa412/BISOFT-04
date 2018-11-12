@@ -6,7 +6,8 @@
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-        Horario.Show()
+        'Horario.Show()
+        tiempo.Show()
         Me.Hide()
 
     End Sub
