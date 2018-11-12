@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Profile
+    Dim db As New database
+
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
         Calendario.Show()
         Me.Hide()
@@ -59,26 +61,11 @@ Public Class Profile
         Dim Password = TextBoxPassword.Text
         Dim Email = TextBoxEmail.Text
 
-        Dim connection As New SqlConnection
-        Dim command As New SqlCommand
-
-        Dim connectionString As String = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-
-        connection = New SqlConnection(connectionString)
         Dim insertQuery As String
-        insertQuery = "UPDATE [User] SET Name = @Name, UserName = @UserName, Password = @Password, Email = @Email WHERE  username = '" & UserName & "'" & " AND password ='" & Password & "'"
-        command = New SqlCommand(insertQuery, connection)
+        insertQuery = "UPDATE [User] SET Name ='" & Name & "', UserName ='" & UserName & "', Password ='" & Password & "', Email ='" & Email & "' WHERE  [UserName]='" & Login.TextBoxUsername.Text & "' AND [Password] ='" & Login.TextBoxPassword.Text & "'"
+        db.ExecuteQuery(insertQuery)
 
-        With command
-            .Parameters.AddWithValue("@Name", Name)
-            .Parameters.AddWithValue("@UserName", UserName)
-            .Parameters.AddWithValue("@Password", Password)
-            .Parameters.AddWithValue("@Email", Email)
-        End With
-
-        connection.Open()
-        command.ExecuteNonQuery()
-        command.Dispose()
-        connection.Close()
+        Label5.Text = "Actualizado correctamente"
     End Sub
+
 End Class

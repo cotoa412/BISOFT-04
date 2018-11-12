@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Registro
+    Dim db = New database
+
     Dim User As New User
     Private Sub Registro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -19,31 +21,11 @@ Public Class Registro
             LabelError.Visible = True
 
         Else
-            Dim connection As New SqlConnection
-            Dim command As New SqlCommand
 
-            Dim connectionString As String = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+            Dim insertQuery As String = "INSERT INTO [User] (Name,Username,Password,Email) VALUES('" & User.Name_User & "','" & User.Username_User & "','" & User.Password_User & "','" & User.Email_User & "')"
 
-            connection = New SqlConnection(connectionString)
-            Dim insertQuery As String
-            insertQuery = "INSERT INTO [User] (Name,Username,Password,Email) VALUES(@Name,@UserName,@Password,@Email)"
-            command = New SqlCommand(insertQuery, connection)
-
-            With command
-
-                .Parameters.AddWithValue("@Name", User.Name_User)
-                .Parameters.AddWithValue("@UserName", User.Username_User)
-                .Parameters.AddWithValue("@Password", User.Password_User)
-                .Parameters.AddWithValue("@Email", User.Email_User)
-            End With
-
-            connection.Open()
-            command.ExecuteNonQuery()
-            command.Dispose()
+            db.ExecuteQuery(insertQuery)
             MsgBox("Registro Completado", MsgBoxStyle.MsgBoxRight, "Registro")
-            connection.Close()
-
-
             Me.Close()
             Login.Show()
         End If

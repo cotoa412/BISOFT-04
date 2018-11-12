@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Login
+    Dim db As New database
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -9,39 +11,27 @@ Public Class Login
 
         Dim Username As String = TextBoxUsername.Text
         Dim Password As String = TextBoxPassword.Text
-        Dim connection As New SqlConnection
-        Dim command As New SqlCommand
 
         If (Password = "" Or Username = "") Then
             LabelError.Text = "Debe llenar todos los campos"
             LabelError.Visible = True
 
         Else
+            Dim selectQuery As String = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
 
-            Dim connectionString As String = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+            Dim rows = db.ReaderQuery(selectQuery)
 
-            connection = New SqlConnection(connectionString)
+            If rows.Count > 0 Then
 
-            Dim selectQuery As String
-            selectQuery = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
-            command = New SqlCommand(selectQuery, connection)
+                Profile.TextBoxUser.Text = rows(0).Item("UserName")
+                Profile.TextBoxName.Text = rows(0).Item("Name")
+                Profile.TextBoxPassword.Text = rows(0).Item("Password")
+                Profile.TextBoxEmail.Text = rows(0).Item("Email")
 
-            connection.Open()
-
-            Dim reader As SqlDataReader = command.ExecuteReader
-
-            If reader.HasRows Then
-                If reader.Read() Then
-                    Profile.TextBoxUser.Text = reader.Item("UserName")
-                    Profile.TextBoxName.Text = reader.Item("Name")
-                    Profile.TextBoxPassword.Text = reader.Item("Password")
-                    Profile.TextBoxEmail.Text = reader.Item("Email")
-                    Profile.Show()
-                    Me.Hide()
-                End If
-
+                Profile.Show()
+                Me.Hide()
             Else
-                    LabelError.Text = "El Usuario No Existe"
+                LabelError.Text = "El Usuario No Existe"
                 LabelError.Visible = True
             End If
 
