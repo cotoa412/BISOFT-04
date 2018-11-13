@@ -36,16 +36,18 @@ Partial Class Material
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBoxCourse1
         '
+        Me.ComboBoxCourse1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxCourse1.FormattingEnabled = True
-        Me.ComboBoxCourse1.Location = New System.Drawing.Point(470, 85)
+        Me.ComboBoxCourse1.Location = New System.Drawing.Point(490, 77)
         Me.ComboBoxCourse1.Name = "ComboBoxCourse1"
-        Me.ComboBoxCourse1.Size = New System.Drawing.Size(110, 21)
+        Me.ComboBoxCourse1.Size = New System.Drawing.Size(150, 28)
         Me.ComboBoxCourse1.TabIndex = 0
         '
         'DataGridView1
@@ -53,34 +55,37 @@ Partial Class Material
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 77)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(441, 266)
+        Me.DataGridView1.Size = New System.Drawing.Size(468, 294)
         Me.DataGridView1.TabIndex = 1
         '
         'ButtonOpen
         '
-        Me.ButtonOpen.Location = New System.Drawing.Point(485, 127)
+        Me.ButtonOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOpen.Location = New System.Drawing.Point(491, 126)
         Me.ButtonOpen.Name = "ButtonOpen"
-        Me.ButtonOpen.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonOpen.Size = New System.Drawing.Size(150, 33)
         Me.ButtonOpen.TabIndex = 2
         Me.ButtonOpen.Text = "Abrir"
         Me.ButtonOpen.UseVisualStyleBackColor = True
         '
         'ButtonSelect
         '
-        Me.ButtonSelect.Location = New System.Drawing.Point(485, 184)
+        Me.ButtonSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonSelect.Location = New System.Drawing.Point(490, 238)
         Me.ButtonSelect.Name = "ButtonSelect"
-        Me.ButtonSelect.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSelect.Size = New System.Drawing.Size(150, 33)
         Me.ButtonSelect.TabIndex = 3
         Me.ButtonSelect.Text = "Subir"
         Me.ButtonSelect.UseVisualStyleBackColor = True
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(485, 155)
+        Me.ButtonDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDelete.Location = New System.Drawing.Point(491, 183)
         Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonDelete.Size = New System.Drawing.Size(150, 33)
         Me.ButtonDelete.TabIndex = 4
         Me.ButtonDelete.Text = "Eliminar"
         Me.ButtonDelete.UseVisualStyleBackColor = True
@@ -92,10 +97,11 @@ Partial Class Material
         'LabelChange
         '
         Me.LabelChange.AutoSize = True
+        Me.LabelChange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelChange.ForeColor = System.Drawing.Color.Lime
-        Me.LabelChange.Location = New System.Drawing.Point(482, 249)
+        Me.LabelChange.Location = New System.Drawing.Point(486, 289)
         Me.LabelChange.Name = "LabelChange"
-        Me.LabelChange.Size = New System.Drawing.Size(39, 13)
+        Me.LabelChange.Size = New System.Drawing.Size(57, 20)
         Me.LabelChange.TabIndex = 6
         Me.LabelChange.Text = "Label1"
         Me.LabelChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,11 +110,12 @@ Partial Class Material
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(501, 54)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(532, 54)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(63, 20)
         Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Cursos"
+        Me.Label1.Text = "Cursos:"
         '
         'ToolStrip1
         '
@@ -116,7 +123,7 @@ Partial Class Material
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel5, Me.ToolStripLabel3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(592, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(653, 25)
         Me.ToolStrip1.TabIndex = 8
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -150,11 +157,22 @@ Partial Class Material
         Me.ToolStripLabel3.Size = New System.Drawing.Size(43, 22)
         Me.ToolStripLabel3.Text = "Cursos"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(118, 37)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(257, 25)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Administrador De Materiales"
+        '
         'Material
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(592, 328)
+        Me.ClientSize = New System.Drawing.Size(653, 384)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelChange)
@@ -188,4 +206,5 @@ Partial Class Material
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents ToolStripLabel4 As ToolStripLabel
     Friend WithEvents ToolStripLabel5 As ToolStripLabel
+    Friend WithEvents Label2 As Label
 End Class
