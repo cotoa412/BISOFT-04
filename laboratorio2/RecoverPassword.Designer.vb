@@ -33,45 +33,45 @@ Partial Class RecoverPassword
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 59)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(58, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(174, 15)
+        Me.Label2.Size = New System.Drawing.Size(224, 20)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Ingrese su nombre de usuario:"
         '
         'TextBoxUser
         '
-        Me.TextBoxUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUser.Location = New System.Drawing.Point(12, 93)
+        Me.TextBoxUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxUser.Location = New System.Drawing.Point(46, 76)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(255, 23)
+        Me.TextBoxUser.Size = New System.Drawing.Size(255, 26)
         Me.TextBoxUser.TabIndex = 1
         '
         'ButtonConfirm
         '
-        Me.ButtonConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonConfirm.Location = New System.Drawing.Point(46, 122)
+        Me.ButtonConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonConfirm.Location = New System.Drawing.Point(68, 108)
         Me.ButtonConfirm.Name = "ButtonConfirm"
         Me.ButtonConfirm.Size = New System.Drawing.Size(80, 31)
         Me.ButtonConfirm.TabIndex = 2
-        Me.ButtonConfirm.Text = "Confirmar"
+        Me.ButtonConfirm.Text = "Enviar"
         Me.ButtonConfirm.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(26, 23)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(63, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(219, 20)
+        Me.Label1.Size = New System.Drawing.Size(204, 25)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Para recuperar su contraseña"
+        Me.Label1.Text = "Recuperar contraseña"
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(146, 122)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(187, 108)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(80, 31)
         Me.Button1.TabIndex = 4
@@ -81,10 +81,11 @@ Partial Class RecoverPassword
         'LabelMessage
         '
         Me.LabelMessage.AutoSize = True
+        Me.LabelMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelMessage.ForeColor = System.Drawing.Color.Red
-        Me.LabelMessage.Location = New System.Drawing.Point(57, 169)
+        Me.LabelMessage.Location = New System.Drawing.Point(42, 152)
         Me.LabelMessage.Name = "LabelMessage"
-        Me.LabelMessage.Size = New System.Drawing.Size(39, 13)
+        Me.LabelMessage.Size = New System.Drawing.Size(57, 20)
         Me.LabelMessage.TabIndex = 5
         Me.LabelMessage.Text = "Label3"
         Me.LabelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -94,7 +95,7 @@ Partial Class RecoverPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(279, 200)
+        Me.ClientSize = New System.Drawing.Size(333, 200)
         Me.Controls.Add(Me.LabelMessage)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
