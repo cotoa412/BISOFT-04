@@ -1,4 +1,5 @@
 ﻿Public Class Calendario
+    Dim db As New database
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs)
 
     End Sub
@@ -26,7 +27,6 @@
                 week += 1
             End If
         End While
-
 
 
     End Sub
@@ -59,7 +59,4 @@
 
     End Sub
 
-    Private Sub d2_3_Click(sender As Object, e As EventArgs) Handles d2_3.Click
-
-    End Sub
 End Class
