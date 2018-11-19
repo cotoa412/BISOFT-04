@@ -288,9 +288,9 @@ Partial Class Calendario
         '
         'd5_6
         '
-        Me.d5_6.Location = New System.Drawing.Point(445, 318)
+        Me.d5_6.Location = New System.Drawing.Point(447, 318)
         Me.d5_6.Name = "d5_6"
-        Me.d5_6.Size = New System.Drawing.Size(81, 56)
+        Me.d5_6.Size = New System.Drawing.Size(79, 56)
         Me.d5_6.TabIndex = 35
         '
         'd5_5
@@ -419,6 +419,7 @@ Partial Class Calendario
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Calendario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

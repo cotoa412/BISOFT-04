@@ -38,7 +38,7 @@ Partial Class Reminder
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(322, 44)
+        Me.Label1.Location = New System.Drawing.Point(352, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(132, 25)
         Me.Label1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class Reminder
         '
         Me.LabelChange.AutoSize = True
         Me.LabelChange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelChange.Location = New System.Drawing.Point(272, 92)
+        Me.LabelChange.Location = New System.Drawing.Point(287, 92)
         Me.LabelChange.Name = "LabelChange"
         Me.LabelChange.Size = New System.Drawing.Size(57, 20)
         Me.LabelChange.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class Reminder
         Me.PanelRemider.Controls.Add(Me.Label3)
         Me.PanelRemider.Controls.Add(Me.Label2)
         Me.PanelRemider.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelRemider.Location = New System.Drawing.Point(501, 162)
+        Me.PanelRemider.Location = New System.Drawing.Point(12, 135)
         Me.PanelRemider.Name = "PanelRemider"
         Me.PanelRemider.Size = New System.Drawing.Size(267, 129)
         Me.PanelRemider.TabIndex = 2
@@ -132,11 +132,12 @@ Partial Class Reminder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(821, 551)
         Me.Controls.Add(Me.PanelRemider)
         Me.Controls.Add(Me.LabelChange)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Reminder"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reminder"
         Me.PanelRemider.ResumeLayout(False)
         Me.PanelRemider.PerformLayout()

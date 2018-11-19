@@ -45,13 +45,7 @@
         Dim LabelDate As String = sender.Text
         Reminder.LabelChange.Text = "Recordatorios del " & LabelDate.ToString & "/" & Date.Now.Month & "/" & Date.Now.Year
         Reminder.LabelChange.Visible = True
-        Dim PanelReminder As New Panel
-        Dim LbelNameActivity As New Label
-        Dim LbelCourse As New Label
-        Dim LbelPriority As New Label
-        Dim LabelChangeReminder As New Label
-        Dim LabelChangePriority As New Label
-        Dim LabelChangeCourse As New Label
+
 
         Dim Rows = db.ReaderQuery("Select a.NameActivity,c.NameCourse,a.[Priority]
                                    From Activity a,CourseUser cu, [User] us, Course c
@@ -60,9 +54,18 @@
                                      and cu.IdUser=us.Id
                                      and c.IdCourse=cu.IdCourse")
         Dim Num As Integer = 0
+        Dim NumR As Integer = 0
+        Dim NumC As Integer = 0
 
         For Each Item In Rows
 
+            Dim PanelReminder As New Panel
+            Dim LbelNameActivity As New Label
+            Dim LbelCourse As New Label
+            Dim LbelPriority As New Label
+            Dim LabelChangeReminder As New Label
+            Dim LabelChangePriority As New Label
+            Dim LabelChangeCourse As New Label
 
             LbelNameActivity.Text = "Recordatorio"
             LbelNameActivity.Location = New Point(3, 10)
@@ -103,7 +106,7 @@
             LabelChangePriority.Visible = True
             PanelReminder.Controls.Add(LabelChangePriority)
 
-            PanelReminder.Location = New Point(63, 145)
+            PanelReminder.Location = New Point(12 + (270 * NumC), 135 + (130 * NumR))
             PanelReminder.Size = New Size(260, 120)
             PanelReminder.BorderStyle = BorderStyle.FixedSingle
             PanelReminder.BackColor = Color.Gray
@@ -121,7 +124,13 @@
             LabelChangePriority.Name = "LabelChangePriority" & Num
             LabelChangeCourse.Name = "LabelChangeCourse" & Num
             Num += 1
+            NumC += 1
+            If NumC = 3 Then
 
+                NumR += 1
+                NumC = 0
+
+            End If
         Next
 
         Reminder.Show()
