@@ -62,6 +62,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.2\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -167,6 +176,12 @@
     <Compile Include="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reminder.Designer.vb">
+      <DependentUpon>Reminder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reminder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Schedule.vb" />
     <Compile Include="tiempo.Designer.vb">
       <DependentUpon>tiempo.vb</DependentUpon>
@@ -210,6 +225,9 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reminder.resx">
+      <DependentUpon>Reminder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tiempo.resx">
       <DependentUpon>tiempo.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +243,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="ProjectDBDataSet.xsc">
       <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
     </None>
