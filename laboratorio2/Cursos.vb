@@ -24,4 +24,10 @@
         Me.Hide()
 
     End Sub
+
+    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
+        Cursos.Show()
+        Me.Hide()
+
+    End Sub
 End Class

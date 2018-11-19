@@ -1,5 +1,12 @@
 ﻿Imports System.Data.SqlClient
+Imports Microsoft.WindowsAzure.Storage
+Imports Microsoft.WindowsAzure.Storage.Auth
+Imports Microsoft.WindowsAzure.Storage.Blob
+Imports System.IO
+
+
 Public Class Material
+
     Dim Document As String
     Dim NameCourse As String
     Dim IdCourse As Integer
@@ -7,8 +14,22 @@ Public Class Material
     Dim Description As String
     Dim IdDocument As Integer
     Dim db = New database
+    Private m_csa_storageAccount As CloudStorageAccount
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
+    Public ReadOnly Property Csa_storageAccount() As CloudStorageAccount
+        Get
+            If m_csa_storageAccount Is Nothing Then
+                Dim strAccount As String = "concinnity"
+                Dim strKey As String = "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg=="
+
+                Dim credential As New StorageCredentials(strAccount, strKey)
+                m_csa_storageAccount = New CloudStorageAccount(credential, True)
+            End If
+            Return m_csa_storageAccount
+        End Get
+    End Property
+
+    Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
 
         Dim Open As New OpenFileDialog
         Dim Result As New DialogResult
@@ -26,6 +47,12 @@ Public Class Material
 
             NameDocument = InputBox("Nombre el archivo", "Nombre")
             Description = InputBox("Agrege una descriptión", "Descripción")
+            Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
+            Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
+            Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
+            Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
+            Dim blockblob = container.GetBlockBlobReference(Document)
+            Await blockblob.UploadFromFileAsync(Document)
             Dim CommandInsert As String = "INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
             db.ExecuteQuery(CommandInsert)
             LabelChange.ForeColor = Color.Green
@@ -49,14 +76,29 @@ Public Class Material
         Next
     End Sub
 
-    Private Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
+    Private Async Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
 
         Try
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
-            Process.Start(Document)
+            Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
+            Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
+            Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
+            Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
+            Dim blockblob = container.GetBlockBlobReference(Document)
+            Dim saveDialog1 As SaveFileDialog
+            saveDialog1 = New SaveFileDialog()
+            saveDialog1.CreatePrompt = True
+            saveDialog1.FileName = "TestDocument"
+            saveDialog1.Filter = "Text File (*.txt)|*.txt|Doc File (*.docx)|*.docx|Image (*.jpg)|*.jpg|All Files (*.*)|*.*"
+            Await blockblob.DownloadToFileAsync(saveDialog1.FileName, FileMode.Create)
+            Process.Start(saveDialog1.FileName)
+
         Catch ex As Exception
             MsgBox("Error al abrir el archivo. " + ex.Message)
         End Try
+        'Dim save As New SaveFileDialog
+        ' Dim Result As New DialogResult
+        'Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
     End Sub
 
@@ -134,4 +176,5 @@ Public Class Material
         Profile.Show()
         Me.Hide()
     End Sub
+
 End Class
