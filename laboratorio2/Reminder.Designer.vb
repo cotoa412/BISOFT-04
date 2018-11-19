@@ -25,12 +25,12 @@ Partial Class Reminder
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelChange = New System.Windows.Forms.Label()
         Me.PanelRemider = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.LabelShowReminder = New System.Windows.Forms.Label()
-        Me.LabelCourse = New System.Windows.Forms.Label()
         Me.LabelPriority = New System.Windows.Forms.Label()
+        Me.LabelCourse = New System.Windows.Forms.Label()
+        Me.LabelShowReminder = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRemider.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,7 +38,7 @@ Partial Class Reminder
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(313, 46)
+        Me.Label1.Location = New System.Drawing.Point(322, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(132, 25)
         Me.Label1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class Reminder
         '
         Me.LabelChange.AutoSize = True
         Me.LabelChange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelChange.Location = New System.Drawing.Point(350, 95)
+        Me.LabelChange.Location = New System.Drawing.Point(272, 92)
         Me.LabelChange.Name = "LabelChange"
         Me.LabelChange.Size = New System.Drawing.Size(57, 20)
         Me.LabelChange.TabIndex = 1
@@ -65,31 +65,38 @@ Partial Class Reminder
         Me.PanelRemider.Controls.Add(Me.Label3)
         Me.PanelRemider.Controls.Add(Me.Label2)
         Me.PanelRemider.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelRemider.Location = New System.Drawing.Point(51, 156)
+        Me.PanelRemider.Location = New System.Drawing.Point(501, 162)
         Me.PanelRemider.Name = "PanelRemider"
         Me.PanelRemider.Size = New System.Drawing.Size(267, 129)
         Me.PanelRemider.TabIndex = 2
         Me.PanelRemider.Visible = False
         '
-        'Label2
+        'LabelPriority
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 10)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Recordatorio:"
+        Me.LabelPriority.AutoSize = True
+        Me.LabelPriority.Location = New System.Drawing.Point(194, 39)
+        Me.LabelPriority.Name = "LabelPriority"
+        Me.LabelPriority.Size = New System.Drawing.Size(39, 13)
+        Me.LabelPriority.TabIndex = 5
+        Me.LabelPriority.Text = "Label7"
         '
-        'Label3
+        'LabelCourse
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 63)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 20)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Curso:"
+        Me.LabelCourse.AutoSize = True
+        Me.LabelCourse.Location = New System.Drawing.Point(16, 92)
+        Me.LabelCourse.Name = "LabelCourse"
+        Me.LabelCourse.Size = New System.Drawing.Size(39, 13)
+        Me.LabelCourse.TabIndex = 4
+        Me.LabelCourse.Text = "Label6"
+        '
+        'LabelShowReminder
+        '
+        Me.LabelShowReminder.AutoSize = True
+        Me.LabelShowReminder.Location = New System.Drawing.Point(16, 39)
+        Me.LabelShowReminder.Name = "LabelShowReminder"
+        Me.LabelShowReminder.Size = New System.Drawing.Size(39, 13)
+        Me.LabelShowReminder.TabIndex = 3
+        Me.LabelShowReminder.Text = "Label5"
         '
         'Label4
         '
@@ -101,32 +108,25 @@ Partial Class Reminder
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Prioridad:"
         '
-        'LabelShowReminder
+        'Label3
         '
-        Me.LabelShowReminder.AutoSize = True
-        Me.LabelShowReminder.Location = New System.Drawing.Point(16, 39)
-        Me.LabelShowReminder.Name = "LabelShowReminder"
-        Me.LabelShowReminder.Size = New System.Drawing.Size(39, 13)
-        Me.LabelShowReminder.TabIndex = 3
-        Me.LabelShowReminder.Text = "Label5"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 63)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 20)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Curso:"
         '
-        'LabelCourse
+        'Label2
         '
-        Me.LabelCourse.AutoSize = True
-        Me.LabelCourse.Location = New System.Drawing.Point(16, 92)
-        Me.LabelCourse.Name = "LabelCourse"
-        Me.LabelCourse.Size = New System.Drawing.Size(39, 13)
-        Me.LabelCourse.TabIndex = 4
-        Me.LabelCourse.Text = "Label6"
-        '
-        'LabelPriority
-        '
-        Me.LabelPriority.AutoSize = True
-        Me.LabelPriority.Location = New System.Drawing.Point(194, 39)
-        Me.LabelPriority.Name = "LabelPriority"
-        Me.LabelPriority.Size = New System.Drawing.Size(39, 13)
-        Me.LabelPriority.TabIndex = 5
-        Me.LabelPriority.Text = "Label7"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(105, 20)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Recordatorio:"
         '
         'Reminder
         '
