@@ -6,11 +6,10 @@
     End Sub
 
     Sub Label_Change()
-        Dim day, week As Int16
-
     End Sub
 
-
-
-
+    Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
+        Me.Hide()
+        Calendario.Show()
+    End Sub
 End Class

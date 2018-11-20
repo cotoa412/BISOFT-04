@@ -1,5 +1,6 @@
 ﻿Public Class Calendario
     Dim db As New database
+    Dim Month As Int16 = Date.Now.Month
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs)
 
     End Sub
@@ -17,7 +18,7 @@
         dateNum = 1
 
         While dateNum <= DaysInMonth
-            Dim label As Label = CType(Me.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
+            Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
             label.Text = CStr(dateNum)
 
             dateNum += 1
@@ -26,12 +27,10 @@
                 day = 1
                 week += 1
             End If
+            AddHandler label.Click, AddressOf HandleClick
         End While
 
-        GetAll(Me, GetType(Label)).ToList.ForEach(
-        Sub(c)
-            AddHandler c.Click, AddressOf HandleClick
-        End Sub)
+
 
     End Sub
     Private Function GetAll(ByVal sender As Control, ByVal T As Type) As IEnumerable(Of Control)
@@ -42,6 +41,12 @@
     End Function
 
     Private Sub HandleClick(sender As Label, e As EventArgs)
+
+        GetAll(Reminder, GetType(Panel)).ToList.ForEach(
+            Sub(c)
+                Reminder.Controls.Remove(c)
+            End Sub)
+
         Dim LabelDate As String = sender.Text
         Reminder.LabelChange.Text = "Recordatorios del " & LabelDate.ToString & "/" & Date.Now.Month & "/" & Date.Now.Year
         Reminder.LabelChange.Visible = True
@@ -49,92 +54,99 @@
 
         Dim Rows = db.ReaderQuery("Select a.NameActivity,c.NameCourse,a.[Priority]
                                    From Activity a,CourseUser cu, [User] us, Course c
-                                    Where a.DateHour='" & Date.Now.Year & "-" & Date.Now.Month & "-" & LabelDate & "'
+                                    Where a.DateHour='" & Date.Now.Year & "-" & Month & "-" & LabelDate & "'
                                      and a.Course=cu.IdCourse
                                      and cu.IdUser=us.Id
                                      and c.IdCourse=cu.IdCourse")
-        Dim Num As Integer = 0
-        Dim NumR As Integer = 0
-        Dim NumC As Integer = 0
+        If Rows.Count > 0 Then
+            Dim Num As Integer = 0
+            Dim NumR As Integer = 0
+            Dim NumC As Integer = 0
 
-        For Each Item In Rows
+            For Each Item In Rows
+                If NumR > 0 And NumC = 0 Then
+                    Reminder.Size = New Size(837, Reminder.Size.Height + 130)
+                End If
+                Dim PanelReminder As New Panel
+                Dim LbelNameActivity As New Label
+                Dim LbelCourse As New Label
+                Dim LbelPriority As New Label
+                Dim LabelChangeReminder As New Label
+                Dim LabelChangePriority As New Label
+                Dim LabelChangeCourse As New Label
 
-            Dim PanelReminder As New Panel
-            Dim LbelNameActivity As New Label
-            Dim LbelCourse As New Label
-            Dim LbelPriority As New Label
-            Dim LabelChangeReminder As New Label
-            Dim LabelChangePriority As New Label
-            Dim LabelChangeCourse As New Label
+                LbelNameActivity.Text = "Recordatorio"
+                LbelNameActivity.Location = New Point(3, 10)
+                LbelNameActivity.Size = New Size(105, 20)
+                LbelNameActivity.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelNameActivity.Visible = True
+                PanelReminder.Controls.Add(LbelNameActivity)
 
-            LbelNameActivity.Text = "Recordatorio"
-            LbelNameActivity.Location = New Point(3, 10)
-            LbelNameActivity.Size = New Size(105, 20)
-            LbelNameActivity.Font = New Font(LbelCourse.Font, FontStyle.Bold)
-            LbelNameActivity.Visible = True
-            PanelReminder.Controls.Add(LbelNameActivity)
+                LabelChangeReminder.Text = Rows(Num).Item("NameActivity")
+                LabelChangeReminder.Location = New Point(16, 39)
+                LabelChangePriority.AutoSize = True
+                LabelChangeReminder.Visible = True
+                PanelReminder.Controls.Add(LabelChangeReminder)
 
-            LabelChangeReminder.Text = Rows(Num).Item("NameActivity")
-            LabelChangeReminder.Location = New Point(16, 39)
-            LabelChangePriority.AutoSize = True
-            LabelChangeReminder.Visible = True
-            PanelReminder.Controls.Add(LabelChangeReminder)
+                LbelCourse.Text = "Course"
+                LbelCourse.Location = New Point(3, 63)
+                LbelCourse.Size = New Size(55, 20)
+                LbelCourse.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelCourse.Visible = True
+                PanelReminder.Controls.Add(LbelCourse)
 
-            LbelCourse.Text = "Course"
-            LbelCourse.Location = New Point(3, 63)
-            LbelCourse.Size = New Size(55, 20)
-            LbelCourse.Font = New Font(LbelCourse.Font, FontStyle.Bold)
-            LbelCourse.Visible = True
-            PanelReminder.Controls.Add(LbelCourse)
+                LabelChangeCourse.Text = Rows(Num).Item("NameCourse")
+                LabelChangeCourse.Location = New Point(16, 92)
+                LabelChangePriority.AutoSize = True
+                LabelChangeCourse.Visible = True
+                PanelReminder.Controls.Add(LabelChangeCourse)
 
-            LabelChangeCourse.Text = Rows(Num).Item("NameCourse")
-            LabelChangeCourse.Location = New Point(16, 92)
-            LabelChangePriority.AutoSize = True
-            LabelChangeCourse.Visible = True
-            PanelReminder.Controls.Add(LabelChangeCourse)
+                LbelPriority.Text = "Prioridad"
+                LbelPriority.Location = New Point(179, 10)
+                LbelPriority.Size = New Size(75, 20)
+                LbelPriority.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelPriority.Visible = True
+                PanelReminder.Controls.Add(LbelPriority)
 
-            LbelPriority.Text = "Prioridad"
-            LbelPriority.Location = New Point(179, 10)
-            LbelPriority.Size = New Size(75, 20)
-            LbelPriority.Font = New Font(LbelCourse.Font, FontStyle.Bold)
-            LbelPriority.Visible = True
-            PanelReminder.Controls.Add(LbelPriority)
+                LabelChangePriority.Text = Rows(Num).Item("Priority")
+                LabelChangePriority.Location = New Point(194, 39)
+                LabelChangePriority.AutoSize = True
+                LabelChangePriority.Visible = True
+                PanelReminder.Controls.Add(LabelChangePriority)
 
-            LabelChangePriority.Text = Rows(Num).Item("Priority")
-            LabelChangePriority.Location = New Point(194, 39)
-            LabelChangePriority.AutoSize = True
-            LabelChangePriority.Visible = True
-            PanelReminder.Controls.Add(LabelChangePriority)
-
-            PanelReminder.Location = New Point(12 + (270 * NumC), 135 + (130 * NumR))
-            PanelReminder.Size = New Size(260, 120)
-            PanelReminder.BorderStyle = BorderStyle.FixedSingle
-            PanelReminder.BackColor = Color.Gray
-            PanelReminder.Visible = True
-            Reminder.Controls.Add(PanelReminder)
+                PanelReminder.Location = New Point(12 + (270 * NumC), 135 + (130 * NumR))
+                PanelReminder.Size = New Size(260, 120)
+                PanelReminder.BorderStyle = BorderStyle.FixedSingle
+                PanelReminder.BackColor = Color.Gray
+                PanelReminder.Visible = True
+                Reminder.Controls.Add(PanelReminder)
 
 
 
 
-            LbelNameActivity.Name = "LbelNameActivity" & Num
-            LbelCourse.Name = "LbelCourse" & Num
-            LbelPriority.Name = "LbelPriority" & Num
-            PanelReminder.Name = "PanelRemin" & Num
-            LabelChangeReminder.Name = "LabelChangeReminder" & Num
-            LabelChangePriority.Name = "LabelChangePriority" & Num
-            LabelChangeCourse.Name = "LabelChangeCourse" & Num
-            Num += 1
-            NumC += 1
-            If NumC = 3 Then
+                LbelNameActivity.Name = "LbelNameActivity" & Num
+                LbelCourse.Name = "LbelCourse" & Num
+                LbelPriority.Name = "LbelPriority" & Num
+                PanelReminder.Name = "PanelRemin" & Num
+                LabelChangeReminder.Name = "LabelChangeReminder" & Num
+                LabelChangePriority.Name = "LabelChangePriority" & Num
+                LabelChangeCourse.Name = "LabelChangeCourse" & Num
+                Num += 1
 
-                NumR += 1
-                NumC = 0
+                If NumC = 2 Then
 
-            End If
-        Next
+                    NumR += 1
+                    NumC = 0
 
-        Reminder.Show()
+                Else
+                    NumC += 1
+                End If
 
+            Next
+
+            Reminder.Show()
+
+        End If
     End Sub
     Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
         Profile.Show()
@@ -164,4 +176,7 @@
 
     End Sub
 
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
 End Class

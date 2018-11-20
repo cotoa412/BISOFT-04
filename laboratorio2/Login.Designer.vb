@@ -96,7 +96,7 @@ Partial Class Login
         Me.LabelRecoverPassword.AutoSize = True
         Me.LabelRecoverPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelRecoverPassword.ForeColor = System.Drawing.Color.Black
-        Me.LabelRecoverPassword.Location = New System.Drawing.Point(36, 236)
+        Me.LabelRecoverPassword.Location = New System.Drawing.Point(27, 236)
         Me.LabelRecoverPassword.Name = "LabelRecoverPassword"
         Me.LabelRecoverPassword.Size = New System.Drawing.Size(135, 15)
         Me.LabelRecoverPassword.TabIndex = 8
@@ -106,7 +106,7 @@ Partial Class Login
         '
         Me.LabelRegister.AutoSize = True
         Me.LabelRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRegister.Location = New System.Drawing.Point(205, 236)
+        Me.LabelRegister.Location = New System.Drawing.Point(196, 236)
         Me.LabelRegister.Name = "LabelRegister"
         Me.LabelRegister.Size = New System.Drawing.Size(57, 15)
         Me.LabelRegister.TabIndex = 9
