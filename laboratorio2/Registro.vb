@@ -33,7 +33,7 @@ Public Class Registro
                 LabelError.ForeColor = Color.Red
                 LabelError.Visible = True
             ElseIf validar_Mail(LCase(TextBoxEmail.Text)) = False Then
-                LabelError.Text = "El correo no se encuentra en un formato válido"
+                LabelError.Text = "Correo en formato no válido"
                 LabelError.ForeColor = Color.Red
                 LabelError.Visible = True
             Else

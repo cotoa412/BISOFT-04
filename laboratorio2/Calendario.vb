@@ -68,7 +68,8 @@
                                     Where a.DateHour='" & Date.Now.Year & "-" & Month & "-" & LabelDate & "'
                                      and a.Course=cu.IdCourse
                                      and cu.IdUser=us.Id
-                                     and c.IdCourse=cu.IdCourse")
+                                     and c.IdCourse=cu.IdCourse
+                                    and us.UserName='" & Login.TextBoxUsername.Text & "'")
         If Rows.Count > 0 Then
             Dim Num As Integer = 0
             Dim NumR As Integer = 0

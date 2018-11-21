@@ -117,12 +117,12 @@ Partial Class Login
         Me.LabelError.AutoSize = True
         Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelError.ForeColor = System.Drawing.Color.Red
-        Me.LabelError.Location = New System.Drawing.Point(94, 157)
+        Me.LabelError.Location = New System.Drawing.Point(58, 157)
         Me.LabelError.Name = "LabelError"
         Me.LabelError.Size = New System.Drawing.Size(77, 18)
         Me.LabelError.TabIndex = 10
         Me.LabelError.Text = "LabelError"
-        Me.LabelError.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelError.Visible = False
         '
         'Label3

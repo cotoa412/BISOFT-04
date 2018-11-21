@@ -49,7 +49,7 @@
 
     Public Sub ShowList()
 
-        Dim Rows = db.ReaderQuery("Select c.NameCourse From Course c,[User] u Where u.UserName='" & Login.TextBoxUsername.Text & "' AND u.Password='" & Login.TextBoxPassword.Text & "'")
+        Dim Rows = db.ReaderQuery("Select c.NameCourse From Course c,[User] u,CourseUser cu Where u.UserName='" & Login.TextBoxUsername.Text & "' AND u.Password='" & Login.TextBoxPassword.Text & "' And cu.IdUser=u.Id And cu.IdCourse=c.IdCourse")
         Dim Num1 As Integer = 0
         For Each Item In Rows
 
@@ -96,6 +96,8 @@
             Label5.Visible = False
         End If
         ListBox1.Items.Clear()
+        Material.ComboBoxCourse1.Items.Clear()
+        Material.ComboBox_Course()
         ShowList()
 
     End Sub
@@ -111,7 +113,9 @@
         db.ExecuteQuery("DELETE FROM Course Where [NameCourse]='" & Course & "'")
         dbInsert.ExecuteQuery("DELETE FROM CourseUser Where IdCourse='" & IdCour & "' AND IdUser='" & IdUser & "'")
         Material.ComboBoxCourse1.Items.Clear()
+        Material.ComboBoxCourse1.Text = ""
         Material.ComboBox_Course()
+        Material.DataGridView1.DataSource = Nothing
         ListBox1.Items.Clear()
         ShowList()
 

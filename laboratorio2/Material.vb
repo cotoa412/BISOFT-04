@@ -67,19 +67,24 @@ Public Class Material
     End Sub
 
     Private Sub Prueba_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If ComboBoxCourse1.Items.Count > 0 Then
 
-        ComboBox_Course()
+        Else
+            ComboBox_Course()
+        End If
+
 
     End Sub
     Public Sub ComboBox_Course()
-        Dim rows = db.ReaderQuery("Select c.[IdCourse],c.[NameCourse]
+        Dim rows = db.ReaderQuery("Select c.[NameCourse]
                              	From Course c, CourseUser cu, [User] u
                              	Where cu.IdCourse = c.IdCourse 
-                                And cu.IdUser=u.Id")
+                                And cu.IdUser=u.Id And u.UserName='" & Login.TextBoxUsername.Text & "'")
 
         For Each row As Dictionary(Of String, Object) In rows
             ComboBoxCourse1.Items.Add(row.Item("NameCourse"))
         Next
+
     End Sub
     Private Async Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
 
