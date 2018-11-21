@@ -30,6 +30,17 @@
             AddHandler label.Click, AddressOf HandleClick
         End While
 
+        For index = 1 To 12
+
+            If Date.Now.Month = index Then
+                Label9.Text = MonthName(index)
+            End If
+
+        Next
+
+
+
+
 
 
     End Sub
@@ -88,7 +99,7 @@
                 LabelChangeReminder.Visible = True
                 PanelReminder.Controls.Add(LabelChangeReminder)
 
-                LbelCourse.Text = "Course"
+                LbelCourse.Text = "Curso"
                 LbelCourse.Location = New Point(3, 63)
                 LbelCourse.Size = New Size(55, 20)
                 LbelCourse.Font = New Font(LbelCourse.Font, FontStyle.Bold)

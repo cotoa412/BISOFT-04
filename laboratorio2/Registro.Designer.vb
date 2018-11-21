@@ -122,7 +122,7 @@ Partial Class Registro
         'ButtonAccept
         '
         Me.ButtonAccept.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAccept.Location = New System.Drawing.Point(53, 242)
+        Me.ButtonAccept.Location = New System.Drawing.Point(55, 242)
         Me.ButtonAccept.Name = "ButtonAccept"
         Me.ButtonAccept.Size = New System.Drawing.Size(91, 32)
         Me.ButtonAccept.TabIndex = 9
@@ -153,7 +153,7 @@ Partial Class Registro
         Me.LabelError.AutoSize = True
         Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelError.ForeColor = System.Drawing.Color.Red
-        Me.LabelError.Location = New System.Drawing.Point(23, 286)
+        Me.LabelError.Location = New System.Drawing.Point(51, 284)
         Me.LabelError.Name = "LabelError"
         Me.LabelError.Size = New System.Drawing.Size(57, 20)
         Me.LabelError.TabIndex = 12

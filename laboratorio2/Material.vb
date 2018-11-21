@@ -46,14 +46,14 @@ Public Class Material
         Else
 
             NameDocument = InputBox("Nombre el archivo", "Nombre")
-            Description = InputBox("Agrege una descriptión", "Descripción")
+            Description = InputBox("Agrege una descripción", "Descripción")
             Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
             Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
             Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
             Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
             Dim blockblob = container.GetBlockBlobReference(Document)
             Await blockblob.UploadFromFileAsync(Document)
-            Dim CommandInsert As String = "INSERT iNTO [Document] (PathDocument,CourseDocument,NameDocument,DescriptionDocument) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
+            Dim CommandInsert As String = "INSERT iNTO [Document] (Ubicación,Curso,Nombre,Descripción) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
             db.ExecuteQuery(CommandInsert)
             LabelChange.ForeColor = Color.Green
             LabelChange.Text = "Guardado con éxito"
@@ -67,15 +67,20 @@ Public Class Material
     End Sub
 
     Private Sub Prueba_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ComboBox_Course()
+
+    End Sub
+    Public Sub ComboBox_Course()
         Dim rows = db.ReaderQuery("Select c.[IdCourse],c.[NameCourse]
                              	From Course c, CourseUser cu, [User] u
                              	Where cu.IdCourse = c.IdCourse 
                                 And cu.IdUser=u.Id")
+
         For Each row As Dictionary(Of String, Object) In rows
             ComboBoxCourse1.Items.Add(row.Item("NameCourse"))
         Next
     End Sub
-
     Private Async Sub ButtonOpen_Click(sender As Object, e As EventArgs) Handles ButtonOpen.Click
 
         Try
@@ -113,7 +118,7 @@ Public Class Material
 
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
-        db.ExecuteQuery("DELETE FROM [Document] Where [PathDocument]='" & Document & "' And [CourseDocument]='" & IdCourse & "'")
+        db.ExecuteQuery("DELETE FROM [Document] Where [Ubicación]='" & Document & "' And [Curso]='" & IdCourse & "'")
 
 
 
@@ -132,7 +137,7 @@ Public Class Material
                                     From Course c Where c.NameCourse='" & NameCourse & "'")
             IdCourse = rows(0).Item("IdCourse")
 
-            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[PathDocument],c.[NameCourse],d.[NameDocument],d.[DescriptionDocument] FROM [Document]d,[Course]c Where d.[CourseDocument]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
+            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[Ubicación],c.[NameCourse],d.[Nombre],d.[Descripción] FROM [Document]d,[Course]c Where d.[Curso]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
         End If
 
 

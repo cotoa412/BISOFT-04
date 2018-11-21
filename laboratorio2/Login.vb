@@ -31,7 +31,7 @@ Public Class Login
                 Profile.Show()
                 Me.Hide()
             Else
-                LabelError.Text = "El Usuario No Existe"
+                LabelError.Text = "Usuario o contraseña incorrecta"
                 LabelError.Visible = True
             End If
 
