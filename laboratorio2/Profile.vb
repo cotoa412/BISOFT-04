@@ -3,26 +3,26 @@
 Public Class Profile
     Dim db As New database
 
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs)
         Calendario.Show()
         Me.Hide()
 
     End Sub
 
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs)
         'Horario.Show()
         tiempo.Show()
         Me.Hide()
 
     End Sub
 
-    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
+    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs)
         Material.Show()
         Me.Hide()
 
     End Sub
 
-    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
+    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs)
         Cursos.Show()
         Me.Hide()
 
@@ -68,5 +68,6 @@ Public Class Profile
 
         Label5.Text = "Actualizado correctamente"
     End Sub
+
 
 End Class

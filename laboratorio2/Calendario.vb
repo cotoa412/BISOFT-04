@@ -69,7 +69,7 @@
                                      and a.Course=cu.IdCourse
                                      and cu.IdUser=us.Id
                                      and c.IdCourse=cu.IdCourse
-                                    and us.UserName='" & Login.TextBoxUsername.Text & "'")
+                                    and us.UserName='" & Profile.TextBoxUser.Text & "'")
         If Rows.Count > 0 Then
             Dim Num As Integer = 0
             Dim NumR As Integer = 0
@@ -160,35 +160,5 @@
 
         End If
     End Sub
-    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
-        Profile.Show()
-        Me.Hide()
 
-    End Sub
-
-    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
-
-    End Sub
-
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-        Horario.Show()
-        Me.Close()
-
-    End Sub
-
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
-        Material.Show()
-        Me.Close()
-
-    End Sub
-
-    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
-        Cursos.Show()
-        Me.Close()
-
-    End Sub
-
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
-
-    End Sub
 End Class

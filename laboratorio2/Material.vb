@@ -79,7 +79,7 @@ Public Class Material
         Dim rows = db.ReaderQuery("Select c.[NameCourse]
                              	From Course c, CourseUser cu, [User] u
                              	Where cu.IdCourse = c.IdCourse 
-                                And cu.IdUser=u.Id And u.UserName='" & Login.TextBoxUsername.Text & "'")
+                                And cu.IdUser=u.Id And u.UserName='" & Profile.TextBoxUser.Text & "'")
 
         For Each row As Dictionary(Of String, Object) In rows
             ComboBoxCourse1.Items.Add(row.Item("NameCourse"))
@@ -114,7 +114,7 @@ Public Class Material
 
     Private Sub ComboBoxCourse1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedValueChanged
         ShowData()
-        ShowIdDocument()
+
 
     End Sub
 
@@ -142,49 +142,15 @@ Public Class Material
                                     From Course c Where c.NameCourse='" & NameCourse & "'")
             IdCourse = rows(0).Item("IdCourse")
 
-            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[Ubicación],c.[NameCourse],d.[Nombre],d.[Descripción] FROM [Document]d,[Course]c Where d.[Curso]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
+            DataGridView1.DataSource = db.AdapterQuery("SELECT d.[Ubicación],c.[NameCourse] As Curso,d.[Nombre],d.[Descripción] FROM [Document]d,[Course]c Where d.[Curso]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
+
+
+
         End If
 
 
     End Sub
 
-    Sub ShowIdDocument()
-    End Sub
 
-    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
-        Login.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
-        Calendario.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-        Horario.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
-        Cursos.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
-
-    End Sub
-
-    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
-        Profile.Show()
-        Me.Hide()
-    End Sub
 
 End Class

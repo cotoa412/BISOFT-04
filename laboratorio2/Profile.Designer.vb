@@ -23,12 +23,6 @@ Partial Class Profile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Profile))
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,49 +36,9 @@ Partial Class Profile
         Me.ButtonSave = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ToolStrip1.SuspendLayout()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel5, Me.ToolStripLabel3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(383, 25)
-        Me.ToolStrip1.TabIndex = 0
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(34, 22)
-        Me.ToolStripLabel4.Text = "Perfil"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(64, 22)
-        Me.ToolStripLabel1.Text = "Calendario"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
-        Me.ToolStripLabel2.Text = "Horario"
-        '
-        'ToolStripLabel5
-        '
-        Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripLabel5.Text = "Materiales"
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(43, 22)
-        Me.ToolStripLabel3.Text = "Cursos"
         '
         'PictureBox1
         '
@@ -220,11 +174,20 @@ Partial Class Profile
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Perfil"
         '
+        'CustomMenuStrip1
+        '
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(383, 25)
+        Me.CustomMenuStrip1.TabIndex = 14
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        '
         'Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(383, 480)
+        Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ButtonSave)
@@ -238,25 +201,15 @@ Partial Class Profile
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Profile"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripLabel3 As ToolStripLabel
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripLabel4 As ToolStripLabel
-    Friend WithEvents ToolStripLabel5 As ToolStripLabel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -270,4 +223,5 @@ Partial Class Profile
     Friend WithEvents ButtonSave As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
 End Class

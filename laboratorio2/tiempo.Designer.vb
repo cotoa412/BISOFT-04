@@ -30,13 +30,7 @@ Partial Class tiempo
         Me.status = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.hoursLabel = New System.Windows.Forms.Label()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStrip1.SuspendLayout()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.SuspendLayout()
         '
         'Label1
@@ -120,52 +114,20 @@ Partial Class tiempo
         Me.hoursLabel.TabIndex = 7
         Me.hoursLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'ToolStrip1
+        'CustomMenuStrip1
         '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel4, Me.ToolStripLabel5, Me.ToolStripLabel2, Me.ToolStripLabel1, Me.ToolStripLabel3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(452, 25)
-        Me.ToolStrip1.TabIndex = 39
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(34, 22)
-        Me.ToolStripLabel4.Text = "Perfil"
-        '
-        'ToolStripLabel5
-        '
-        Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(64, 22)
-        Me.ToolStripLabel5.Text = "Calendario"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
-        Me.ToolStripLabel2.Text = "Horario"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripLabel1.Text = "Materiales"
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(43, 22)
-        Me.ToolStripLabel3.Text = "Cursos"
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(452, 25)
+        Me.CustomMenuStrip1.TabIndex = 8
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'tiempo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(452, 450)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.hoursLabel)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.status)
@@ -176,8 +138,6 @@ Partial Class tiempo
         Me.Controls.Add(Me.Label1)
         Me.Name = "tiempo"
         Me.Text = "tiempo"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -191,10 +151,5 @@ Partial Class tiempo
     Friend WithEvents status As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents hoursLabel As Label
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripLabel4 As ToolStripLabel
-    Friend WithEvents ToolStripLabel5 As ToolStripLabel
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripLabel3 As ToolStripLabel
+    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
 End Class

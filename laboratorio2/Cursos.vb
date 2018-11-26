@@ -6,37 +6,7 @@
     Dim IdUser As Integer
     Dim IdCour As Integer
     Dim _Course As New Course
-    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
-        Calendario.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-        Horario.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub ToolStripLabel3_Click_1(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
-        Material.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
-        Profile.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
-
-        Me.Hide()
-
-    End Sub
 
     Private Sub Cursos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListBox1.Items.Clear()
@@ -49,7 +19,7 @@
 
     Public Sub ShowList()
 
-        Dim Rows = db.ReaderQuery("Select c.NameCourse From Course c,[User] u,CourseUser cu Where u.UserName='" & Login.TextBoxUsername.Text & "' AND u.Password='" & Login.TextBoxPassword.Text & "' And cu.IdUser=u.Id And cu.IdCourse=c.IdCourse")
+        Dim Rows = db.ReaderQuery("Select c.NameCourse From Course c,[User] u,CourseUser cu Where u.UserName='" & Profile.TextBoxUser.Text & "' AND u.Password='" & Profile.TextBoxPassword.Text & "' And cu.IdUser=u.Id And cu.IdCourse=c.IdCourse")
         Dim Num1 As Integer = 0
         For Each Item In Rows
 
@@ -85,7 +55,7 @@
             _Course.Credits_Course = Integer.Parse(TextBoxCredits.Text)
             db.ExecuteQuery("Insert INTO Course (NameCourse,Credit) VALUES('" & _Course.Name_Course & "','" & _Course.Credits_Course & "')")
 
-            Dim Row_Id_User = dbId.ReaderQuery("SELECT [Id] From [User] Where UserName='" & Login.TextBoxUsername.Text & "' AND Password='" & Login.TextBoxPassword.Text & "'")
+            Dim Row_Id_User = dbId.ReaderQuery("SELECT [Id] From [User] Where UserName='" & Profile.TextBoxUser.Text & "' AND Password='" & Profile.TextBoxPassword.Text & "'")
             IdUser = Row_Id_User(0).Item("Id")
             Dim Row_Id_Course = dbIdCor.ReaderQuery("Select IdCourse From Course Where NameCourse='" & _Course.Name_Course & "' And Credit='" & _Course.Credits_Course & "'")
             IdCour = Row_Id_Course(0).Item("IdCourse")
