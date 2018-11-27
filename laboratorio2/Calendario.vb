@@ -1,47 +1,17 @@
 ﻿Public Class Calendario
     Dim db As New database
     Dim Month As Int16 = Date.Now.Month
+    Dim Count_Date As Integer
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs)
 
     End Sub
 
     Private Sub Calendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim firstDay As DateTime
-        Dim week, day As Int16
-        Dim dateNum As Int32
-        Dim DaysInMonth As Integer = Date.DaysInMonth(Now.Year, Now.Month)
-        firstDay = New DateTime(Now.Year, Now.Month, 1)
-        day = CInt(firstDay.DayOfWeek)
-        If day = 0 Then day = 7
 
-        week = 1
-        dateNum = 1
+        Calendario_Change()
 
-        While dateNum <= DaysInMonth
-            Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
-            label.Text = CStr(dateNum)
-
-            dateNum += 1
-            day += 1
-            If day > 7 Then
-                day = 1
-                week += 1
-            End If
-            AddHandler label.Click, AddressOf HandleClick
-        End While
-
-        For index = 1 To 12
-
-            If Date.Now.Month = index Then
-                Label9.Text = MonthName(index)
-            End If
-
-        Next
-
-
-
-
-
+        Count_Date = Date.Now.Month
+        Label9.Text = MonthName(Count_Date)
 
     End Sub
     Private Function GetAll(ByVal sender As Control, ByVal T As Type) As IEnumerable(Of Control)
@@ -159,6 +129,92 @@
             Reminder.Show()
 
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Count_Date += 1
+        Label9.Text = MonthName(Count_Date)
+        Clear_Labels()
+        Month += 1
+        Calendario_Change()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Count_Date -= 1
+        Label9.Text = MonthName(Count_Date)
+        Clear_Labels()
+        Month -= 1
+        Calendario_Change()
+
+
+
+
+    End Sub
+    Private Sub Calendario_Change()
+
+        Dim firstDay As DateTime
+        Dim week, day As Int16
+        Dim dateNum As New Int32
+        Dim DaysInMonth As Integer = Date.DaysInMonth(Now.Year, Month)
+        firstDay = New DateTime(Now.Year, Month, 1)
+        day = CInt(firstDay.DayOfWeek)
+        If day = 0 Then day = 7
+
+        week = 1
+        dateNum = 1
+
+        While dateNum <= DaysInMonth
+
+
+            Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
+            label.Text = CStr(dateNum)
+
+            dateNum += 1
+            day += 1
+
+            If day > 7 Then
+                day = 1
+                week += 1
+            End If
+
+            AddHandler label.Click, AddressOf HandleClick
+
+        End While
+
+
+    End Sub
+
+    Private Sub Clear_Labels()
+        Dim firstDay As DateTime
+        Dim week, day As Int16
+        Dim dateNum As New Int32
+        Dim DaysInMonth As Integer = Date.DaysInMonth(Now.Year, Month)
+        firstDay = New DateTime(Now.Year, Month, 1)
+        day = CInt(firstDay.DayOfWeek)
+        If day = 0 Then day = 7
+
+        week = 1
+        dateNum = 1
+
+        While dateNum <= DaysInMonth
+
+
+            Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
+            label.Text = ""
+
+            dateNum += 1
+            day += 1
+
+            If day > 7 Then
+                day = 1
+                week += 1
+            End If
+
+        End While
+
+
+
     End Sub
 
 End Class
