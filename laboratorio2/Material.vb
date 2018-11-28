@@ -28,6 +28,14 @@ Public Class Material
             Return m_csa_storageAccount
         End Get
     End Property
+    Private Function cloud_storageGetBlobReference()
+        Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
+        Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
+        Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
+        Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
+        Dim blockblob = container.GetBlockBlobReference(Document)
+        Return blockblob
+    End Function
 
     Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonSelect.Click
 
@@ -47,12 +55,7 @@ Public Class Material
 
             NameDocument = InputBox("Nombre el archivo", "Nombre")
             Description = InputBox("Agrege una descripción", "Descripción")
-            Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
-            Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
-            Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
-            Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
-            Dim blockblob = container.GetBlockBlobReference(Document)
-            Await blockblob.UploadFromFileAsync(Document)
+            Await cloud_storageGetBlobReference().UploadFromFileAsync(Document)
             Dim CommandInsert As String = "INSERT iNTO [Document] (Ubicación,Curso,Nombre,Descripción) VALUES ('" & Document & "','" & IdCourse & "','" & NameDocument & "','" & Description & "')"
             db.ExecuteQuery(CommandInsert)
             LabelChange.ForeColor = Color.Green
@@ -90,25 +93,17 @@ Public Class Material
 
         Try
             Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
-            Dim sc As StorageCredentials = New StorageCredentials("concinnity", "tPeyMjjE7X2dvJKure3NnDLoOnnHw9Ogzis4a4Sjc8LUXpLM5nbhPjRNUufA6iCHsIyEkphs9oxVKgE9kVcEtg==")
-            Dim storageAccount As CloudStorageAccount = New CloudStorageAccount(sc, True)
-            Dim blobclient As CloudBlobClient = storageAccount.CreateCloudBlobClient()
-            Dim container As CloudBlobContainer = blobclient.GetContainerReference("proyecto1")
-            Dim blockblob = container.GetBlockBlobReference(Document)
             Dim saveDialog1 As SaveFileDialog
             saveDialog1 = New SaveFileDialog()
             saveDialog1.CreatePrompt = True
             saveDialog1.FileName = "TestDocument"
-            saveDialog1.Filter = "Text File (*.txt)|*.txt|Doc File (*.docx)|*.docx|Image (*.jpg)|*.jpg|All Files (*.*)|*.*"
-            Await blockblob.DownloadToFileAsync(saveDialog1.FileName, FileMode.Create)
+            saveDialog1.Filter = "All Files (*.*)|*.*"
+            Await cloud_storageGetBlobReference().DownloadToFileAsync(saveDialog1.FileName, FileMode.Create)
             Process.Start(saveDialog1.FileName)
 
         Catch ex As Exception
             MsgBox("Error al abrir el archivo. " + ex.Message)
         End Try
-        'Dim save As New SaveFileDialog
-        ' Dim Result As New DialogResult
-        'Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
 
     End Sub
 
@@ -150,7 +145,5 @@ Public Class Material
 
 
     End Sub
-
-
 
 End Class
