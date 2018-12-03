@@ -62,6 +62,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Desktop\Itext\itextSharp\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
     </Reference>
@@ -173,6 +176,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProjectDBDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RecoverPassword.Designer.vb">
       <DependentUpon>RecoverPassword.vb</DependentUpon>
     </Compile>
@@ -189,6 +197,12 @@
       <DependentUpon>Reminder.vb</DependentUpon>
     </Compile>
     <Compile Include="Reminder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.vb">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Schedule.vb" />
@@ -237,6 +251,9 @@
     <EmbeddedResource Include="Reminder.resx">
       <DependentUpon>Reminder.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tiempo.resx">
       <DependentUpon>tiempo.vb</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +292,17 @@
     <None Include="ProjectDBDataSet1.xss">
       <DependentUpon>ProjectDBDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="ProjectDBDataSet2.xsc">
+      <DependentUpon>ProjectDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDBDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDBDataSet2.xss">
+      <DependentUpon>ProjectDBDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -290,6 +318,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

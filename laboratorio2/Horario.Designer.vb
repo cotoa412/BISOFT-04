@@ -36,9 +36,10 @@ Partial Class Horario
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 60)
+        Me.PictureBox1.Location = New System.Drawing.Point(29, 74)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(763, 119)
+        Me.PictureBox1.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -46,9 +47,10 @@ Partial Class Horario
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(22, 180)
+        Me.PictureBox2.Location = New System.Drawing.Point(29, 222)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(763, 119)
+        Me.PictureBox2.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -56,50 +58,55 @@ Partial Class Horario
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox3.Location = New System.Drawing.Point(22, 305)
+        Me.PictureBox3.Location = New System.Drawing.Point(29, 375)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(763, 119)
+        Me.PictureBox3.Size = New System.Drawing.Size(1017, 146)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(561, 445)
+        Me.Button1.Location = New System.Drawing.Point(748, 548)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(691, 445)
+        Me.Button2.Location = New System.Drawing.Point(921, 548)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'CustomMenuStrip1
         '
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(800, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(1067, 25)
         Me.CustomMenuStrip1.TabIndex = 5
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'Horario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 481)
+        Me.ClientSize = New System.Drawing.Size(1067, 592)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Horario"
         Me.Text = "Horario"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
