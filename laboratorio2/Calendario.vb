@@ -1,4 +1,7 @@
-﻿Public Class Calendario
+﻿Imports System.ComponentModel
+Imports System.Reflection
+
+Public Class Calendario
     Dim db As New database
     Dim Month As Int16 = Date.Now.Month
     Dim Count_Date As Integer
@@ -29,7 +32,8 @@
             End Sub)
 
         Dim LabelDate As String = sender.Text
-        Reminder.LabelChange.Text = "Recordatorios del " & LabelDate.ToString & "/" & Date.Now.Month & "/" & Date.Now.Year
+
+        Reminder.LabelChange.Text = "Recordatorios del " & LabelDate.ToString & "/" & Month & "/" & Date.Now.Year
         Reminder.LabelChange.Visible = True
 
 
@@ -41,14 +45,19 @@
                                      and c.IdCourse=cu.IdCourse
                                     and us.UserName='" & Profile.TextBoxUser.Text & "'")
         If Rows.Count > 0 Then
+
             Dim Num As Integer = 0
             Dim NumR As Integer = 0
             Dim NumC As Integer = 0
 
             For Each Item In Rows
+
                 If NumR > 0 And NumC = 0 Then
+
                     Reminder.Size = New Size(837, Reminder.Size.Height + 130)
+
                 End If
+
                 Dim PanelReminder As New Panel
                 Dim LbelNameActivity As New Label
                 Dim LbelCourse As New Label
@@ -132,6 +141,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
         Count_Date += 1
         Label9.Text = MonthName(Count_Date)
         Clear_Labels()
@@ -141,14 +151,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Count_Date -= 1
         Label9.Text = MonthName(Count_Date)
         Clear_Labels()
         Month -= 1
         Calendario_Change()
-
-
-
 
     End Sub
     Private Sub Calendario_Change()
@@ -166,7 +174,6 @@
 
         While dateNum <= DaysInMonth
 
-
             Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
             label.Text = CStr(dateNum)
 
@@ -178,14 +185,26 @@
                 week += 1
             End If
 
+            RemoveClickEvent(label)
             AddHandler label.Click, AddressOf HandleClick
 
         End While
 
+    End Sub
+
+    Private Sub RemoveClickEvent(b As Control)
+
+        Dim f1 As FieldInfo = GetType(Control).GetField("EventClick", BindingFlags.Static Or BindingFlags.NonPublic)
+        Dim obj As Object = f1.GetValue(b)
+        Dim pi As PropertyInfo = b.GetType().GetProperty("Events", BindingFlags.NonPublic Or BindingFlags.Instance)
+        Dim list As EventHandlerList = DirectCast(pi.GetValue(b, Nothing), EventHandlerList)
+        list.RemoveHandler(obj, list(obj))
 
     End Sub
 
+
     Private Sub Clear_Labels()
+
         Dim firstDay As DateTime
         Dim week, day As Int16
         Dim dateNum As New Int32
@@ -199,7 +218,6 @@
 
         While dateNum <= DaysInMonth
 
-
             Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
             label.Text = ""
 
@@ -210,11 +228,11 @@
                 day = 1
                 week += 1
             End If
+            RemoveClickEvent(label)
 
         End While
 
-
-
     End Sub
+
 
 End Class

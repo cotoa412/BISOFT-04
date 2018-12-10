@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 
 Public Class database
-
+    '' Private connectionString = ¨stringLocal¨
     Private connectionString = "Data Source=comoquiera.database.windows.net;Initial Catalog=ProjectDB;User ID=Pro;Password=Destiny2!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
     Private connection As SqlConnection
 

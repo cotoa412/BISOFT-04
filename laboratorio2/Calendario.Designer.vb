@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Calendario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class Calendario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelCalendar = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -72,23 +71,28 @@ Partial Class Calendario
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.d6_7 = New System.Windows.Forms.Label()
+        Me.d6_6 = New System.Windows.Forms.Label()
+        Me.d6_5 = New System.Windows.Forms.Label()
+        Me.d6_4 = New System.Windows.Forms.Label()
+        Me.d6_3 = New System.Windows.Forms.Label()
+        Me.d6_2 = New System.Windows.Forms.Label()
+        Me.d6_1 = New System.Windows.Forms.Label()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox1.Location = New System.Drawing.Point(-227, 61)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'PanelCalendar
         '
+        Me.PanelCalendar.Controls.Add(Me.d6_7)
+        Me.PanelCalendar.Controls.Add(Me.d6_6)
+        Me.PanelCalendar.Controls.Add(Me.d6_5)
+        Me.PanelCalendar.Controls.Add(Me.d6_4)
+        Me.PanelCalendar.Controls.Add(Me.d6_3)
+        Me.PanelCalendar.Controls.Add(Me.d6_2)
+        Me.PanelCalendar.Controls.Add(Me.d6_1)
         Me.PanelCalendar.Controls.Add(Me.Label8)
         Me.PanelCalendar.Controls.Add(Me.Label7)
         Me.PanelCalendar.Controls.Add(Me.Label6)
@@ -132,9 +136,9 @@ Partial Class Calendario
         Me.PanelCalendar.Controls.Add(Me.d1_2)
         Me.PanelCalendar.Controls.Add(Me.d1_1)
         Me.PanelCalendar.Controls.Add(Me.PictureBox2)
-        Me.PanelCalendar.Location = New System.Drawing.Point(0, 122)
+        Me.PanelCalendar.Location = New System.Drawing.Point(0, 112)
         Me.PanelCalendar.Name = "PanelCalendar"
-        Me.PanelCalendar.Size = New System.Drawing.Size(631, 339)
+        Me.PanelCalendar.Size = New System.Drawing.Size(631, 433)
         Me.PanelCalendar.TabIndex = 39
         '
         'Label8
@@ -218,28 +222,28 @@ Partial Class Calendario
         '
         Me.d5_7.Location = New System.Drawing.Point(529, 275)
         Me.d5_7.Name = "d5_7"
-        Me.d5_7.Size = New System.Drawing.Size(81, 56)
+        Me.d5_7.Size = New System.Drawing.Size(81, 55)
         Me.d5_7.TabIndex = 74
         '
         'd5_6
         '
-        Me.d5_6.Location = New System.Drawing.Point(446, 275)
+        Me.d5_6.Location = New System.Drawing.Point(443, 275)
         Me.d5_6.Name = "d5_6"
-        Me.d5_6.Size = New System.Drawing.Size(79, 56)
+        Me.d5_6.Size = New System.Drawing.Size(79, 55)
         Me.d5_6.TabIndex = 73
         '
         'd5_5
         '
         Me.d5_5.Location = New System.Drawing.Point(361, 275)
         Me.d5_5.Name = "d5_5"
-        Me.d5_5.Size = New System.Drawing.Size(78, 56)
+        Me.d5_5.Size = New System.Drawing.Size(78, 55)
         Me.d5_5.TabIndex = 72
         '
         'd5_4
         '
-        Me.d5_4.Location = New System.Drawing.Point(272, 275)
+        Me.d5_4.Location = New System.Drawing.Point(274, 274)
         Me.d5_4.Name = "d5_4"
-        Me.d5_4.Size = New System.Drawing.Size(81, 56)
+        Me.d5_4.Size = New System.Drawing.Size(79, 56)
         Me.d5_4.TabIndex = 71
         '
         'd5_3
@@ -265,58 +269,58 @@ Partial Class Calendario
         '
         'd4_7
         '
-        Me.d4_7.Location = New System.Drawing.Point(529, 215)
+        Me.d4_7.Location = New System.Drawing.Point(528, 215)
         Me.d4_7.Name = "d4_7"
-        Me.d4_7.Size = New System.Drawing.Size(81, 56)
+        Me.d4_7.Size = New System.Drawing.Size(79, 46)
         Me.d4_7.TabIndex = 67
         '
         'd4_6
         '
         Me.d4_6.Location = New System.Drawing.Point(444, 215)
         Me.d4_6.Name = "d4_6"
-        Me.d4_6.Size = New System.Drawing.Size(81, 56)
+        Me.d4_6.Size = New System.Drawing.Size(78, 46)
         Me.d4_6.TabIndex = 66
         '
         'd4_5
         '
         Me.d4_5.Location = New System.Drawing.Point(359, 215)
         Me.d4_5.Name = "d4_5"
-        Me.d4_5.Size = New System.Drawing.Size(81, 56)
+        Me.d4_5.Size = New System.Drawing.Size(81, 46)
         Me.d4_5.TabIndex = 65
         '
         'd4_4
         '
         Me.d4_4.Location = New System.Drawing.Point(274, 215)
         Me.d4_4.Name = "d4_4"
-        Me.d4_4.Size = New System.Drawing.Size(81, 56)
+        Me.d4_4.Size = New System.Drawing.Size(81, 46)
         Me.d4_4.TabIndex = 64
         '
         'd4_3
         '
-        Me.d4_3.Location = New System.Drawing.Point(189, 215)
+        Me.d4_3.Location = New System.Drawing.Point(191, 215)
         Me.d4_3.Name = "d4_3"
-        Me.d4_3.Size = New System.Drawing.Size(79, 56)
+        Me.d4_3.Size = New System.Drawing.Size(77, 46)
         Me.d4_3.TabIndex = 63
         '
         'd4_2
         '
         Me.d4_2.Location = New System.Drawing.Point(107, 215)
         Me.d4_2.Name = "d4_2"
-        Me.d4_2.Size = New System.Drawing.Size(78, 56)
+        Me.d4_2.Size = New System.Drawing.Size(78, 46)
         Me.d4_2.TabIndex = 62
         '
         'd4_1
         '
         Me.d4_1.Location = New System.Drawing.Point(20, 215)
         Me.d4_1.Name = "d4_1"
-        Me.d4_1.Size = New System.Drawing.Size(80, 56)
+        Me.d4_1.Size = New System.Drawing.Size(80, 46)
         Me.d4_1.TabIndex = 61
         '
         'd3_7
         '
-        Me.d3_7.Location = New System.Drawing.Point(529, 154)
+        Me.d3_7.Location = New System.Drawing.Point(528, 155)
         Me.d3_7.Name = "d3_7"
-        Me.d3_7.Size = New System.Drawing.Size(81, 56)
+        Me.d3_7.Size = New System.Drawing.Size(79, 53)
         Me.d3_7.TabIndex = 60
         '
         'd3_6
@@ -349,9 +353,9 @@ Partial Class Calendario
         '
         'd3_1
         '
-        Me.d3_1.Location = New System.Drawing.Point(19, 152)
+        Me.d3_1.Location = New System.Drawing.Point(19, 154)
         Me.d3_1.Name = "d3_1"
-        Me.d3_1.Size = New System.Drawing.Size(80, 56)
+        Me.d3_1.Size = New System.Drawing.Size(80, 54)
         Me.d3_1.TabIndex = 55
         '
         'd2_7
@@ -400,7 +404,7 @@ Partial Class Calendario
         '
         Me.d2_1.Location = New System.Drawing.Point(18, 93)
         Me.d2_1.Name = "d2_1"
-        Me.d2_1.Size = New System.Drawing.Size(83, 56)
+        Me.d2_1.Size = New System.Drawing.Size(81, 56)
         Me.d2_1.TabIndex = 48
         '
         'd1_7
@@ -457,7 +461,7 @@ Partial Class Calendario
         Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
         Me.PictureBox2.Location = New System.Drawing.Point(7, 20)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(617, 328)
+        Me.PictureBox2.Size = New System.Drawing.Size(617, 396)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 40
         Me.PictureBox2.TabStop = False
@@ -510,11 +514,70 @@ Partial Class Calendario
         Me.CustomMenuStrip1.TabIndex = 44
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
+        Me.PictureBox1.Location = New System.Drawing.Point(-227, 61)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'd6_7
+        '
+        Me.d6_7.Location = New System.Drawing.Point(528, 340)
+        Me.d6_7.Name = "d6_7"
+        Me.d6_7.Size = New System.Drawing.Size(81, 46)
+        Me.d6_7.TabIndex = 89
+        '
+        'd6_6
+        '
+        Me.d6_6.Location = New System.Drawing.Point(442, 340)
+        Me.d6_6.Name = "d6_6"
+        Me.d6_6.Size = New System.Drawing.Size(79, 46)
+        Me.d6_6.TabIndex = 88
+        '
+        'd6_5
+        '
+        Me.d6_5.Location = New System.Drawing.Point(360, 340)
+        Me.d6_5.Name = "d6_5"
+        Me.d6_5.Size = New System.Drawing.Size(78, 46)
+        Me.d6_5.TabIndex = 87
+        '
+        'd6_4
+        '
+        Me.d6_4.Location = New System.Drawing.Point(273, 340)
+        Me.d6_4.Name = "d6_4"
+        Me.d6_4.Size = New System.Drawing.Size(79, 46)
+        Me.d6_4.TabIndex = 86
+        '
+        'd6_3
+        '
+        Me.d6_3.Location = New System.Drawing.Point(188, 340)
+        Me.d6_3.Name = "d6_3"
+        Me.d6_3.Size = New System.Drawing.Size(79, 46)
+        Me.d6_3.TabIndex = 85
+        '
+        'd6_2
+        '
+        Me.d6_2.Location = New System.Drawing.Point(103, 340)
+        Me.d6_2.Name = "d6_2"
+        Me.d6_2.Size = New System.Drawing.Size(79, 47)
+        Me.d6_2.TabIndex = 84
+        '
+        'd6_1
+        '
+        Me.d6_1.Location = New System.Drawing.Point(18, 340)
+        Me.d6_1.Name = "d6_1"
+        Me.d6_1.Size = New System.Drawing.Size(81, 47)
+        Me.d6_1.TabIndex = 83
+        '
         'Calendario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(631, 462)
+        Me.ClientSize = New System.Drawing.Size(631, 520)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
@@ -525,16 +588,14 @@ Partial Class Calendario
         Me.Name = "Calendario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendario"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelCalendar.ResumeLayout(False)
         Me.PanelCalendar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelCalendar As Panel
     Friend WithEvents d3_5 As Label
     Friend WithEvents d5_7 As Label
@@ -571,7 +632,6 @@ Partial Class Calendario
     Friend WithEvents d1_3 As Label
     Friend WithEvents d1_2 As Label
     Friend WithEvents d1_1 As Label
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -584,4 +644,13 @@ Partial Class Calendario
     Friend WithEvents Button2 As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents d6_7 As Label
+    Friend WithEvents d6_6 As Label
+    Friend WithEvents d6_5 As Label
+    Friend WithEvents d6_4 As Label
+    Friend WithEvents d6_3 As Label
+    Friend WithEvents d6_2 As Label
+    Friend WithEvents d6_1 As Label
 End Class
