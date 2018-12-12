@@ -23,6 +23,13 @@ Partial Class Calendario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelCalendar = New System.Windows.Forms.Panel()
+        Me.d6_7 = New System.Windows.Forms.Label()
+        Me.d6_6 = New System.Windows.Forms.Label()
+        Me.d6_5 = New System.Windows.Forms.Label()
+        Me.d6_4 = New System.Windows.Forms.Label()
+        Me.d6_3 = New System.Windows.Forms.Label()
+        Me.d6_2 = New System.Windows.Forms.Label()
+        Me.d6_1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -70,15 +77,8 @@ Partial Class Calendario
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.d6_7 = New System.Windows.Forms.Label()
-        Me.d6_6 = New System.Windows.Forms.Label()
-        Me.d6_5 = New System.Windows.Forms.Label()
-        Me.d6_4 = New System.Windows.Forms.Label()
-        Me.d6_3 = New System.Windows.Forms.Label()
-        Me.d6_2 = New System.Windows.Forms.Label()
-        Me.d6_1 = New System.Windows.Forms.Label()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,6 +140,55 @@ Partial Class Calendario
         Me.PanelCalendar.Name = "PanelCalendar"
         Me.PanelCalendar.Size = New System.Drawing.Size(631, 433)
         Me.PanelCalendar.TabIndex = 39
+        '
+        'd6_7
+        '
+        Me.d6_7.Location = New System.Drawing.Point(528, 340)
+        Me.d6_7.Name = "d6_7"
+        Me.d6_7.Size = New System.Drawing.Size(81, 46)
+        Me.d6_7.TabIndex = 89
+        '
+        'd6_6
+        '
+        Me.d6_6.Location = New System.Drawing.Point(442, 340)
+        Me.d6_6.Name = "d6_6"
+        Me.d6_6.Size = New System.Drawing.Size(79, 46)
+        Me.d6_6.TabIndex = 88
+        '
+        'd6_5
+        '
+        Me.d6_5.Location = New System.Drawing.Point(360, 340)
+        Me.d6_5.Name = "d6_5"
+        Me.d6_5.Size = New System.Drawing.Size(78, 46)
+        Me.d6_5.TabIndex = 87
+        '
+        'd6_4
+        '
+        Me.d6_4.Location = New System.Drawing.Point(273, 340)
+        Me.d6_4.Name = "d6_4"
+        Me.d6_4.Size = New System.Drawing.Size(79, 46)
+        Me.d6_4.TabIndex = 86
+        '
+        'd6_3
+        '
+        Me.d6_3.Location = New System.Drawing.Point(188, 340)
+        Me.d6_3.Name = "d6_3"
+        Me.d6_3.Size = New System.Drawing.Size(79, 46)
+        Me.d6_3.TabIndex = 85
+        '
+        'd6_2
+        '
+        Me.d6_2.Location = New System.Drawing.Point(103, 340)
+        Me.d6_2.Name = "d6_2"
+        Me.d6_2.Size = New System.Drawing.Size(79, 47)
+        Me.d6_2.TabIndex = 84
+        '
+        'd6_1
+        '
+        Me.d6_1.Location = New System.Drawing.Point(18, 340)
+        Me.d6_1.Name = "d6_1"
+        Me.d6_1.Size = New System.Drawing.Size(81, 47)
+        Me.d6_1.TabIndex = 83
         '
         'Label8
         '
@@ -500,19 +549,11 @@ Partial Class Calendario
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(271, 80)
+        Me.Label9.Location = New System.Drawing.Point(273, 79)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(57, 20)
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "Label9"
-        '
-        'CustomMenuStrip1
-        '
-        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(631, 25)
-        Me.CustomMenuStrip1.TabIndex = 44
-        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'PictureBox1
         '
@@ -524,54 +565,13 @@ Partial Class Calendario
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'd6_7
+        'CustomMenuStrip1
         '
-        Me.d6_7.Location = New System.Drawing.Point(528, 340)
-        Me.d6_7.Name = "d6_7"
-        Me.d6_7.Size = New System.Drawing.Size(81, 46)
-        Me.d6_7.TabIndex = 89
-        '
-        'd6_6
-        '
-        Me.d6_6.Location = New System.Drawing.Point(442, 340)
-        Me.d6_6.Name = "d6_6"
-        Me.d6_6.Size = New System.Drawing.Size(79, 46)
-        Me.d6_6.TabIndex = 88
-        '
-        'd6_5
-        '
-        Me.d6_5.Location = New System.Drawing.Point(360, 340)
-        Me.d6_5.Name = "d6_5"
-        Me.d6_5.Size = New System.Drawing.Size(78, 46)
-        Me.d6_5.TabIndex = 87
-        '
-        'd6_4
-        '
-        Me.d6_4.Location = New System.Drawing.Point(273, 340)
-        Me.d6_4.Name = "d6_4"
-        Me.d6_4.Size = New System.Drawing.Size(79, 46)
-        Me.d6_4.TabIndex = 86
-        '
-        'd6_3
-        '
-        Me.d6_3.Location = New System.Drawing.Point(188, 340)
-        Me.d6_3.Name = "d6_3"
-        Me.d6_3.Size = New System.Drawing.Size(79, 46)
-        Me.d6_3.TabIndex = 85
-        '
-        'd6_2
-        '
-        Me.d6_2.Location = New System.Drawing.Point(103, 340)
-        Me.d6_2.Name = "d6_2"
-        Me.d6_2.Size = New System.Drawing.Size(79, 47)
-        Me.d6_2.TabIndex = 84
-        '
-        'd6_1
-        '
-        Me.d6_1.Location = New System.Drawing.Point(18, 340)
-        Me.d6_1.Name = "d6_1"
-        Me.d6_1.Size = New System.Drawing.Size(81, 47)
-        Me.d6_1.TabIndex = 83
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(631, 25)
+        Me.CustomMenuStrip1.TabIndex = 44
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'Calendario
         '

@@ -143,7 +143,6 @@ Public Class Material
 
         End If
 
-
     End Sub
 
 End Class
