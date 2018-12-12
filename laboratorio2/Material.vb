@@ -145,4 +145,17 @@ Public Class Material
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim saveDialog1 As SaveFileDialog
+        saveDialog1 = New SaveFileDialog()
+        saveDialog1.CreatePrompt = True
+        saveDialog1.FileName = "ReportePdf"
+        saveDialog1.Filter = "PDF (*.pdf*)|*.pdf*"
+
+
+
+        Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
+        Process.Start(Document)
+
+    End Sub
 End Class

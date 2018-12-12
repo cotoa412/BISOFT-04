@@ -32,6 +32,7 @@ Partial Class Material
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +41,7 @@ Partial Class Material
         Me.ComboBoxCourse1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxCourse1.FormattingEnabled = True
         Me.ComboBoxCourse1.Location = New System.Drawing.Point(653, 95)
-        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBoxCourse1.Name = "ComboBoxCourse1"
         Me.ComboBoxCourse1.Size = New System.Drawing.Size(199, 33)
         Me.ComboBoxCourse1.TabIndex = 0
@@ -52,7 +53,7 @@ Partial Class Material
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(16, 95)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(624, 362)
         Me.DataGridView1.TabIndex = 1
@@ -61,7 +62,7 @@ Partial Class Material
         '
         Me.ButtonOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOpen.Location = New System.Drawing.Point(655, 155)
-        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonOpen.Name = "ButtonOpen"
         Me.ButtonOpen.Size = New System.Drawing.Size(200, 41)
         Me.ButtonOpen.TabIndex = 2
@@ -72,7 +73,7 @@ Partial Class Material
         '
         Me.ButtonSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSelect.Location = New System.Drawing.Point(653, 293)
-        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonSelect.Name = "ButtonSelect"
         Me.ButtonSelect.Size = New System.Drawing.Size(200, 41)
         Me.ButtonSelect.TabIndex = 3
@@ -83,7 +84,7 @@ Partial Class Material
         '
         Me.ButtonDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonDelete.Location = New System.Drawing.Point(655, 225)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(200, 41)
         Me.ButtonDelete.TabIndex = 4
@@ -139,11 +140,22 @@ Partial Class Material
         Me.CustomMenuStrip1.TabIndex = 10
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(655, 395)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(197, 40)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Crear reporte"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Material
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(871, 473)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -153,7 +165,7 @@ Partial Class Material
         Me.Controls.Add(Me.ButtonOpen)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ComboBoxCourse1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Material"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Prueba"
@@ -173,4 +185,5 @@ Partial Class Material
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
+    Friend WithEvents Button1 As Button
 End Class
