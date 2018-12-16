@@ -40,12 +40,12 @@ Partial Class Reporte
         Me.ActivityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProjectDBDataSet2 = New laboratorio2.ProjectDBDataSet2()
         Me.ActivityTableAdapter2 = New laboratorio2.ProjectDBDataSet2TableAdapters.ActivityTableAdapter()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.IdActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateHourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         CType(Me.ProjectDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,6 +146,8 @@ Partial Class Reporte
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdActivityDataGridViewTextBoxColumn, Me.NameActivityDataGridViewTextBoxColumn, Me.PriorityDataGridViewTextBoxColumn, Me.DateHourDataGridViewTextBoxColumn, Me.CourseDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ActivityBindingSource2
@@ -169,6 +171,15 @@ Partial Class Reporte
         '
         Me.ActivityTableAdapter2.ClearBeforeFill = True
         '
+        'CustomMenuStrip1
+        '
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(834, 25)
+        Me.CustomMenuStrip1.TabIndex = 8
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        '
         'IdActivityDataGridViewTextBoxColumn
         '
         Me.IdActivityDataGridViewTextBoxColumn.DataPropertyName = "IdActivity"
@@ -180,35 +191,30 @@ Partial Class Reporte
         'NameActivityDataGridViewTextBoxColumn
         '
         Me.NameActivityDataGridViewTextBoxColumn.DataPropertyName = "NameActivity"
-        Me.NameActivityDataGridViewTextBoxColumn.HeaderText = "NameActivity"
+        Me.NameActivityDataGridViewTextBoxColumn.HeaderText = "Nombre de Actividad"
         Me.NameActivityDataGridViewTextBoxColumn.Name = "NameActivityDataGridViewTextBoxColumn"
+        Me.NameActivityDataGridViewTextBoxColumn.Width = 102
         '
         'PriorityDataGridViewTextBoxColumn
         '
         Me.PriorityDataGridViewTextBoxColumn.DataPropertyName = "Priority"
-        Me.PriorityDataGridViewTextBoxColumn.HeaderText = "Priority"
+        Me.PriorityDataGridViewTextBoxColumn.HeaderText = "Prioridad"
         Me.PriorityDataGridViewTextBoxColumn.Name = "PriorityDataGridViewTextBoxColumn"
+        Me.PriorityDataGridViewTextBoxColumn.Width = 94
         '
         'DateHourDataGridViewTextBoxColumn
         '
         Me.DateHourDataGridViewTextBoxColumn.DataPropertyName = "DateHour"
-        Me.DateHourDataGridViewTextBoxColumn.HeaderText = "DateHour"
+        Me.DateHourDataGridViewTextBoxColumn.HeaderText = "Fecha"
         Me.DateHourDataGridViewTextBoxColumn.Name = "DateHourDataGridViewTextBoxColumn"
+        Me.DateHourDataGridViewTextBoxColumn.Width = 76
         '
         'CourseDataGridViewTextBoxColumn
         '
         Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "Course"
-        Me.CourseDataGridViewTextBoxColumn.HeaderText = "Course"
+        Me.CourseDataGridViewTextBoxColumn.HeaderText = "Curso"
         Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
-        '
-        'CustomMenuStrip1
-        '
-        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(834, 25)
-        Me.CustomMenuStrip1.TabIndex = 8
-        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        Me.CourseDataGridViewTextBoxColumn.Width = 74
         '
         'Reporte
         '
