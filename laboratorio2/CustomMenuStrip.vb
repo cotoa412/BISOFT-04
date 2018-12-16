@@ -10,6 +10,8 @@
     Friend WithEvents ToolStripLabel4 As ToolStripLabel
     Friend WithEvents ToolStripLabel6 As ToolStripLabel
     Friend WithEvents ToolStripLabel7 As ToolStripLabel
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripLabel8 As ToolStripLabel
     Friend WithEvents ToolStripLabel5 As ToolStripLabel
 
     Public Sub New()
@@ -25,6 +27,8 @@
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel7 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel8 = New System.Windows.Forms.ToolStripLabel()
         Me.SuspendLayout()
         '
         'ToolStripLabel1
@@ -66,13 +70,23 @@
         'ToolStripLabel7
         '
         Me.ToolStripLabel7.Name = "ToolStripLabel7"
-        Me.ToolStripLabel7.Size = New System.Drawing.Size(23, 23)
+        Me.ToolStripLabel7.Size = New System.Drawing.Size(62, 20)
         Me.ToolStripLabel7.Text = "Reporte"
-
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 6)
+        '
+        'ToolStripLabel8
+        '
+        Me.ToolStripLabel8.Name = "ToolStripLabel8"
+        Me.ToolStripLabel8.Size = New System.Drawing.Size(23, 23)
+        Me.ToolStripLabel8.Text = "Salir"
         '
         'CustomMenuStrip
         '
-        Me.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel3, Me.ToolStripLabel4, Me.ToolStripLabel5, Me.ToolStripLabel6, Me.ToolStripLabel7})
+        Me.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripLabel2, Me.ToolStripLabel3, Me.ToolStripLabel4, Me.ToolStripLabel5, Me.ToolStripLabel6, Me.ToolStripLabel7, Me.ToolStripSeparator1, Me.ToolStripLabel8})
         Me.ResumeLayout(False)
 
     End Sub
@@ -105,7 +119,6 @@
         Cursos.Hide()
         tiempo.Hide()
         Reporte.Hide()
-
     End Sub
 
     Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
@@ -118,7 +131,6 @@
         tiempo.Hide()
         Reporte.Hide()
 
-
     End Sub
 
     Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
@@ -130,7 +142,6 @@
         Horario.Hide()
         tiempo.Hide()
         Reporte.Hide()
-
     End Sub
 
     Private Sub ToolStripLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripLabel6.Click
@@ -142,7 +153,6 @@
         Horario.Hide()
         Cursos.Hide()
         Reporte.Hide()
-
     End Sub
     Private Sub ToolStripLabel7_Click(sender As Object, e As EventArgs) Handles ToolStripLabel7.Click
 
@@ -155,6 +165,15 @@
         Cursos.Hide()
 
     End Sub
+    Private Sub ToolStripLabel8_Click(sender As Object, e As EventArgs) Handles ToolStripLabel8.Click
 
+        Login.Show()
+        Calendario.Hide()
+        Profile.Hide()
+        Material.Hide()
+        Horario.Hide()
+        tiempo.Hide()
+        Cursos.Hide()
+        Reporte.Hide()
+    End Sub
 End Class
-

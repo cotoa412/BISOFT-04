@@ -37,15 +37,15 @@ Partial Class Reporte
         Me.ActivityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ActivityTableAdapter1 = New laboratorio2.ProjectDBDataSet1TableAdapters.ActivityTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ActivityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProjectDBDataSet2 = New laboratorio2.ProjectDBDataSet2()
+        Me.ActivityTableAdapter2 = New laboratorio2.ProjectDBDataSet2TableAdapters.ActivityTableAdapter()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.IdActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateHourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ActivityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectDBDataSet2 = New laboratorio2.ProjectDBDataSet2()
-        Me.ActivityTableAdapter2 = New laboratorio2.ProjectDBDataSet2TableAdapters.ActivityTableAdapter()
-        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         CType(Me.ProjectDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,20 +57,18 @@ Partial Class Reporte
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(151, 303)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Location = New System.Drawing.Point(201, 373)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 30)
+        Me.Button1.Size = New System.Drawing.Size(117, 37)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(253, 303)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(337, 373)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(157, 30)
+        Me.Button2.Size = New System.Drawing.Size(209, 37)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Crear Pdf"
         Me.Button2.UseVisualStyleBackColor = True
@@ -78,47 +76,42 @@ Partial Class Reporte
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(59, 65)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(79, 80)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(116, 17)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Titulo del archivo"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 274)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(57, 337)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 13)
+        Me.Label2.Size = New System.Drawing.Size(143, 17)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Locacion del archivo"
+        Me.Label2.Text = "Ubicacion del archivo"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(151, 63)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(201, 77)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(260, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(345, 22)
         Me.TextBox1.TabIndex = 4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(151, 271)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Location = New System.Drawing.Point(201, 334)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(260, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(345, 22)
         Me.TextBox2.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(284, 21)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(387, 34)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 24)
+        Me.Label3.Size = New System.Drawing.Size(100, 29)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Reporte"
         '
@@ -153,46 +146,16 @@ Partial Class Reporte
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdActivityDataGridViewTextBoxColumn, Me.NameActivityDataGridViewTextBoxColumn, Me.PriorityDataGridViewTextBoxColumn, Me.DateHourDataGridViewTextBoxColumn, Me.CourseDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ActivityBindingSource2
-        Me.DataGridView1.Location = New System.Drawing.Point(151, 102)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(201, 125)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(407, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(543, 185)
         Me.DataGridView1.TabIndex = 7
-        '
-        'IdActivityDataGridViewTextBoxColumn
-        '
-        Me.IdActivityDataGridViewTextBoxColumn.DataPropertyName = "IdActivity"
-        Me.IdActivityDataGridViewTextBoxColumn.HeaderText = "IdActivity"
-        Me.IdActivityDataGridViewTextBoxColumn.Name = "IdActivityDataGridViewTextBoxColumn"
-        Me.IdActivityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NameActivityDataGridViewTextBoxColumn
-        '
-        Me.NameActivityDataGridViewTextBoxColumn.DataPropertyName = "NameActivity"
-        Me.NameActivityDataGridViewTextBoxColumn.HeaderText = "NameActivity"
-        Me.NameActivityDataGridViewTextBoxColumn.Name = "NameActivityDataGridViewTextBoxColumn"
-        '
-        'PriorityDataGridViewTextBoxColumn
-        '
-        Me.PriorityDataGridViewTextBoxColumn.DataPropertyName = "Priority"
-        Me.PriorityDataGridViewTextBoxColumn.HeaderText = "Priority"
-        Me.PriorityDataGridViewTextBoxColumn.Name = "PriorityDataGridViewTextBoxColumn"
-        '
-        'DateHourDataGridViewTextBoxColumn
-        '
-        Me.DateHourDataGridViewTextBoxColumn.DataPropertyName = "DateHour"
-        Me.DateHourDataGridViewTextBoxColumn.HeaderText = "DateHour"
-        Me.DateHourDataGridViewTextBoxColumn.Name = "DateHourDataGridViewTextBoxColumn"
-        '
-        'CourseDataGridViewTextBoxColumn
-        '
-        Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "Course"
-        Me.CourseDataGridViewTextBoxColumn.HeaderText = "Course"
-        Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
         '
         'ActivityBindingSource2
         '
@@ -210,17 +173,54 @@ Partial Class Reporte
         '
         'CustomMenuStrip1
         '
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(626, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(834, 25)
         Me.CustomMenuStrip1.TabIndex = 8
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
+        'IdActivityDataGridViewTextBoxColumn
+        '
+        Me.IdActivityDataGridViewTextBoxColumn.DataPropertyName = "IdActivity"
+        Me.IdActivityDataGridViewTextBoxColumn.HeaderText = "IdActivity"
+        Me.IdActivityDataGridViewTextBoxColumn.Name = "IdActivityDataGridViewTextBoxColumn"
+        Me.IdActivityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdActivityDataGridViewTextBoxColumn.Visible = False
+        '
+        'NameActivityDataGridViewTextBoxColumn
+        '
+        Me.NameActivityDataGridViewTextBoxColumn.DataPropertyName = "NameActivity"
+        Me.NameActivityDataGridViewTextBoxColumn.HeaderText = "Nombre de Actividad"
+        Me.NameActivityDataGridViewTextBoxColumn.Name = "NameActivityDataGridViewTextBoxColumn"
+        Me.NameActivityDataGridViewTextBoxColumn.Width = 102
+        '
+        'PriorityDataGridViewTextBoxColumn
+        '
+        Me.PriorityDataGridViewTextBoxColumn.DataPropertyName = "Priority"
+        Me.PriorityDataGridViewTextBoxColumn.HeaderText = "Prioridad"
+        Me.PriorityDataGridViewTextBoxColumn.Name = "PriorityDataGridViewTextBoxColumn"
+        Me.PriorityDataGridViewTextBoxColumn.Width = 94
+        '
+        'DateHourDataGridViewTextBoxColumn
+        '
+        Me.DateHourDataGridViewTextBoxColumn.DataPropertyName = "DateHour"
+        Me.DateHourDataGridViewTextBoxColumn.HeaderText = "Fecha"
+        Me.DateHourDataGridViewTextBoxColumn.Name = "DateHourDataGridViewTextBoxColumn"
+        Me.DateHourDataGridViewTextBoxColumn.Width = 76
+        '
+        'CourseDataGridViewTextBoxColumn
+        '
+        Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "Course"
+        Me.CourseDataGridViewTextBoxColumn.HeaderText = "Curso"
+        Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
+        Me.CourseDataGridViewTextBoxColumn.Width = 74
+        '
         'Reporte
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(626, 366)
+        Me.ClientSize = New System.Drawing.Size(834, 450)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
@@ -230,7 +230,6 @@ Partial Class Reporte
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Reporte"
         Me.Text = "Reporte"
         CType(Me.ProjectDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -262,10 +261,10 @@ Partial Class Reporte
     Friend WithEvents ProjectDBDataSet2 As ProjectDBDataSet2
     Friend WithEvents ActivityBindingSource2 As BindingSource
     Friend WithEvents ActivityTableAdapter2 As ProjectDBDataSet2TableAdapters.ActivityTableAdapter
+    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
     Friend WithEvents IdActivityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NameActivityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PriorityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DateHourDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CourseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
 End Class
