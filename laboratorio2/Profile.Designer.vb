@@ -43,10 +43,11 @@ Partial Class Profile
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(100, 65)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(164, 78)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(181, 147)
+        Me.PictureBox1.Size = New System.Drawing.Size(175, 181)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -54,10 +55,9 @@ Partial Class Profile
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 233)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(23, 287)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 20)
+        Me.Label1.Size = New System.Drawing.Size(85, 25)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Usuario:"
         '
@@ -65,10 +65,9 @@ Partial Class Profile
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(16, 272)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(21, 335)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 20)
+        Me.Label2.Size = New System.Drawing.Size(120, 25)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Contraseña:"
         '
@@ -76,49 +75,48 @@ Partial Class Profile
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 330)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(23, 406)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 20)
+        Me.Label3.Size = New System.Drawing.Size(87, 25)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre:"
         '
         'TextBoxUser
         '
         Me.TextBoxUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUser.Location = New System.Drawing.Point(138, 227)
-        Me.TextBoxUser.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxUser.Location = New System.Drawing.Point(184, 279)
+        Me.TextBoxUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxUser.Size = New System.Drawing.Size(295, 30)
         Me.TextBoxUser.TabIndex = 5
         '
         'TextBoxPassword
         '
         Me.TextBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxPassword.Location = New System.Drawing.Point(138, 266)
-        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(184, 327)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(295, 30)
         Me.TextBoxPassword.TabIndex = 6
         '
         'TextBoxName
         '
         Me.TextBoxName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxName.Location = New System.Drawing.Point(138, 324)
-        Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxName.Location = New System.Drawing.Point(184, 399)
+        Me.TextBoxName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxName.Size = New System.Drawing.Size(295, 30)
         Me.TextBoxName.TabIndex = 7
         '
         'CheckBoxMostrar
         '
         Me.CheckBoxMostrar.AutoSize = True
         Me.CheckBoxMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBoxMostrar.Location = New System.Drawing.Point(167, 296)
-        Me.CheckBoxMostrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBoxMostrar.Location = New System.Drawing.Point(223, 364)
+        Me.CheckBoxMostrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBoxMostrar.Name = "CheckBoxMostrar"
-        Me.CheckBoxMostrar.Size = New System.Drawing.Size(169, 24)
+        Me.CheckBoxMostrar.Size = New System.Drawing.Size(207, 29)
         Me.CheckBoxMostrar.TabIndex = 8
         Me.CheckBoxMostrar.Text = "Mostrar Contraseña"
         Me.CheckBoxMostrar.UseVisualStyleBackColor = True
@@ -127,29 +125,28 @@ Partial Class Profile
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(16, 369)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(21, 454)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 20)
+        Me.Label4.Size = New System.Drawing.Size(78, 25)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Correo:"
         '
         'TextBoxEmail
         '
         Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxEmail.Location = New System.Drawing.Point(138, 363)
-        Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxEmail.Location = New System.Drawing.Point(184, 447)
+        Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxEmail.Size = New System.Drawing.Size(295, 30)
         Me.TextBoxEmail.TabIndex = 10
         '
         'ButtonSave
         '
         Me.ButtonSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSave.Location = New System.Drawing.Point(152, 407)
-        Me.ButtonSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.ButtonSave.Location = New System.Drawing.Point(203, 501)
+        Me.ButtonSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonSave.Name = "ButtonSave"
-        Me.ButtonSave.Size = New System.Drawing.Size(79, 29)
+        Me.ButtonSave.Size = New System.Drawing.Size(105, 36)
         Me.ButtonSave.TabIndex = 11
         Me.ButtonSave.Text = "Guardar"
         Me.ButtonSave.UseVisualStyleBackColor = True
@@ -159,34 +156,37 @@ Partial Class Profile
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Lime
-        Me.Label5.Location = New System.Drawing.Point(77, 451)
+        Me.Label5.Location = New System.Drawing.Point(103, 555)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(0, 20)
+        Me.Label5.Size = New System.Drawing.Size(0, 25)
         Me.Label5.TabIndex = 12
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(162, 38)
+        Me.Label6.Location = New System.Drawing.Point(216, 47)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 25)
+        Me.Label6.Size = New System.Drawing.Size(71, 29)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Perfil"
         '
         'CustomMenuStrip1
         '
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(383, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(511, 25)
         Me.CustomMenuStrip1.TabIndex = 14
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'Profile
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(383, 480)
+        Me.ClientSize = New System.Drawing.Size(511, 591)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -201,7 +201,7 @@ Partial Class Profile
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Profile"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"

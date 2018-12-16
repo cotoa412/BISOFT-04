@@ -37,14 +37,15 @@ Partial Class Reporte
         Me.ActivityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ActivityTableAdapter1 = New laboratorio2.ProjectDBDataSet1TableAdapters.ActivityTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ActivityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProjectDBDataSet2 = New laboratorio2.ProjectDBDataSet2()
+        Me.ActivityTableAdapter2 = New laboratorio2.ProjectDBDataSet2TableAdapters.ActivityTableAdapter()
         Me.IdActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameActivityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateHourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ActivityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectDBDataSet2 = New laboratorio2.ProjectDBDataSet2()
-        Me.ActivityTableAdapter2 = New laboratorio2.ProjectDBDataSet2TableAdapters.ActivityTableAdapter()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         CType(Me.ProjectDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProjectDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,9 +87,9 @@ Partial Class Reporte
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(57, 337)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 17)
+        Me.Label2.Size = New System.Drawing.Size(143, 17)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Locacion del archivo"
+        Me.Label2.Text = "Ubicacion del archivo"
         '
         'TextBox1
         '
@@ -108,7 +109,7 @@ Partial Class Reporte
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(379, 26)
+        Me.Label3.Location = New System.Drawing.Point(387, 34)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 29)
         Me.Label3.TabIndex = 6
@@ -154,12 +155,27 @@ Partial Class Reporte
         Me.DataGridView1.Size = New System.Drawing.Size(543, 185)
         Me.DataGridView1.TabIndex = 7
         '
+        'ActivityBindingSource2
+        '
+        Me.ActivityBindingSource2.DataMember = "Activity"
+        Me.ActivityBindingSource2.DataSource = Me.ProjectDBDataSet2
+        '
+        'ProjectDBDataSet2
+        '
+        Me.ProjectDBDataSet2.DataSetName = "ProjectDBDataSet2"
+        Me.ProjectDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ActivityTableAdapter2
+        '
+        Me.ActivityTableAdapter2.ClearBeforeFill = True
+        '
         'IdActivityDataGridViewTextBoxColumn
         '
         Me.IdActivityDataGridViewTextBoxColumn.DataPropertyName = "IdActivity"
         Me.IdActivityDataGridViewTextBoxColumn.HeaderText = "IdActivity"
         Me.IdActivityDataGridViewTextBoxColumn.Name = "IdActivityDataGridViewTextBoxColumn"
         Me.IdActivityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdActivityDataGridViewTextBoxColumn.Visible = False
         '
         'NameActivityDataGridViewTextBoxColumn
         '
@@ -185,25 +201,21 @@ Partial Class Reporte
         Me.CourseDataGridViewTextBoxColumn.HeaderText = "Course"
         Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
         '
-        'ActivityBindingSource2
+        'CustomMenuStrip1
         '
-        Me.ActivityBindingSource2.DataMember = "Activity"
-        Me.ActivityBindingSource2.DataSource = Me.ProjectDBDataSet2
-        '
-        'ProjectDBDataSet2
-        '
-        Me.ProjectDBDataSet2.DataSetName = "ProjectDBDataSet2"
-        Me.ProjectDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ActivityTableAdapter2
-        '
-        Me.ActivityTableAdapter2.ClearBeforeFill = True
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(834, 25)
+        Me.CustomMenuStrip1.TabIndex = 8
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'Reporte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(834, 450)
+        Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox2)
@@ -243,6 +255,7 @@ Partial Class Reporte
     Friend WithEvents ProjectDBDataSet2 As ProjectDBDataSet2
     Friend WithEvents ActivityBindingSource2 As BindingSource
     Friend WithEvents ActivityTableAdapter2 As ProjectDBDataSet2TableAdapters.ActivityTableAdapter
+    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
     Friend WithEvents IdActivityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NameActivityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PriorityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

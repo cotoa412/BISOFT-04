@@ -82,7 +82,7 @@
         Calendario.Hide()
         Cursos.Hide()
         tiempo.Hide()
-
+        Reporte.Hide()
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
@@ -92,7 +92,7 @@
         Horario.Hide()
         Cursos.Hide()
         tiempo.Hide()
-
+        Reporte.Hide()
     End Sub
 
     Private Sub ToolStripLabel3_Click_1(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
@@ -103,7 +103,7 @@
         Material.Hide()
         Cursos.Hide()
         tiempo.Hide()
-
+        Reporte.Hide()
     End Sub
 
     Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
@@ -114,7 +114,7 @@
         Horario.Hide()
         Cursos.Hide()
         tiempo.Hide()
-
+        Reporte.Hide()
 
     End Sub
 
@@ -126,7 +126,7 @@
         Material.Hide()
         Horario.Hide()
         tiempo.Hide()
-
+        Reporte.Hide()
     End Sub
 
     Private Sub ToolStripLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripLabel6.Click
@@ -137,7 +137,7 @@
         Material.Hide()
         Horario.Hide()
         Cursos.Hide()
-
+        Reporte.Hide()
     End Sub
     Private Sub ToolStripLabel7_Click(sender As Object, e As EventArgs) Handles ToolStripLabel7.Click
 
