@@ -43,10 +43,11 @@ Partial Class Profile
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(100, 65)
+        Me.PictureBox1.Location = New System.Drawing.Point(138, 65)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(181, 147)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -89,7 +90,7 @@ Partial Class Profile
         Me.TextBoxUser.Location = New System.Drawing.Point(138, 227)
         Me.TextBoxUser.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxUser.Size = New System.Drawing.Size(272, 26)
         Me.TextBoxUser.TabIndex = 5
         '
         'TextBoxPassword
@@ -99,7 +100,7 @@ Partial Class Profile
         Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(272, 26)
         Me.TextBoxPassword.TabIndex = 6
         '
         'TextBoxName
@@ -108,7 +109,7 @@ Partial Class Profile
         Me.TextBoxName.Location = New System.Drawing.Point(138, 324)
         Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxName.Size = New System.Drawing.Size(272, 26)
         Me.TextBoxName.TabIndex = 7
         '
         'CheckBoxMostrar
@@ -140,7 +141,7 @@ Partial Class Profile
         Me.TextBoxEmail.Location = New System.Drawing.Point(138, 363)
         Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(222, 26)
+        Me.TextBoxEmail.Size = New System.Drawing.Size(272, 26)
         Me.TextBoxEmail.TabIndex = 10
         '
         'ButtonSave
@@ -168,7 +169,7 @@ Partial Class Profile
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(162, 38)
+        Me.Label6.Location = New System.Drawing.Point(196, 38)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 25)
         Me.Label6.TabIndex = 13
@@ -178,7 +179,7 @@ Partial Class Profile
         '
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(383, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(424, 25)
         Me.CustomMenuStrip1.TabIndex = 14
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
@@ -186,7 +187,7 @@ Partial Class Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(383, 480)
+        Me.ClientSize = New System.Drawing.Size(424, 480)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)

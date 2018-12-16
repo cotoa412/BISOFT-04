@@ -81,7 +81,7 @@ Partial Class Registro
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(109, 10)
+        Me.Label5.Location = New System.Drawing.Point(187, 10)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(91, 25)
         Me.Label5.TabIndex = 4
@@ -92,7 +92,7 @@ Partial Class Registro
         Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxEmail.Location = New System.Drawing.Point(114, 61)
         Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(187, 26)
+        Me.TextBoxEmail.Size = New System.Drawing.Size(336, 26)
         Me.TextBoxEmail.TabIndex = 5
         '
         'TextBoxName
@@ -100,7 +100,7 @@ Partial Class Registro
         Me.TextBoxName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxName.Location = New System.Drawing.Point(114, 106)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(187, 26)
+        Me.TextBoxName.Size = New System.Drawing.Size(336, 26)
         Me.TextBoxName.TabIndex = 6
         '
         'TextBoxUsername
@@ -108,7 +108,7 @@ Partial Class Registro
         Me.TextBoxUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxUsername.Location = New System.Drawing.Point(114, 150)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(187, 26)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(336, 26)
         Me.TextBoxUsername.TabIndex = 7
         '
         'TextBoxPassword
@@ -116,13 +116,13 @@ Partial Class Registro
         Me.TextBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxPassword.Location = New System.Drawing.Point(114, 195)
         Me.TextBoxPassword.Name = "TextBoxPassword"
-        Me.TextBoxPassword.Size = New System.Drawing.Size(187, 26)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(336, 26)
         Me.TextBoxPassword.TabIndex = 8
         '
         'ButtonAccept
         '
         Me.ButtonAccept.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAccept.Location = New System.Drawing.Point(61, 242)
+        Me.ButtonAccept.Location = New System.Drawing.Point(114, 242)
         Me.ButtonAccept.Name = "ButtonAccept"
         Me.ButtonAccept.Size = New System.Drawing.Size(91, 32)
         Me.ButtonAccept.TabIndex = 9
@@ -132,7 +132,7 @@ Partial Class Registro
         'ButtonCancel
         '
         Me.ButtonCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonCancel.Location = New System.Drawing.Point(178, 242)
+        Me.ButtonCancel.Location = New System.Drawing.Point(293, 242)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(91, 32)
         Me.ButtonCancel.TabIndex = 10
@@ -153,7 +153,7 @@ Partial Class Registro
         Me.LabelError.AutoSize = True
         Me.LabelError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelError.ForeColor = System.Drawing.Color.Red
-        Me.LabelError.Location = New System.Drawing.Point(39, 282)
+        Me.LabelError.Location = New System.Drawing.Point(138, 289)
         Me.LabelError.Name = "LabelError"
         Me.LabelError.Size = New System.Drawing.Size(57, 20)
         Me.LabelError.TabIndex = 12
@@ -165,7 +165,7 @@ Partial Class Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 322)
+        Me.ClientSize = New System.Drawing.Size(462, 327)
         Me.Controls.Add(Me.LabelError)
         Me.Controls.Add(Me.LabelID)
         Me.Controls.Add(Me.ButtonCancel)

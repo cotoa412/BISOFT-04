@@ -79,13 +79,16 @@ Partial Class Calendario
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CustomMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelCalendar
         '
+        Me.PanelCalendar.BackColor = System.Drawing.SystemColors.Control
         Me.PanelCalendar.Controls.Add(Me.d6_7)
         Me.PanelCalendar.Controls.Add(Me.d6_6)
         Me.PanelCalendar.Controls.Add(Me.d6_5)
@@ -136,9 +139,9 @@ Partial Class Calendario
         Me.PanelCalendar.Controls.Add(Me.d1_2)
         Me.PanelCalendar.Controls.Add(Me.d1_1)
         Me.PanelCalendar.Controls.Add(Me.PictureBox2)
-        Me.PanelCalendar.Location = New System.Drawing.Point(0, 112)
+        Me.PanelCalendar.Location = New System.Drawing.Point(0, 133)
         Me.PanelCalendar.Name = "PanelCalendar"
-        Me.PanelCalendar.Size = New System.Drawing.Size(631, 433)
+        Me.PanelCalendar.Size = New System.Drawing.Size(631, 449)
         Me.PanelCalendar.TabIndex = 39
         '
         'd6_7
@@ -171,21 +174,21 @@ Partial Class Calendario
         '
         'd6_3
         '
-        Me.d6_3.Location = New System.Drawing.Point(188, 340)
+        Me.d6_3.Location = New System.Drawing.Point(188, 339)
         Me.d6_3.Name = "d6_3"
         Me.d6_3.Size = New System.Drawing.Size(79, 46)
         Me.d6_3.TabIndex = 85
         '
         'd6_2
         '
-        Me.d6_2.Location = New System.Drawing.Point(103, 340)
+        Me.d6_2.Location = New System.Drawing.Point(103, 339)
         Me.d6_2.Name = "d6_2"
         Me.d6_2.Size = New System.Drawing.Size(79, 47)
         Me.d6_2.TabIndex = 84
         '
         'd6_1
         '
-        Me.d6_1.Location = New System.Drawing.Point(18, 340)
+        Me.d6_1.Location = New System.Drawing.Point(18, 339)
         Me.d6_1.Name = "d6_1"
         Me.d6_1.Size = New System.Drawing.Size(81, 47)
         Me.d6_1.TabIndex = 83
@@ -194,7 +197,7 @@ Partial Class Calendario
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(528, 4)
+        Me.Label8.Location = New System.Drawing.Point(528, -3)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(73, 20)
         Me.Label8.TabIndex = 82
@@ -204,7 +207,7 @@ Partial Class Calendario
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(445, 4)
+        Me.Label7.Location = New System.Drawing.Point(444, -3)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(65, 20)
         Me.Label7.TabIndex = 81
@@ -214,7 +217,7 @@ Partial Class Calendario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(360, 4)
+        Me.Label6.Location = New System.Drawing.Point(360, -3)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 20)
         Me.Label6.TabIndex = 80
@@ -224,7 +227,7 @@ Partial Class Calendario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(284, 4)
+        Me.Label5.Location = New System.Drawing.Point(284, -3)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 20)
         Me.Label5.TabIndex = 79
@@ -234,7 +237,7 @@ Partial Class Calendario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(193, 4)
+        Me.Label4.Location = New System.Drawing.Point(193, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(76, 20)
         Me.Label4.TabIndex = 78
@@ -244,7 +247,7 @@ Partial Class Calendario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(115, 4)
+        Me.Label3.Location = New System.Drawing.Point(124, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 20)
         Me.Label3.TabIndex = 77
@@ -254,7 +257,7 @@ Partial Class Calendario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(30, 4)
+        Me.Label2.Location = New System.Drawing.Point(30, -3)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 20)
         Me.Label2.TabIndex = 76
@@ -320,49 +323,49 @@ Partial Class Calendario
         '
         Me.d4_7.Location = New System.Drawing.Point(528, 215)
         Me.d4_7.Name = "d4_7"
-        Me.d4_7.Size = New System.Drawing.Size(79, 46)
+        Me.d4_7.Size = New System.Drawing.Size(79, 49)
         Me.d4_7.TabIndex = 67
         '
         'd4_6
         '
         Me.d4_6.Location = New System.Drawing.Point(444, 215)
         Me.d4_6.Name = "d4_6"
-        Me.d4_6.Size = New System.Drawing.Size(78, 46)
+        Me.d4_6.Size = New System.Drawing.Size(78, 49)
         Me.d4_6.TabIndex = 66
         '
         'd4_5
         '
         Me.d4_5.Location = New System.Drawing.Point(359, 215)
         Me.d4_5.Name = "d4_5"
-        Me.d4_5.Size = New System.Drawing.Size(81, 46)
+        Me.d4_5.Size = New System.Drawing.Size(81, 49)
         Me.d4_5.TabIndex = 65
         '
         'd4_4
         '
         Me.d4_4.Location = New System.Drawing.Point(274, 215)
         Me.d4_4.Name = "d4_4"
-        Me.d4_4.Size = New System.Drawing.Size(81, 46)
+        Me.d4_4.Size = New System.Drawing.Size(81, 49)
         Me.d4_4.TabIndex = 64
         '
         'd4_3
         '
         Me.d4_3.Location = New System.Drawing.Point(191, 215)
         Me.d4_3.Name = "d4_3"
-        Me.d4_3.Size = New System.Drawing.Size(77, 46)
+        Me.d4_3.Size = New System.Drawing.Size(77, 49)
         Me.d4_3.TabIndex = 63
         '
         'd4_2
         '
         Me.d4_2.Location = New System.Drawing.Point(107, 215)
         Me.d4_2.Name = "d4_2"
-        Me.d4_2.Size = New System.Drawing.Size(78, 46)
+        Me.d4_2.Size = New System.Drawing.Size(78, 49)
         Me.d4_2.TabIndex = 62
         '
         'd4_1
         '
-        Me.d4_1.Location = New System.Drawing.Point(20, 215)
+        Me.d4_1.Location = New System.Drawing.Point(17, 215)
         Me.d4_1.Name = "d4_1"
-        Me.d4_1.Size = New System.Drawing.Size(80, 46)
+        Me.d4_1.Size = New System.Drawing.Size(82, 49)
         Me.d4_1.TabIndex = 61
         '
         'd3_7
@@ -549,7 +552,7 @@ Partial Class Calendario
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(273, 79)
+        Me.Label9.Location = New System.Drawing.Point(261, 88)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(57, 20)
         Me.Label9.TabIndex = 43
@@ -567,17 +570,24 @@ Partial Class Calendario
         '
         'CustomMenuStrip1
         '
+        Me.CustomMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1})
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(631, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(637, 25)
         Me.CustomMenuStrip1.TabIndex = 44
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(76, 22)
+        Me.ToolStripLabel1.Text = "Cerrar Sesión"
         '
         'Calendario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(631, 520)
+        Me.ClientSize = New System.Drawing.Size(637, 562)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
@@ -592,6 +602,8 @@ Partial Class Calendario
         Me.PanelCalendar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CustomMenuStrip1.ResumeLayout(False)
+        Me.CustomMenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -653,4 +665,5 @@ Partial Class Calendario
     Friend WithEvents d6_3 As Label
     Friend WithEvents d6_2 As Label
     Friend WithEvents d6_1 As Label
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
 End Class

@@ -2,10 +2,15 @@
 
 Public Class Login
     Dim db As New database
-
+    Dim val As Boolean = False
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+
+
+
     End Sub
+
 
     Private Sub ButtonAccept_Click(sender As Object, e As EventArgs) Handles ButtonAccept.Click
 
@@ -56,7 +61,6 @@ Public Class Login
     End Sub
 
     Private Sub LabelRegister_Click(sender As Object, e As EventArgs) Handles LabelRegister.Click
-
         Registro.Show()
         Me.Hide()
     End Sub
@@ -64,6 +68,9 @@ Public Class Login
     Private Sub TextBoxPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPassword.KeyPress
         Dim Username As String = TextBoxUsername.Text
         Dim Password As String = TextBoxPassword.Text
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
         If Asc(e.KeyChar) = 13 Then
             Dim selectQuery As String = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
 
@@ -79,7 +86,7 @@ Public Class Login
                 Profile.Show()
                 Me.Hide()
             Else
-                LabelError.Text = "El Usuario No Existe"
+                LabelError.Text = "Usuario o contraseña incorrecta"
                 LabelError.Visible = True
             End If
         End If
@@ -88,7 +95,11 @@ Public Class Login
     Private Sub TextBoxUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxUsername.KeyPress
         Dim Username As String = TextBoxUsername.Text
         Dim Password As String = TextBoxPassword.Text
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
         If Asc(e.KeyChar) = 13 Then
+
             Dim selectQuery As String = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
 
             Dim rows = db.ReaderQuery(selectQuery)
@@ -103,13 +114,10 @@ Public Class Login
                 Profile.Show()
                 Me.Hide()
             Else
-                LabelError.Text = "El Usuario No Existe"
+                LabelError.Text = "Usuario o contraseña incorrecta"
                 LabelError.Visible = True
             End If
         End If
     End Sub
 
-    Private Sub TextBoxUsername_TextChanged(sender As Object, e As EventArgs) Handles TextBoxUsername.TextChanged
-
-    End Sub
 End Class

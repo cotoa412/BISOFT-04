@@ -53,4 +53,29 @@ Public Class Registro
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Close()
     End Sub
+
+
+    Private Sub TextBoxPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPassword.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
+    End Sub
+
+    Private Sub TextBoxUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxUsername.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
+    End Sub
+
+    Private Sub TextBoxName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxName.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
+    End Sub
+
+    Private Sub TextBoxEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxEmail.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+            LabelError.Visible = False
+        End If
+    End Sub
 End Class

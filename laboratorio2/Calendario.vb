@@ -5,16 +5,14 @@ Public Class Calendario
     Dim db As New database
     Dim Month As Int16 = Date.Now.Month
     Dim Count_Date As Integer
-    Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs)
 
-    End Sub
 
     Private Sub Calendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Calendario_Change()
 
         Count_Date = Date.Now.Month
-        Label9.Text = MonthName(Count_Date)
+        Label9.Text = MonthName(Count_Date) & " " & "2018"
 
     End Sub
     Private Function GetAll(ByVal sender As Control, ByVal T As Type) As IEnumerable(Of Control)
@@ -143,7 +141,7 @@ Public Class Calendario
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         Count_Date += 1
-        Label9.Text = MonthName(Count_Date)
+        Label9.Text = MonthName(Count_Date) & " " & "2018"
         Clear_Labels()
         Month += 1
         Calendario_Change()
@@ -153,7 +151,7 @@ Public Class Calendario
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Count_Date -= 1
-        Label9.Text = MonthName(Count_Date)
+        Label9.Text = MonthName(Count_Date) & " " & "2018"
         Clear_Labels()
         Month -= 1
         Calendario_Change()
@@ -232,6 +230,19 @@ Public Class Calendario
 
         End While
 
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        Me.Hide()
+        Reporte.Hide()
+        Profile.Hide()
+        Material.Hide()
+        Horario.Hide()
+        tiempo.Hide()
+        Cursos.Hide()
+        Login.TextBoxUsername.Text = ""
+        Login.TextBoxPassword.Text = ""
+        Login.Show()
     End Sub
 
 

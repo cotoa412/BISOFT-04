@@ -70,12 +70,12 @@ Public Class Material
     End Sub
 
     Private Sub Prueba_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If ComboBoxCourse1.Items.Count > 0 Then
 
         Else
             ComboBox_Course()
         End If
-
 
     End Sub
     Public Sub ComboBox_Course()
@@ -109,8 +109,6 @@ Public Class Material
 
     Private Sub ComboBoxCourse1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedValueChanged
         ShowData()
-
-
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
