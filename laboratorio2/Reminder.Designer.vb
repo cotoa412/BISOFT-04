@@ -68,7 +68,7 @@ Partial Class Reminder
         Me.Controls.Add(Me.Label1)
         Me.Name = "Reminder"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Reminder"
+        Me.Text = "Recordatorios"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

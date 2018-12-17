@@ -32,6 +32,7 @@ Partial Class Cursos
         Me.TextBoxNameCourse = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class Cursos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(417, 154)
+        Me.Label1.Location = New System.Drawing.Point(417, 143)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 1
@@ -58,7 +59,7 @@ Partial Class Cursos
         'TextBoxCredits
         '
         Me.TextBoxCredits.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCredits.Location = New System.Drawing.Point(546, 151)
+        Me.TextBoxCredits.Location = New System.Drawing.Point(546, 140)
         Me.TextBoxCredits.Name = "TextBoxCredits"
         Me.TextBoxCredits.Size = New System.Drawing.Size(105, 26)
         Me.TextBoxCredits.TabIndex = 2
@@ -67,11 +68,11 @@ Partial Class Cursos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(368, 180)
+        Me.Label2.Location = New System.Drawing.Point(349, 177)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(224, 20)
+        Me.Label2.Size = New System.Drawing.Size(173, 20)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Estudio recomendado: x horas"
+        Me.Label2.Text = "Horas Recomendadas:"
         '
         'ButtonAddCourse
         '
@@ -97,7 +98,7 @@ Partial Class Cursos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(349, 125)
+        Me.Label4.Location = New System.Drawing.Point(349, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(140, 20)
         Me.Label4.TabIndex = 9
@@ -106,7 +107,7 @@ Partial Class Cursos
         'TextBoxNameCourse
         '
         Me.TextBoxNameCourse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxNameCourse.Location = New System.Drawing.Point(495, 122)
+        Me.TextBoxNameCourse.Location = New System.Drawing.Point(495, 93)
         Me.TextBoxNameCourse.Name = "TextBoxNameCourse"
         Me.TextBoxNameCourse.Size = New System.Drawing.Size(156, 26)
         Me.TextBoxNameCourse.TabIndex = 10
@@ -125,12 +126,21 @@ Partial Class Cursos
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(215, 272)
+        Me.Label5.Location = New System.Drawing.Point(293, 271)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 20)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Label5"
         Me.Label5.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(528, 177)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 20)
+        Me.Label6.TabIndex = 14
         '
         'CustomMenuStrip1
         '
@@ -144,7 +154,8 @@ Partial Class Cursos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(663, 303)
+        Me.ClientSize = New System.Drawing.Size(663, 309)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button1)
@@ -157,6 +168,7 @@ Partial Class Cursos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Name = "Cursos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cursos"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -174,4 +186,5 @@ Partial Class Cursos
     Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
+    Friend WithEvents Label6 As Label
 End Class

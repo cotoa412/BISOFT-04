@@ -70,6 +70,7 @@
                     LabelInicio.Location = New Point(10, 9)
                     LabelInicio.AutoSize = True
                     LabelInicio.Font = New Font(LabelInicio.Font, FontStyle.Bold)
+                    LabelInicio.ForeColor = SystemColors.ControlLightLight
                     LabelInicio.Visible = True
                     PanelHorario.Controls.Add(LabelInicio)
 
@@ -77,6 +78,7 @@
                     LabelInicio_Hora.Location = New Point(49, 9)
                     LabelInicio_Hora.AutoSize = True
                     LabelInicio_Hora.Font = New Font(LabelInicio_Hora.Font, FontStyle.Bold)
+                    LabelInicio_Hora.ForeColor = SystemColors.ControlLightLight
                     LabelInicio_Hora.Visible = True
                     PanelHorario.Controls.Add(LabelInicio_Hora)
 
@@ -84,6 +86,7 @@
                     LabelFin.Location = New Point(10, 34)
                     LabelFin.AutoSize = True
                     LabelFin.Font = New Font(LabelFin.Font, FontStyle.Bold)
+                    LabelFin.ForeColor = SystemColors.ControlLightLight
                     LabelFin.Visible = True
                     PanelHorario.Controls.Add(LabelFin)
 
@@ -91,6 +94,7 @@
                     LabelFin_Hora.Location = New Point(49, 34)
                     LabelFin_Hora.AutoSize = True
                     LabelFin_Hora.Font = New Font(LabelFin_Hora.Font, FontStyle.Bold)
+                    LabelFin_Hora.ForeColor = SystemColors.ControlLightLight
                     LabelFin_Hora.Visible = True
                     PanelHorario.Controls.Add(LabelFin_Hora)
 
@@ -98,13 +102,14 @@
                     LabelDesc_Desc.Location = New Point(10, 60)
                     LabelDesc_Desc.AutoSize = True
                     LabelDesc_Desc.Font = New Font(LabelDesc_Desc.Font, FontStyle.Bold)
+                    LabelDesc_Desc.ForeColor = SystemColors.ControlLightLight
                     LabelDesc_Desc.Visible = True
                     PanelHorario.Controls.Add(LabelDesc_Desc)
 
                     PanelHorario.Location = New Point(12 + (X * 125), 157 + (Y * 94))
                     PanelHorario.Size = New Size(119, 88)
                     PanelHorario.BorderStyle = BorderStyle.FixedSingle
-                    PanelHorario.BackColor = Color.Gray
+                    PanelHorario.BackColor = SystemColors.HotTrack
                     PanelHorario.Visible = True
                     Me.Controls.Add(PanelHorario)
 

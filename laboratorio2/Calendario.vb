@@ -68,12 +68,14 @@ Public Class Calendario
                 LbelNameActivity.Location = New Point(3, 10)
                 LbelNameActivity.Size = New Size(105, 20)
                 LbelNameActivity.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelNameActivity.ForeColor = SystemColors.ControlLightLight
                 LbelNameActivity.Visible = True
                 PanelReminder.Controls.Add(LbelNameActivity)
 
                 LabelChangeReminder.Text = Rows(Num).Item("NameActivity")
                 LabelChangeReminder.Location = New Point(16, 39)
                 LabelChangePriority.AutoSize = True
+                LabelChangeReminder.ForeColor = SystemColors.ControlLightLight
                 LabelChangeReminder.Visible = True
                 PanelReminder.Controls.Add(LabelChangeReminder)
 
@@ -81,12 +83,14 @@ Public Class Calendario
                 LbelCourse.Location = New Point(3, 63)
                 LbelCourse.Size = New Size(55, 20)
                 LbelCourse.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelCourse.ForeColor = SystemColors.ControlLightLight
                 LbelCourse.Visible = True
                 PanelReminder.Controls.Add(LbelCourse)
 
                 LabelChangeCourse.Text = Rows(Num).Item("NameCourse")
                 LabelChangeCourse.Location = New Point(16, 92)
                 LabelChangePriority.AutoSize = True
+                LabelChangeCourse.ForeColor = SystemColors.ControlLightLight
                 LabelChangeCourse.Visible = True
                 PanelReminder.Controls.Add(LabelChangeCourse)
 
@@ -94,19 +98,21 @@ Public Class Calendario
                 LbelPriority.Location = New Point(179, 10)
                 LbelPriority.Size = New Size(75, 20)
                 LbelPriority.Font = New Font(LbelCourse.Font, FontStyle.Bold)
+                LbelPriority.ForeColor = SystemColors.ControlLightLight
                 LbelPriority.Visible = True
                 PanelReminder.Controls.Add(LbelPriority)
 
                 LabelChangePriority.Text = Rows(Num).Item("Priority")
                 LabelChangePriority.Location = New Point(194, 39)
                 LabelChangePriority.AutoSize = True
+                LabelChangePriority.ForeColor = SystemColors.ControlLightLight
                 LabelChangePriority.Visible = True
                 PanelReminder.Controls.Add(LabelChangePriority)
 
                 PanelReminder.Location = New Point(12 + (270 * NumC), 135 + (130 * NumR))
                 PanelReminder.Size = New Size(260, 120)
                 PanelReminder.BorderStyle = BorderStyle.FixedSingle
-                PanelReminder.BackColor = Color.Gray
+                PanelReminder.BackColor = SystemColors.HotTrack
                 PanelReminder.Visible = True
                 Reminder.Controls.Add(PanelReminder)
 
@@ -232,7 +238,7 @@ Public Class Calendario
 
     End Sub
 
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Reporte.Hide()
         Profile.Hide()

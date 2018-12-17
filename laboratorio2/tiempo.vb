@@ -86,45 +86,8 @@ Public Class tiempo
             status.Text = "Horas insuficientes"
         Else
             status.ForeColor = Color.Green
-            status.Text = "Guardado con exito!"
+            status.Text = "!Guardado con exito!"
         End If
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) 
-
-    End Sub
-
-    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) 
-        Calendario.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) 
-        Profile.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) 
-        Horario.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) 
-        Material.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) 
-        Cursos.Show()
-        Me.Hide()
-
-    End Sub
 End Class

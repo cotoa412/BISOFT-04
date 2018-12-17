@@ -51,7 +51,14 @@ Public Class Registro
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
-        Me.Close()
+        TextBoxEmail.Text = ""
+        TextBoxName.Text = ""
+        TextBoxPassword.Text = ""
+        TextBoxUsername.Text = ""
+        Me.Hide()
+        Login.TextBoxUsername.Text = ""
+        Login.TextBoxPassword.Text = ""
+        Login.Show()
     End Sub
 
 

@@ -90,7 +90,7 @@ Partial Class Profile
         Me.TextBoxUser.Location = New System.Drawing.Point(138, 227)
         Me.TextBoxUser.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxUser.Name = "TextBoxUser"
-        Me.TextBoxUser.Size = New System.Drawing.Size(272, 26)
+        Me.TextBoxUser.Size = New System.Drawing.Size(294, 26)
         Me.TextBoxUser.TabIndex = 5
         '
         'TextBoxPassword
@@ -100,7 +100,7 @@ Partial Class Profile
         Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(272, 26)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(294, 26)
         Me.TextBoxPassword.TabIndex = 6
         '
         'TextBoxName
@@ -109,7 +109,7 @@ Partial Class Profile
         Me.TextBoxName.Location = New System.Drawing.Point(138, 324)
         Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(272, 26)
+        Me.TextBoxName.Size = New System.Drawing.Size(294, 26)
         Me.TextBoxName.TabIndex = 7
         '
         'CheckBoxMostrar
@@ -141,13 +141,13 @@ Partial Class Profile
         Me.TextBoxEmail.Location = New System.Drawing.Point(138, 363)
         Me.TextBoxEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(272, 26)
+        Me.TextBoxEmail.Size = New System.Drawing.Size(294, 26)
         Me.TextBoxEmail.TabIndex = 10
         '
         'ButtonSave
         '
         Me.ButtonSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSave.Location = New System.Drawing.Point(152, 407)
+        Me.ButtonSave.Location = New System.Drawing.Point(189, 408)
         Me.ButtonSave.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(79, 29)
@@ -160,7 +160,7 @@ Partial Class Profile
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Lime
-        Me.Label5.Location = New System.Drawing.Point(77, 451)
+        Me.Label5.Location = New System.Drawing.Point(134, 453)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(0, 20)
         Me.Label5.TabIndex = 12
@@ -179,7 +179,7 @@ Partial Class Profile
         '
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(424, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(462, 25)
         Me.CustomMenuStrip1.TabIndex = 14
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
@@ -187,7 +187,7 @@ Partial Class Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(424, 480)
+        Me.ClientSize = New System.Drawing.Size(462, 482)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -205,7 +205,7 @@ Partial Class Profile
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Profile"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Perfil"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

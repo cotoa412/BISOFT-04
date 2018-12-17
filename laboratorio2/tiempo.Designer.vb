@@ -37,7 +37,7 @@ Partial Class tiempo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(135, 48)
+        Me.Label1.Location = New System.Drawing.Point(135, 50)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 25)
         Me.Label1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class tiempo
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(233, 49)
+        Me.Label2.Location = New System.Drawing.Point(233, 51)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 25)
         Me.Label2.TabIndex = 1
@@ -58,9 +58,9 @@ Partial Class tiempo
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(318, 36)
+        Me.Button1.Location = New System.Drawing.Point(317, 49)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 54)
+        Me.Button1.Size = New System.Drawing.Size(171, 33)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Añadir otro Horario"
         Me.Button1.UseVisualStyleBackColor = True
@@ -68,9 +68,9 @@ Partial Class tiempo
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(318, 96)
+        Me.Button2.Location = New System.Drawing.Point(317, 97)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(114, 54)
+        Me.Button2.Size = New System.Drawing.Size(171, 33)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Limpiar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -78,9 +78,9 @@ Partial Class tiempo
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(318, 156)
+        Me.Button3.Location = New System.Drawing.Point(317, 146)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(114, 54)
+        Me.Button3.Size = New System.Drawing.Size(171, 33)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Guardar"
         Me.Button3.UseVisualStyleBackColor = True
@@ -88,17 +88,17 @@ Partial Class tiempo
         'status
         '
         Me.status.AutoSize = True
-        Me.status.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.status.Location = New System.Drawing.Point(315, 175)
+        Me.status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.status.Location = New System.Drawing.Point(345, 290)
         Me.status.Name = "status"
-        Me.status.Size = New System.Drawing.Size(0, 13)
+        Me.status.Size = New System.Drawing.Size(0, 20)
         Me.status.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(315, 222)
+        Me.Label3.Location = New System.Drawing.Point(346, 195)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 13)
         Me.Label3.TabIndex = 6
@@ -108,7 +108,7 @@ Partial Class tiempo
         '
         Me.hoursLabel.AutoSize = True
         Me.hoursLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.hoursLabel.Location = New System.Drawing.Point(374, 247)
+        Me.hoursLabel.Location = New System.Drawing.Point(396, 236)
         Me.hoursLabel.Name = "hoursLabel"
         Me.hoursLabel.Size = New System.Drawing.Size(0, 13)
         Me.hoursLabel.TabIndex = 7
@@ -118,7 +118,7 @@ Partial Class tiempo
         '
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(452, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(524, 25)
         Me.CustomMenuStrip1.TabIndex = 8
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
@@ -126,7 +126,7 @@ Partial Class tiempo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(452, 450)
+        Me.ClientSize = New System.Drawing.Size(524, 450)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.hoursLabel)
         Me.Controls.Add(Me.Label3)
@@ -137,6 +137,7 @@ Partial Class tiempo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "tiempo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "tiempo"
         Me.ResumeLayout(False)
         Me.PerformLayout()

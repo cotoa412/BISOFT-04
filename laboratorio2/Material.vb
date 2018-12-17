@@ -42,17 +42,17 @@ Public Class Material
         Dim Open As New OpenFileDialog
         Dim Result As New DialogResult
 
-        Result = Open.ShowDialog
-        Document = Open.FileName
 
-        If ComboBoxCourse1.SelectedItem = "" Then
+        If ComboBoxCourse1.SelectedItem = "" Or ComboBoxCourse1.Text = "" Then
 
-            LabelChange.Text = "Debe seleccionar el curso donde desea agregar el documento"
+            LabelChange.Text = "Seleccione un curso"
             LabelChange.ForeColor = Color.Red
             LabelChange.Visible = True
 
         Else
 
+            Result = Open.ShowDialog
+            Document = Open.FileName
             NameDocument = InputBox("Nombre el archivo", "Nombre")
             Description = InputBox("Agrege una descripción", "Descripción")
             Await cloud_storageGetBlobReference().UploadFromFileAsync(Document)
@@ -79,6 +79,7 @@ Public Class Material
 
     End Sub
     Public Sub ComboBox_Course()
+
         Dim rows = db.ReaderQuery("Select c.[NameCourse]
                              	From Course c, CourseUser cu, [User] u
                              	Where cu.IdCourse = c.IdCourse 
@@ -118,25 +119,25 @@ Public Class Material
 
         db.ExecuteQuery("DELETE FROM [Document] Where [Ubicación]='" & Document & "' And [Curso]='" & IdCourse & "'")
 
-
-
         ShowData()
         LabelChange.ForeColor = Color.Green
         LabelChange.Text = "Borrado con éxito"
         LabelChange.Visible = True
+
     End Sub
 
     Sub ShowData()
+
         LabelChange.Visible = False
         NameCourse = ComboBoxCourse1.SelectedItem
 
         If ComboBoxCourse1.SelectedItem = NameCourse Then
+
             Dim rows = db.ReaderQuery("Select c.[IdCourse]
                                     From Course c Where c.NameCourse='" & NameCourse & "'")
+
             IdCourse = rows(0).Item("IdCourse")
-
             DataGridView1.DataSource = db.AdapterQuery("SELECT d.[Ubicación],c.[NameCourse] As Curso,d.[Nombre],d.[Descripción] FROM [Document]d,[Course]c Where d.[Curso]='" & IdCourse & "'And c.[NameCourse]='" & NameCourse & "'")
-
 
 
         End If
@@ -150,10 +151,10 @@ Public Class Material
         saveDialog1.FileName = "ReportePdf"
         saveDialog1.Filter = "PDF (*.pdf*)|*.pdf*"
 
-
-
         Document = DataGridView1.SelectedCells.Item(0).OwningRow.Cells.Item(0).Value
         Process.Start(Document)
 
     End Sub
+
+
 End Class

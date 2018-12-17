@@ -91,23 +91,27 @@
 
     End Sub
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
-        Profile.Show()
+
         Material.Hide()
         Horario.Hide()
         Calendario.Hide()
         Cursos.Hide()
         tiempo.Hide()
         Reporte.Hide()
+        Profile.Show()
+
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-        Calendario.Show()
+
         Profile.Hide()
         Material.Hide()
         Horario.Hide()
         Cursos.Hide()
         tiempo.Hide()
         Reporte.Hide()
+        Calendario.Show()
+
     End Sub
 
     Private Sub ToolStripLabel3_Click_1(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
@@ -119,6 +123,8 @@
         Cursos.Hide()
         tiempo.Hide()
         Reporte.Hide()
+
+
     End Sub
 
     Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
@@ -131,9 +137,11 @@
         tiempo.Hide()
         Reporte.Hide()
 
+
     End Sub
 
     Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
+
 
         Cursos.Show()
         Calendario.Hide()
@@ -142,6 +150,8 @@
         Horario.Hide()
         tiempo.Hide()
         Reporte.Hide()
+
+
     End Sub
 
     Private Sub ToolStripLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripLabel6.Click
@@ -153,6 +163,8 @@
         Horario.Hide()
         Cursos.Hide()
         Reporte.Hide()
+
+
     End Sub
     Private Sub ToolStripLabel7_Click(sender As Object, e As EventArgs) Handles ToolStripLabel7.Click
 
@@ -164,16 +176,20 @@
         tiempo.Hide()
         Cursos.Hide()
 
+
     End Sub
     Private Sub ToolStripLabel8_Click(sender As Object, e As EventArgs) Handles ToolStripLabel8.Click
 
+        Login.TextBoxUsername.Text = ""
+        Login.TextBoxPassword.Text = ""
         Login.Show()
-        Calendario.Hide()
-        Profile.Hide()
-        Material.Hide()
-        Horario.Hide()
-        tiempo.Hide()
-        Cursos.Hide()
-        Reporte.Hide()
+        Calendario.Close()
+        Profile.Close()
+        Material.Close()
+        Horario.Close()
+        tiempo.Close()
+        Cursos.Close()
+        Reporte.Close()
+
     End Sub
 End Class

@@ -5,10 +5,6 @@ Public Class Login
     Dim val As Boolean = False
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
-
-
     End Sub
 
 
@@ -20,10 +16,8 @@ Public Class Login
         If (Password = "" Or Username = "") Then
             LabelError.Text = "Debe llenar todos los campos"
             LabelError.Visible = True
-
         Else
             Dim selectQuery As String = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
-
             Dim rows = db.ReaderQuery(selectQuery)
 
             If rows.Count > 0 Then
@@ -73,8 +67,13 @@ Public Class Login
         End If
         If Asc(e.KeyChar) = 13 Then
             Dim selectQuery As String = "SELECT * FROM [User] WHERE username = '" & Username & "'" & " AND password ='" & Password & "'"
-
             Dim rows = db.ReaderQuery(selectQuery)
+
+            If Char.IsLetterOrDigit(e.KeyChar) Then
+
+                LabelError.Visible = False
+
+            End If
 
             If rows.Count > 0 Then
 
@@ -97,6 +96,11 @@ Public Class Login
         Dim Password As String = TextBoxPassword.Text
         If Char.IsLetterOrDigit(e.KeyChar) Then
             LabelError.Visible = False
+        End If
+        If Char.IsLetterOrDigit(e.KeyChar) Then
+
+            LabelError.Visible = False
+
         End If
         If Asc(e.KeyChar) = 13 Then
 

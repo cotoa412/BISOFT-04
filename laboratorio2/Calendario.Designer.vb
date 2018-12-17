@@ -72,18 +72,16 @@ Partial Class Calendario
         Me.d1_3 = New System.Windows.Forms.Label()
         Me.d1_2 = New System.Windows.Forms.Label()
         Me.d1_1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CustomMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelCalendar
@@ -146,51 +144,65 @@ Partial Class Calendario
         '
         'd6_7
         '
-        Me.d6_7.Location = New System.Drawing.Point(528, 340)
+        Me.d6_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_7.Location = New System.Drawing.Point(527, 335)
         Me.d6_7.Name = "d6_7"
-        Me.d6_7.Size = New System.Drawing.Size(81, 46)
+        Me.d6_7.Size = New System.Drawing.Size(83, 56)
         Me.d6_7.TabIndex = 89
         '
         'd6_6
         '
-        Me.d6_6.Location = New System.Drawing.Point(442, 340)
+        Me.d6_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_6.Location = New System.Drawing.Point(441, 335)
         Me.d6_6.Name = "d6_6"
-        Me.d6_6.Size = New System.Drawing.Size(79, 46)
+        Me.d6_6.Size = New System.Drawing.Size(83, 56)
         Me.d6_6.TabIndex = 88
         '
         'd6_5
         '
-        Me.d6_5.Location = New System.Drawing.Point(360, 340)
+        Me.d6_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_5.Location = New System.Drawing.Point(356, 335)
         Me.d6_5.Name = "d6_5"
-        Me.d6_5.Size = New System.Drawing.Size(78, 46)
+        Me.d6_5.Size = New System.Drawing.Size(83, 56)
         Me.d6_5.TabIndex = 87
         '
         'd6_4
         '
-        Me.d6_4.Location = New System.Drawing.Point(273, 340)
+        Me.d6_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_4.Location = New System.Drawing.Point(272, 335)
         Me.d6_4.Name = "d6_4"
-        Me.d6_4.Size = New System.Drawing.Size(79, 46)
+        Me.d6_4.Size = New System.Drawing.Size(83, 56)
         Me.d6_4.TabIndex = 86
         '
         'd6_3
         '
-        Me.d6_3.Location = New System.Drawing.Point(188, 339)
+        Me.d6_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_3.Location = New System.Drawing.Point(186, 335)
         Me.d6_3.Name = "d6_3"
-        Me.d6_3.Size = New System.Drawing.Size(79, 46)
+        Me.d6_3.Size = New System.Drawing.Size(83, 56)
         Me.d6_3.TabIndex = 85
         '
         'd6_2
         '
-        Me.d6_2.Location = New System.Drawing.Point(103, 339)
+        Me.d6_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_2.Location = New System.Drawing.Point(105, 335)
         Me.d6_2.Name = "d6_2"
-        Me.d6_2.Size = New System.Drawing.Size(79, 47)
+        Me.d6_2.Size = New System.Drawing.Size(79, 56)
         Me.d6_2.TabIndex = 84
         '
         'd6_1
         '
-        Me.d6_1.Location = New System.Drawing.Point(18, 339)
+        Me.d6_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d6_1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d6_1.Location = New System.Drawing.Point(17, 335)
         Me.d6_1.Name = "d6_1"
-        Me.d6_1.Size = New System.Drawing.Size(81, 47)
+        Me.d6_1.Size = New System.Drawing.Size(83, 56)
         Me.d6_1.TabIndex = 83
         '
         'Label8
@@ -265,6 +277,8 @@ Partial Class Calendario
         '
         'd3_5
         '
+        Me.d3_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d3_5.Location = New System.Drawing.Point(358, 155)
         Me.d3_5.Name = "d3_5"
         Me.d3_5.Size = New System.Drawing.Size(81, 56)
@@ -272,48 +286,62 @@ Partial Class Calendario
         '
         'd5_7
         '
-        Me.d5_7.Location = New System.Drawing.Point(529, 275)
+        Me.d5_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_7.Location = New System.Drawing.Point(527, 274)
         Me.d5_7.Name = "d5_7"
-        Me.d5_7.Size = New System.Drawing.Size(81, 55)
+        Me.d5_7.Size = New System.Drawing.Size(83, 56)
         Me.d5_7.TabIndex = 74
         '
         'd5_6
         '
-        Me.d5_6.Location = New System.Drawing.Point(443, 275)
+        Me.d5_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_6.Location = New System.Drawing.Point(441, 275)
         Me.d5_6.Name = "d5_6"
-        Me.d5_6.Size = New System.Drawing.Size(79, 55)
+        Me.d5_6.Size = New System.Drawing.Size(83, 56)
         Me.d5_6.TabIndex = 73
         '
         'd5_5
         '
-        Me.d5_5.Location = New System.Drawing.Point(361, 275)
+        Me.d5_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_5.Location = New System.Drawing.Point(357, 275)
         Me.d5_5.Name = "d5_5"
-        Me.d5_5.Size = New System.Drawing.Size(78, 55)
+        Me.d5_5.Size = New System.Drawing.Size(83, 56)
         Me.d5_5.TabIndex = 72
         '
         'd5_4
         '
-        Me.d5_4.Location = New System.Drawing.Point(274, 274)
+        Me.d5_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_4.Location = New System.Drawing.Point(272, 274)
         Me.d5_4.Name = "d5_4"
-        Me.d5_4.Size = New System.Drawing.Size(79, 56)
+        Me.d5_4.Size = New System.Drawing.Size(83, 56)
         Me.d5_4.TabIndex = 71
         '
         'd5_3
         '
-        Me.d5_3.Location = New System.Drawing.Point(189, 274)
+        Me.d5_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_3.Location = New System.Drawing.Point(189, 275)
         Me.d5_3.Name = "d5_3"
-        Me.d5_3.Size = New System.Drawing.Size(79, 56)
+        Me.d5_3.Size = New System.Drawing.Size(80, 56)
         Me.d5_3.TabIndex = 70
         '
         'd5_2
         '
-        Me.d5_2.Location = New System.Drawing.Point(106, 274)
+        Me.d5_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d5_2.Location = New System.Drawing.Point(104, 274)
         Me.d5_2.Name = "d5_2"
-        Me.d5_2.Size = New System.Drawing.Size(79, 56)
+        Me.d5_2.Size = New System.Drawing.Size(80, 56)
         Me.d5_2.TabIndex = 69
         '
         'd5_1
         '
+        Me.d5_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d5_1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d5_1.Location = New System.Drawing.Point(17, 274)
         Me.d5_1.Name = "d5_1"
         Me.d5_1.Size = New System.Drawing.Size(83, 56)
@@ -321,55 +349,71 @@ Partial Class Calendario
         '
         'd4_7
         '
-        Me.d4_7.Location = New System.Drawing.Point(528, 215)
+        Me.d4_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d4_7.Location = New System.Drawing.Point(527, 215)
         Me.d4_7.Name = "d4_7"
-        Me.d4_7.Size = New System.Drawing.Size(79, 49)
+        Me.d4_7.Size = New System.Drawing.Size(83, 56)
         Me.d4_7.TabIndex = 67
         '
         'd4_6
         '
-        Me.d4_6.Location = New System.Drawing.Point(444, 215)
+        Me.d4_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d4_6.Location = New System.Drawing.Point(442, 215)
         Me.d4_6.Name = "d4_6"
-        Me.d4_6.Size = New System.Drawing.Size(78, 49)
+        Me.d4_6.Size = New System.Drawing.Size(83, 56)
         Me.d4_6.TabIndex = 66
         '
         'd4_5
         '
-        Me.d4_5.Location = New System.Drawing.Point(359, 215)
+        Me.d4_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d4_5.Location = New System.Drawing.Point(357, 215)
         Me.d4_5.Name = "d4_5"
-        Me.d4_5.Size = New System.Drawing.Size(81, 49)
+        Me.d4_5.Size = New System.Drawing.Size(83, 56)
         Me.d4_5.TabIndex = 65
         '
         'd4_4
         '
+        Me.d4_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d4_4.Location = New System.Drawing.Point(274, 215)
         Me.d4_4.Name = "d4_4"
-        Me.d4_4.Size = New System.Drawing.Size(81, 49)
+        Me.d4_4.Size = New System.Drawing.Size(80, 56)
         Me.d4_4.TabIndex = 64
         '
         'd4_3
         '
-        Me.d4_3.Location = New System.Drawing.Point(191, 215)
+        Me.d4_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d4_3.Location = New System.Drawing.Point(189, 215)
         Me.d4_3.Name = "d4_3"
-        Me.d4_3.Size = New System.Drawing.Size(77, 49)
+        Me.d4_3.Size = New System.Drawing.Size(79, 56)
         Me.d4_3.TabIndex = 63
         '
         'd4_2
         '
-        Me.d4_2.Location = New System.Drawing.Point(107, 215)
+        Me.d4_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d4_2.Location = New System.Drawing.Point(104, 215)
         Me.d4_2.Name = "d4_2"
-        Me.d4_2.Size = New System.Drawing.Size(78, 49)
+        Me.d4_2.Size = New System.Drawing.Size(80, 56)
         Me.d4_2.TabIndex = 62
         '
         'd4_1
         '
+        Me.d4_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d4_1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d4_1.Location = New System.Drawing.Point(17, 215)
         Me.d4_1.Name = "d4_1"
-        Me.d4_1.Size = New System.Drawing.Size(82, 49)
+        Me.d4_1.Size = New System.Drawing.Size(83, 56)
         Me.d4_1.TabIndex = 61
         '
         'd3_7
         '
+        Me.d3_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d3_7.Location = New System.Drawing.Point(528, 155)
         Me.d3_7.Name = "d3_7"
         Me.d3_7.Size = New System.Drawing.Size(79, 53)
@@ -377,6 +421,8 @@ Partial Class Calendario
         '
         'd3_6
         '
+        Me.d3_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d3_6.Location = New System.Drawing.Point(445, 154)
         Me.d3_6.Name = "d3_6"
         Me.d3_6.Size = New System.Drawing.Size(78, 56)
@@ -384,6 +430,8 @@ Partial Class Calendario
         '
         'd3_4
         '
+        Me.d3_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d3_4.Location = New System.Drawing.Point(274, 154)
         Me.d3_4.Name = "d3_4"
         Me.d3_4.Size = New System.Drawing.Size(81, 56)
@@ -391,6 +439,8 @@ Partial Class Calendario
         '
         'd3_3
         '
+        Me.d3_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d3_3.Location = New System.Drawing.Point(189, 154)
         Me.d3_3.Name = "d3_3"
         Me.d3_3.Size = New System.Drawing.Size(79, 56)
@@ -398,20 +448,26 @@ Partial Class Calendario
         '
         'd3_2
         '
-        Me.d3_2.Location = New System.Drawing.Point(105, 154)
+        Me.d3_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d3_2.Location = New System.Drawing.Point(104, 154)
         Me.d3_2.Name = "d3_2"
-        Me.d3_2.Size = New System.Drawing.Size(79, 56)
+        Me.d3_2.Size = New System.Drawing.Size(80, 56)
         Me.d3_2.TabIndex = 56
         '
         'd3_1
         '
-        Me.d3_1.Location = New System.Drawing.Point(19, 154)
+        Me.d3_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d3_1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d3_1.Location = New System.Drawing.Point(18, 154)
         Me.d3_1.Name = "d3_1"
-        Me.d3_1.Size = New System.Drawing.Size(80, 54)
+        Me.d3_1.Size = New System.Drawing.Size(81, 56)
         Me.d3_1.TabIndex = 55
         '
         'd2_7
         '
+        Me.d2_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d2_7.Location = New System.Drawing.Point(529, 93)
         Me.d2_7.Name = "d2_7"
         Me.d2_7.Size = New System.Drawing.Size(81, 56)
@@ -419,6 +475,8 @@ Partial Class Calendario
         '
         'd2_6
         '
+        Me.d2_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d2_6.Location = New System.Drawing.Point(444, 93)
         Me.d2_6.Name = "d2_6"
         Me.d2_6.Size = New System.Drawing.Size(81, 56)
@@ -426,6 +484,8 @@ Partial Class Calendario
         '
         'd2_5
         '
+        Me.d2_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d2_5.Location = New System.Drawing.Point(359, 93)
         Me.d2_5.Name = "d2_5"
         Me.d2_5.Size = New System.Drawing.Size(81, 56)
@@ -433,6 +493,8 @@ Partial Class Calendario
         '
         'd2_4
         '
+        Me.d2_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d2_4.Location = New System.Drawing.Point(273, 93)
         Me.d2_4.Name = "d2_4"
         Me.d2_4.Size = New System.Drawing.Size(81, 56)
@@ -440,6 +502,8 @@ Partial Class Calendario
         '
         'd2_3
         '
+        Me.d2_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d2_3.Location = New System.Drawing.Point(190, 94)
         Me.d2_3.Name = "d2_3"
         Me.d2_3.Size = New System.Drawing.Size(79, 56)
@@ -447,13 +511,17 @@ Partial Class Calendario
         '
         'd2_2
         '
-        Me.d2_2.Location = New System.Drawing.Point(105, 93)
+        Me.d2_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d2_2.Location = New System.Drawing.Point(104, 94)
         Me.d2_2.Name = "d2_2"
-        Me.d2_2.Size = New System.Drawing.Size(79, 56)
+        Me.d2_2.Size = New System.Drawing.Size(80, 56)
         Me.d2_2.TabIndex = 49
         '
         'd2_1
         '
+        Me.d2_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d2_1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.d2_1.Location = New System.Drawing.Point(18, 93)
         Me.d2_1.Name = "d2_1"
         Me.d2_1.Size = New System.Drawing.Size(81, 56)
@@ -461,6 +529,8 @@ Partial Class Calendario
         '
         'd1_7
         '
+        Me.d1_7.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_7.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_7.Location = New System.Drawing.Point(529, 33)
         Me.d1_7.Name = "d1_7"
         Me.d1_7.Size = New System.Drawing.Size(81, 56)
@@ -468,6 +538,8 @@ Partial Class Calendario
         '
         'd1_6
         '
+        Me.d1_6.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_6.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_6.Location = New System.Drawing.Point(443, 33)
         Me.d1_6.Name = "d1_6"
         Me.d1_6.Size = New System.Drawing.Size(81, 56)
@@ -475,6 +547,8 @@ Partial Class Calendario
         '
         'd1_5
         '
+        Me.d1_5.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_5.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_5.Location = New System.Drawing.Point(358, 34)
         Me.d1_5.Name = "d1_5"
         Me.d1_5.Size = New System.Drawing.Size(81, 56)
@@ -482,6 +556,8 @@ Partial Class Calendario
         '
         'd1_4
         '
+        Me.d1_4.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_4.Location = New System.Drawing.Point(274, 34)
         Me.d1_4.Name = "d1_4"
         Me.d1_4.Size = New System.Drawing.Size(81, 56)
@@ -489,6 +565,8 @@ Partial Class Calendario
         '
         'd1_3
         '
+        Me.d1_3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_3.Location = New System.Drawing.Point(190, 33)
         Me.d1_3.Name = "d1_3"
         Me.d1_3.Size = New System.Drawing.Size(79, 56)
@@ -496,27 +574,21 @@ Partial Class Calendario
         '
         'd1_2
         '
-        Me.d1_2.Location = New System.Drawing.Point(105, 33)
+        Me.d1_2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.d1_2.Location = New System.Drawing.Point(104, 33)
         Me.d1_2.Name = "d1_2"
-        Me.d1_2.Size = New System.Drawing.Size(79, 56)
+        Me.d1_2.Size = New System.Drawing.Size(80, 56)
         Me.d1_2.TabIndex = 42
         '
         'd1_1
         '
+        Me.d1_1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.d1_1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.d1_1.Location = New System.Drawing.Point(18, 34)
         Me.d1_1.Name = "d1_1"
         Me.d1_1.Size = New System.Drawing.Size(83, 56)
         Me.d1_1.TabIndex = 41
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 20)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(617, 396)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 40
-        Me.PictureBox2.TabStop = False
         '
         'Label1
         '
@@ -558,6 +630,25 @@ Partial Class Calendario
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "Label9"
         '
+        'CustomMenuStrip1
+        '
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(637, 25)
+        Me.CustomMenuStrip1.TabIndex = 44
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 20)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(617, 397)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 40
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
@@ -567,21 +658,6 @@ Partial Class Calendario
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'CustomMenuStrip1
-        '
-        Me.CustomMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1})
-        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(637, 25)
-        Me.CustomMenuStrip1.TabIndex = 44
-        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(76, 22)
-        Me.ToolStripLabel1.Text = "Cerrar Sesión"
         '
         'Calendario
         '
@@ -602,8 +678,6 @@ Partial Class Calendario
         Me.PanelCalendar.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CustomMenuStrip1.ResumeLayout(False)
-        Me.CustomMenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -655,7 +729,6 @@ Partial Class Calendario
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents d6_7 As Label
@@ -665,5 +738,5 @@ Partial Class Calendario
     Friend WithEvents d6_3 As Label
     Friend WithEvents d6_2 As Label
     Friend WithEvents d6_1 As Label
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
 End Class

@@ -153,7 +153,7 @@ Partial Class Login
         Me.MaximizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
+        Me.Text = "Autenticación"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

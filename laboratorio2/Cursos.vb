@@ -12,9 +12,6 @@
         ListBox1.Items.Clear()
         ShowList()
 
-
-
-
     End Sub
 
     Public Sub ShowList()
@@ -61,20 +58,30 @@
             IdCour = Row_Id_Course(0).Item("IdCourse")
             Dim Row_Insert = dbInsert.ExecuteQuery("Insert INTO CourseUser (IdCourse,IdUser) VALUES('" & IdCour & "','" & IdUser & "')")
 
+            Dim a As Integer = Integer.Parse(TextBoxCredits.Text)
+            Dim b As Integer = a * 3
+            Label6.Text = b.ToString & " horas"
+            Label6.Visible = True
+
             TextBoxCredits.Text = ""
             TextBoxNameCourse.Text = ""
-            Label5.Visible = False
+            Label5.Text = "Guardado"
+            Label5.ForeColor = Color.Green
+            Label5.Visible = True
+
+
+
+
+
+            ListBox1.Items.Clear()
+            Material.ComboBoxCourse1.Items.Clear()
+            Material.ComboBox_Course()
+            ShowList()
         End If
-        ListBox1.Items.Clear()
-        Material.ComboBoxCourse1.Items.Clear()
-        Material.ComboBox_Course()
-        ShowList()
+
 
     End Sub
 
-    Public Sub SelectId()
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -88,8 +95,18 @@
         Material.DataGridView1.DataSource = Nothing
         ListBox1.Items.Clear()
         ShowList()
+        Label5.Text = "Borrado"
+        Label5.ForeColor = Color.Green
+        Label5.Visible = True
 
+    End Sub
 
+    Private Sub ButtonAddCourse_MouseLeave(sender As Object, e As EventArgs) Handles ButtonAddCourse.MouseLeave
+        Label5.Visible = False
+        Label6.Visible = False
+    End Sub
 
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        Label5.Visible = False
     End Sub
 End Class
