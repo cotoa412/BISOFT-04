@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities.vb" />
+    <Compile Include="Add.Designer.vb">
+      <DependentUpon>Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Calendario.Designer.vb">
       <DependentUpon>Calendario.vb</DependentUpon>
     </Compile>
@@ -215,6 +221,9 @@
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calendario.resx">
       <DependentUpon>Calendario.vb</DependentUpon>
     </EmbeddedResource>

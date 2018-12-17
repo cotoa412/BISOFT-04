@@ -79,6 +79,9 @@ Partial Class Calendario
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -613,23 +616,27 @@ Partial Class Calendario
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(167, 42)
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(189, 42)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 30)
+        Me.Button1.Size = New System.Drawing.Size(53, 30)
         Me.Button1.TabIndex = 41
         Me.Button1.Text = "←"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Location = New System.Drawing.Point(399, 42)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 30)
+        Me.Button2.Size = New System.Drawing.Size(51, 30)
         Me.Button2.TabIndex = 42
         Me.Button2.Text = "→"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -659,11 +666,34 @@ Partial Class Calendario
         Me.CustomMenuStrip1.TabIndex = 44
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(532, 88)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(40, 32)
+        Me.Button3.TabIndex = 45
+        Me.Button3.Text = "+"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'CustomMenuStrip1
+        '
+        Me.CustomMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(631, 25)
+        Me.CustomMenuStrip1.TabIndex = 44
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
+        '
         'Calendario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(637, 562)
+        Me.ClientSize = New System.Drawing.Size(631, 562)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
@@ -711,7 +741,6 @@ Partial Class Calendario
     Friend WithEvents d2_3 As Label
     Friend WithEvents d2_2 As Label
     Friend WithEvents d2_1 As Label
-    Friend WithEvents d1_7 As Label
     Friend WithEvents d1_6 As Label
     Friend WithEvents d1_5 As Label
     Friend WithEvents d1_4 As Label
@@ -739,4 +768,6 @@ Partial Class Calendario
     Friend WithEvents d6_2 As Label
     Friend WithEvents d6_1 As Label
     Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
+    Friend WithEvents d1_7 As Label
+    Friend WithEvents Button3 As Button
 End Class

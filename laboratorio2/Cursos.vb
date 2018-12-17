@@ -43,6 +43,7 @@
 
     Private Sub ButtonAddCourse_Click(sender As Object, e As EventArgs) Handles ButtonAddCourse.Click
 
+
         If TextBoxCredits.Text = "" Or TextBoxNameCourse.Text = "" Then
             Label5.Text = "Debe llenar los campos"
             Label5.ForeColor = Color.Red
@@ -77,6 +78,8 @@
             Material.ComboBoxCourse1.Items.Clear()
             Material.ComboBox_Course()
             ShowList()
+            Add.ComboBoxCourse1.Items.Clear()
+            Add.ComboBox_Course()
         End If
 
 
@@ -93,6 +96,8 @@
         Material.ComboBoxCourse1.Text = ""
         Material.ComboBox_Course()
         Material.DataGridView1.DataSource = Nothing
+        Add.ComboBoxCourse1.Items.Clear()
+        Add.ComboBox_Course()
         ListBox1.Items.Clear()
         ShowList()
         Label5.Text = "Borrado"

@@ -29,4 +29,12 @@ Public Class Profile
     Private Sub ButtonSave_MouseLeave(sender As Object, e As EventArgs) Handles ButtonSave.MouseLeave
         Label5.Visible = False
     End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label6.Text = "Bienvenido a Concinnity, " & TextBoxName.Text
+    End Sub
 End Class

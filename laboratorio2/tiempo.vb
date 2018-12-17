@@ -12,7 +12,28 @@ Public Class tiempo
         addTimer(1)
         Dim data = db.ReaderQuery("SELECT SUM(Hours) as Hours FROM Course,CourseUser WHERE CourseUser.idUser=1 AND CourseUser.IdCourse=Course.IdCourse")
         hoursLabel.Text = Str(data(0).Item("Hours"))
+
+        If ComboBoxCourse_Time.Items.Count > 0 Then
+
+        Else
+            ComboBox_Time()
+        End If
+
+
+
     End Sub
+    Private Sub ComboBox_Time()
+        Dim rows = db.ReaderQuery("Select c.[NameCourse]
+                             	From Course c, CourseUser cu, [User] u
+                             	Where cu.IdCourse = c.IdCourse 
+                                And cu.IdUser=u.Id And u.UserName='" & Profile.TextBoxUser.Text & "'")
+
+        For Each row As Dictionary(Of String, Object) In rows
+            ComboBoxCourse_Time.Items.Add(row.Item("NameCourse"))
+        Next
+    End Sub
+
+
 
     Private Function addTimer(ammount As Int32)
         For i = 1 To ammount
@@ -81,13 +102,24 @@ Public Class tiempo
             Dim ts = time2 - time1
             result += ts.TotalHours
         Next
-        If result < CInt(hoursLabel.Text) Then
-            status.ForeColor = Color.Red
-            status.Text = "Horas insuficientes"
-        Else
-            status.ForeColor = Color.Green
-            status.Text = "!Guardado con exito!"
-        End If
+
+        'If result < CInt(hoursLabel.Text) Then
+        'status.ForeColor = Color.Red
+        'status.Text = "Horas insuficientes"
+        'Else
+        'status.ForeColor = Color.Green
+        'status.Text = "Guardado con éxito"
+        'End If
+
+        ' Dim Rows = db.ExecuteQuery("Select cu.IdUser From [CourseUser]cu,[User]u Where Username=" & Profile.TextBoxUser.Text & " u.Id=cu.IdUser")
+
+        'Dim User = Rows.Item("IdUser")
+        'Dim Course = Rows.Item("IdCourse")
+        'Dim Desc = "Repaso " & ComboBoxCourse_Time.SelectedItem
+
+        'Dim Rows_Acitvity = db.ExecuteQuery("INSERT INTO [AcitvityHorario] (User,Desc) Values (" & User & "," & Desc & ")")
+
+
     End Sub
 
 End Class
