@@ -156,5 +156,7 @@ Public Class Material
 
     End Sub
 
+    Private Sub ComboBoxCourse1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedIndexChanged
 
+    End Sub
 End Class

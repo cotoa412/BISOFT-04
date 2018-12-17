@@ -40,7 +40,7 @@ Partial Class Material
         Me.ComboBoxCourse1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxCourse1.FormattingEnabled = True
         Me.ComboBoxCourse1.Location = New System.Drawing.Point(653, 95)
-        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBoxCourse1.Name = "ComboBoxCourse1"
         Me.ComboBoxCourse1.Size = New System.Drawing.Size(199, 33)
         Me.ComboBoxCourse1.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class Material
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight
         Me.DataGridView1.Location = New System.Drawing.Point(16, 95)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(624, 362)
         Me.DataGridView1.TabIndex = 1
@@ -62,7 +62,7 @@ Partial Class Material
         '
         Me.ButtonOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOpen.Location = New System.Drawing.Point(655, 155)
-        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonOpen.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonOpen.Name = "ButtonOpen"
         Me.ButtonOpen.Size = New System.Drawing.Size(200, 41)
         Me.ButtonOpen.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class Material
         '
         Me.ButtonSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSelect.Location = New System.Drawing.Point(653, 293)
-        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonSelect.Name = "ButtonSelect"
         Me.ButtonSelect.Size = New System.Drawing.Size(200, 41)
         Me.ButtonSelect.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class Material
         '
         Me.ButtonDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonDelete.Location = New System.Drawing.Point(655, 225)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(200, 41)
         Me.ButtonDelete.TabIndex = 4
@@ -154,7 +154,7 @@ Partial Class Material
         Me.Controls.Add(Me.ButtonOpen)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ComboBoxCourse1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Material"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Material"
