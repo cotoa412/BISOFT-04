@@ -181,6 +181,41 @@ Public Class Calendario
             Dim label As Label = CType(PanelCalendar.Controls("d" + CStr(week) + "_" + CStr(day)), Label)
             label.Text = CStr(dateNum)
 
+            Dim Rows = db.ReaderQuery("SELECT [Priority], COUNT(*) as count FROM Activity a, CourseUser cu, [User] u
+                                       WHERE u.UserName='" & Profile.TextBoxUser.Text & "'
+                                       AND a.Course = cu.IdCourse AND cu.IdUser = u.Id
+                                       AND DAY(a.DateHour) = " & dateNum & "
+                                       AND MONTH(a.DateHour) = " & Month & "
+                                       GROUP BY [Priority]")
+
+            Dim priors = 0
+            For Each item In Rows
+
+                Dim labelP As New Label
+                labelP.Size = New Size(30, 30)
+                labelP.Text = item.Item("count")
+
+
+
+
+                If priors = 0 Then
+                    labelP.Location = New Point(label.Location.X + 0, label.Location.Y)
+                End If
+
+                If priors = 1 Then
+                    labelP.Location = New Point(label.Location.X + 40, label.Location.Y)
+                End If
+
+                If priors = 2 Then
+                    labelP.Location = New Point(label.Location.X + 15, label.Location.Y + 40)
+                End If
+
+
+                Me.Controls.Add(labelP)
+                priors += 1
+
+            Next
+
             dateNum += 1
             day += 1
 
