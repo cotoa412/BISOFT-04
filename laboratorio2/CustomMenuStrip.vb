@@ -103,14 +103,14 @@
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
-
+        Calendario.Show()
         Profile.Hide()
         Material.Hide()
         Horario.Hide()
         Cursos.Hide()
         tiempo.Hide()
         Reporte.Hide()
-        Calendario.Show()
+
 
     End Sub
 

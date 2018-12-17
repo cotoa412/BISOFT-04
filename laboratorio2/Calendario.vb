@@ -253,5 +253,6 @@ Public Class Calendario
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Add.Show()
+        Me.Hide()
     End Sub
 End Class

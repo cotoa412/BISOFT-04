@@ -117,7 +117,7 @@ Partial Class Horario
         '
         Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(893, 25)
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(898, 25)
         Me.CustomMenuStrip1.TabIndex = 14
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
@@ -126,7 +126,7 @@ Partial Class Horario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(893, 509)
+        Me.ClientSize = New System.Drawing.Size(898, 509)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
