@@ -66,10 +66,14 @@
                 TextBox1.Text = ""
                 ComboBoxCourse1.Text = ""
                 ComboBox2.Text = ""
+                ComboBoxCourse1.Items.Clear()
+                ComboBox_Course()
+
             Else
 
             End If
         End If
+
 
 
     End Sub
