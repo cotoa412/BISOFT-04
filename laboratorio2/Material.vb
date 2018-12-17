@@ -144,7 +144,7 @@ Public Class Material
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         Dim saveDialog1 As SaveFileDialog
         saveDialog1 = New SaveFileDialog()
         saveDialog1.CreatePrompt = True
@@ -156,5 +156,7 @@ Public Class Material
 
     End Sub
 
+    Private Sub ComboBoxCourse1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxCourse1.SelectedIndexChanged
 
+    End Sub
 End Class
