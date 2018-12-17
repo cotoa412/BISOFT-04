@@ -142,7 +142,7 @@ Partial Class Profile
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Lime
-        Me.Label5.Location = New System.Drawing.Point(179, 558)
+        Me.Label5.Location = New System.Drawing.Point(193, 469)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(0, 25)
@@ -172,7 +172,7 @@ Partial Class Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 480)
+        Me.ClientSize = New System.Drawing.Size(616, 518)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
