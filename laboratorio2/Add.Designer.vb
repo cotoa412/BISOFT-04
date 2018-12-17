@@ -49,10 +49,10 @@ Partial Class Add
         '
         Me.Button1.AutoSize = True
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Button1.Location = New System.Drawing.Point(137, 327)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(183, 389)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 30)
+        Me.Button1.Size = New System.Drawing.Size(101, 37)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -61,10 +61,10 @@ Partial Class Add
         '
         Me.Button2.AutoSize = True
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Button2.Location = New System.Drawing.Point(282, 327)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(370, 389)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 30)
+        Me.Button2.Size = New System.Drawing.Size(109, 37)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -73,10 +73,9 @@ Partial Class Add
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(42, 126)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(56, 155)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 20)
+        Me.Label1.Size = New System.Drawing.Size(76, 25)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Curso: "
         '
@@ -84,10 +83,9 @@ Partial Class Add
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(42, 169)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(56, 208)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 20)
+        Me.Label2.Size = New System.Drawing.Size(100, 25)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Prioridad: "
         '
@@ -95,10 +93,9 @@ Partial Class Add
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(42, 213)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(56, 262)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(62, 20)
+        Me.Label3.Size = New System.Drawing.Size(78, 25)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Fecha: "
         '
@@ -106,10 +103,9 @@ Partial Class Add
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(37, 250)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(49, 308)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 20)
+        Me.Label4.Size = New System.Drawing.Size(120, 25)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Descripción:"
         '
@@ -117,10 +113,10 @@ Partial Class Add
         '
         Me.ComboBoxCourse1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxCourse1.FormattingEnabled = True
-        Me.ComboBoxCourse1.Location = New System.Drawing.Point(137, 123)
-        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBoxCourse1.Location = New System.Drawing.Point(183, 151)
+        Me.ComboBoxCourse1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxCourse1.Name = "ComboBoxCourse1"
-        Me.ComboBoxCourse1.Size = New System.Drawing.Size(340, 28)
+        Me.ComboBoxCourse1.Size = New System.Drawing.Size(452, 33)
         Me.ComboBoxCourse1.TabIndex = 10
         '
         'ComboBox2
@@ -128,10 +124,10 @@ Partial Class Add
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Urgente", "Medio", "Bajo"})
-        Me.ComboBox2.Location = New System.Drawing.Point(137, 166)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBox2.Location = New System.Drawing.Point(183, 204)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(340, 28)
+        Me.ComboBox2.Size = New System.Drawing.Size(452, 33)
         Me.ComboBox2.TabIndex = 11
         '
         'ProjectDBDataSet2
@@ -160,29 +156,28 @@ Partial Class Add
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(137, 208)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(183, 256)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(340, 26)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(452, 30)
         Me.DateTimePicker1.TabIndex = 12
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(137, 244)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Location = New System.Drawing.Point(183, 300)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(340, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(452, 30)
         Me.TextBox1.TabIndex = 13
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(114, 47)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(152, 58)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(293, 31)
+        Me.Label5.Size = New System.Drawing.Size(349, 38)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Agregar Recordatorio"
         '
@@ -190,18 +185,19 @@ Partial Class Add
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(222, 291)
+        Me.Label6.Location = New System.Drawing.Point(296, 358)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(59, 20)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Label6"
         Me.Label6.Visible = False
         '
         'Add
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(509, 368)
+        Me.ClientSize = New System.Drawing.Size(679, 453)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox1)
@@ -214,7 +210,7 @@ Partial Class Add
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Add"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add"
