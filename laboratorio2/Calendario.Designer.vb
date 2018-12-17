@@ -72,13 +72,13 @@ Partial Class Calendario
         Me.d1_3 = New System.Windows.Forms.Label()
         Me.d1_2 = New System.Windows.Forms.Label()
         Me.d1_1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
         Me.PanelCalendar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -590,6 +590,17 @@ Partial Class Calendario
         Me.d1_1.Size = New System.Drawing.Size(83, 56)
         Me.d1_1.TabIndex = 41
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 20)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(617, 397)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 40
+        Me.PictureBox2.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -630,25 +641,6 @@ Partial Class Calendario
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "Label9"
         '
-        'CustomMenuStrip1
-        '
-        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
-        Me.CustomMenuStrip1.Size = New System.Drawing.Size(637, 25)
-        Me.CustomMenuStrip1.TabIndex = 44
-        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.PictureBox2.Image = Global.laboratorio2.My.Resources.Resources.border
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 20)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(617, 397)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 40
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.laboratorio2.My.Resources.Resources.border
@@ -658,6 +650,14 @@ Partial Class Calendario
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'CustomMenuStrip1
+        '
+        Me.CustomMenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.CustomMenuStrip1.Name = "CustomMenuStrip1"
+        Me.CustomMenuStrip1.Size = New System.Drawing.Size(637, 25)
+        Me.CustomMenuStrip1.TabIndex = 44
+        Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
         'Calendario
         '
