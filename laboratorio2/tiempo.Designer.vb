@@ -31,6 +31,8 @@ Partial Class tiempo
         Me.Label3 = New System.Windows.Forms.Label()
         Me.hoursLabel = New System.Windows.Forms.Label()
         Me.CustomMenuStrip1 = New laboratorio2.CustomMenuStrip()
+        Me.ComboBoxCourse_Time = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -89,7 +91,7 @@ Partial Class tiempo
         '
         Me.status.AutoSize = True
         Me.status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.status.Location = New System.Drawing.Point(345, 290)
+        Me.status.Location = New System.Drawing.Point(343, 396)
         Me.status.Name = "status"
         Me.status.Size = New System.Drawing.Size(0, 20)
         Me.status.TabIndex = 5
@@ -98,7 +100,7 @@ Partial Class tiempo
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(346, 195)
+        Me.Label3.Location = New System.Drawing.Point(344, 301)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 13)
         Me.Label3.TabIndex = 6
@@ -108,7 +110,7 @@ Partial Class tiempo
         '
         Me.hoursLabel.AutoSize = True
         Me.hoursLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.hoursLabel.Location = New System.Drawing.Point(396, 236)
+        Me.hoursLabel.Location = New System.Drawing.Point(394, 342)
         Me.hoursLabel.Name = "hoursLabel"
         Me.hoursLabel.Size = New System.Drawing.Size(0, 13)
         Me.hoursLabel.TabIndex = 7
@@ -122,11 +124,31 @@ Partial Class tiempo
         Me.CustomMenuStrip1.TabIndex = 8
         Me.CustomMenuStrip1.Text = "CustomMenuStrip1"
         '
+        'ComboBoxCourse_Time
+        '
+        Me.ComboBoxCourse_Time.FormattingEnabled = True
+        Me.ComboBoxCourse_Time.Location = New System.Drawing.Point(317, 227)
+        Me.ComboBoxCourse_Time.Name = "ComboBoxCourse_Time"
+        Me.ComboBoxCourse_Time.Size = New System.Drawing.Size(171, 21)
+        Me.ComboBoxCourse_Time.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(374, 195)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(55, 20)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Curso:"
+        '
         'tiempo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(524, 450)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.ComboBoxCourse_Time)
         Me.Controls.Add(Me.CustomMenuStrip1)
         Me.Controls.Add(Me.hoursLabel)
         Me.Controls.Add(Me.Label3)
@@ -153,4 +175,6 @@ Partial Class tiempo
     Friend WithEvents Label3 As Label
     Friend WithEvents hoursLabel As Label
     Friend WithEvents CustomMenuStrip1 As CustomMenuStrip
+    Friend WithEvents ComboBoxCourse_Time As ComboBox
+    Friend WithEvents Label4 As Label
 End Class
