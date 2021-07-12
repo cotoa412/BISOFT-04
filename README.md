@@ -2,4 +2,5 @@
 University project based in visual basic, a scheduling application for university students
 
 ### Tecnologies used: 
-- 
+- Visual Basic .Net
+- Scrum
